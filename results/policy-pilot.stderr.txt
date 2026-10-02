@@ -1,0 +1,48 @@
+test_internal_obstruction (test_boundaries.BoundaryTests.test_internal_obstruction) ... ok
+test_offset_rebase_at_transport_bound (test_boundaries.BoundaryTests.test_offset_rebase_at_transport_bound) ... ok
+test_positive_cycle_certificate_and_false_weight (test_boundaries.BoundaryTests.test_positive_cycle_certificate_and_false_weight) ... ok
+test_witness_and_closure_frontier_costs (test_boundaries.BoundaryTests.test_witness_and_closure_frontier_costs) ... ok
+test_arbitrary_packet_not_model_annotation (test_core.CoreTests.test_arbitrary_packet_not_model_annotation) ... ok
+test_empty_body_and_base_reclassification (test_core.CoreTests.test_empty_body_and_base_reclassification) ... ok
+test_exchange_constant_block_patch (test_core.CoreTests.test_exchange_constant_block_patch) ... ok
+test_json_duplicate_and_nonfinite_rejected (test_core.CoreTests.test_json_duplicate_and_nonfinite_rejected) ... ok
+test_partition_can_be_incomplete_for_an_acyclic_proof (test_core.CoreTests.test_partition_can_be_incomplete_for_an_acyclic_proof) ... ok
+test_random_mixed_sequences (test_core.CoreTests.test_random_mixed_sequences) ... ok
+test_redundant_patch_and_no_commit (test_core.CoreTests.test_redundant_patch_and_no_commit) ... ok
+test_rejections_rollback_and_valid_followup (test_core.CoreTests.test_rejections_rollback_and_valid_followup) ... ok
+test_scalar_patch_grows (test_core.CoreTests.test_scalar_patch_grows) ... ok
+test_unsupported_cycle_is_not_a_proof (test_core.CoreTests.test_unsupported_cycle_is_not_a_proof) ... ok
+test_all_source_records_and_twelve_updates (test_policy.PolicyTests.test_all_source_records_and_twelve_updates) ... ok
+test_independent_substitution_budget (test_policy.PolicyTests.test_independent_substitution_budget) ... ok
+test_guard_and_shift_boundaries (test_temporal.TemporalTests.test_guard_and_shift_boundaries) ... ok
+test_independent_grounders_and_direct_semantics (test_temporal.TemporalTests.test_independent_grounders_and_direct_semantics) ... ok
+test_overlap_empty_intervals_and_coalescing (test_temporal.TemporalTests.test_overlap_empty_intervals_and_coalescing) ... ok
+test_type_and_interval_rejections (test_temporal.TemporalTests.test_type_and_interval_rejections) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.343s
+
+OK
+	Command being timed: "timeout 40s python -m unittest discover -s tests -v"
+	User time (seconds): 0.82
+	System time (seconds): 0.08
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.91
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 97704
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 26328
+	Voluntary context switches: 3
+	Involuntary context switches: 6
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 128
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

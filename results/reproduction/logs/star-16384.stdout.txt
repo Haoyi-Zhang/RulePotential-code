@@ -1,0 +1,1 @@
+{"mode": "timing", "status": "passed", "wall_seconds": 4.773401498999647, "cpu_seconds": 4.769976333000001, "peak_rss_kib": 170256, "workers": 1}

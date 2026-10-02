@@ -1,0 +1,8 @@
+{
+  "deterministic_match": true,
+  "compared_to": "results/offset-repair.json",
+  "excluded_fields": "runtime seconds and peak RSS only",
+  "graph_target_pairs": 110592,
+  "workload_rows": 126,
+  "mismatches": []
+}

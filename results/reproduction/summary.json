@@ -1,0 +1,96 @@
+{
+  "completed_jobs": 49,
+  "units": {
+    "tests": 23,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "correct": {
+    "transitions": 32768,
+    "oracle_mismatches": 0,
+    "rollback_mismatches": 0,
+    "deletions": 9728,
+    "insertions": 9728,
+    "mixed": 9216,
+    "no_base_change": 4096
+  },
+  "candidate": {
+    "candidate_packets": 112896,
+    "accepted_packets": 8448,
+    "wrong_models_accepted": 0,
+    "old_new_pairs_with_certificate": 1024,
+    "rollback_mismatches": 0
+  },
+  "representation": {
+    "cases": 8640,
+    "feasible": 1779,
+    "internal_order": 4629,
+    "positive_cycle": 2232,
+    "checked_obstructions": 6861,
+    "oracle_mismatches": 0
+  },
+  "selection": {
+    "maxatom_systems": 600,
+    "assignments": 15000,
+    "satisfying_assignments": 7768,
+    "forward_mismatches": 0,
+    "reverse_mismatches": 0,
+    "scope": "finite assignment equivalence checks, not an unbounded decision procedure"
+  },
+  "timing_rows": 168,
+  "policy_updates": 216,
+  "policy_status_counts": {
+    "accepted": 216
+  },
+  "max_atoms": 32770,
+  "max_rules": 32770,
+  "peak_rss_kib": 248144,
+  "kernel_cpu_seconds": 51.154015374000004,
+  "child_cpu_seconds_including_startup": 118.734062,
+  "timeouts": 0,
+  "failed_commands": 0,
+  "timing_environment": {
+    "file": "environment.json",
+    "schema": "runtime-environment-1",
+    "recording_status": "not_recorded_for_original_measurement",
+    "scope": "retained clean reproduction completed before environment capture was added",
+    "associated_measurements": [
+      "execution.json",
+      "timing-raw.csv",
+      "timing-summary.csv",
+      "policy-raw.csv",
+      "policy-summary.csv",
+      "summary.json"
+    ],
+    "cpu": {
+      "model": null,
+      "logical_cpu_count": null,
+      "affinity_cpu_count": null
+    },
+    "architecture": {
+      "machine": null,
+      "pointer_bits": null
+    },
+    "operating_system": {
+      "system": null,
+      "kernel_release": null,
+      "kernel_version": null,
+      "pretty_name": null,
+      "id": null,
+      "version_id": null
+    },
+    "python": {
+      "implementation": null,
+      "version": null,
+      "full_version": null,
+      "cache_tag": null
+    },
+    "timing_clocks": {
+      "kernel_elapsed": "time.perf_counter_ns (recoverable from retained campaign source and job clock fields)",
+      "driver_elapsed": "time.monotonic (recoverable from retained reproduction driver)",
+      "process_cpu": "time.process_time per job; resource.getrusage(RUSAGE_CHILDREN) in the reproduction driver"
+    },
+    "traceability_note": "The retained evidence does not contain the original CPU model/architecture, OS/kernel, or Python implementation and full version. These fields are not recoverable and the current or any later machine is deliberately not substituted. The timing APIs are recoverable from the retained source, but absolute timing traceability remains limited; deterministic outputs and counters remain auditable."
+  }
+}

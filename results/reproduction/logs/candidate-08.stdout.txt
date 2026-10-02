@@ -1,0 +1,1 @@
+{"mode": "candidate", "status": "passed", "wall_seconds": 0.15683274599996366, "cpu_seconds": 0.15319904500000003, "peak_rss_kib": 94256, "workers": 1}

@@ -1,0 +1,12 @@
+{
+  "tests": 23,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "run": {
+    "wall_seconds": 0.330471450999994,
+    "cpu_seconds": 0.328554474,
+    "peak_rss_kib": 98224,
+    "workers": 1
+  }
+}

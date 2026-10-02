@@ -1,0 +1,20 @@
+test_anchor_paths_capture_indirect_bound_conflict (__main__.BoundedOffsetRepairTests.test_anchor_paths_capture_indirect_bound_conflict) ... ok
+test_bounded_certificate_mutations_rejected (__main__.BoundedOffsetRepairTests.test_bounded_certificate_mutations_rejected) ... ok
+test_bounded_domain_validation (__main__.BoundedOffsetRepairTests.test_bounded_domain_validation) ... ok
+test_bounded_problem_can_be_infeasible (__main__.BoundedOffsetRepairTests.test_bounded_problem_can_be_infeasible) ... ok
+test_bounds_can_force_old_coordinates (__main__.BoundedOffsetRepairTests.test_bounds_can_force_old_coordinates) ... ok
+test_loose_bounds_recover_unbounded_optimum (__main__.BoundedOffsetRepairTests.test_loose_bounds_recover_unbounded_optimum) ... ok
+test_singleton_and_large_integers (__main__.BoundedOffsetRepairTests.test_singleton_and_large_integers) ... ok
+test_adversarial_chain_covers (__main__.OffsetRepairTests.test_adversarial_chain_covers) ... ok
+test_chain_needs_all_but_one_fields (__main__.OffsetRepairTests.test_chain_needs_all_but_one_fields) ... ok
+test_disconnected_and_large_integers (__main__.OffsetRepairTests.test_disconnected_and_large_integers) ... ok
+test_domain_validation (__main__.OffsetRepairTests.test_domain_validation) ... ok
+test_lowering_avoids_forward_cascade (__main__.OffsetRepairTests.test_lowering_avoids_forward_cascade) ... ok
+test_nonpositive_path_and_wrong_cost_rejected (__main__.OffsetRepairTests.test_nonpositive_path_and_wrong_cost_rejected) ... ok
+test_positive_cycle_rejected (__main__.OffsetRepairTests.test_positive_cycle_rejected) ... ok
+test_zero_cycle_is_not_an_obstruction (__main__.OffsetRepairTests.test_zero_cycle_is_not_an_obstruction) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.002s
+
+OK

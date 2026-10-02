@@ -1,0 +1,7 @@
+{
+  "deterministic_match": true,
+  "compared_to": "results/bounded-offset-repair.json",
+  "excluded_fields": "runtime seconds and peak RSS only",
+  "cases": 331776,
+  "mismatches": []
+}

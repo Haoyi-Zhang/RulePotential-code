@@ -1,0 +1,92 @@
+{
+  "cases": 331776,
+  "certificate_failures": 0,
+  "cpu_seconds": 14.112702954,
+  "environment": {
+    "architecture": {
+      "machine": null,
+      "pointer_bits": null
+    },
+    "associated_measurements": [
+      "bounded-offset-repair-reproduction.json"
+    ],
+    "cpu": {
+      "affinity_cpu_count": null,
+      "logical_cpu_count": null,
+      "model": null
+    },
+    "operating_system": {
+      "id": null,
+      "kernel_release": null,
+      "kernel_version": null,
+      "pretty_name": null,
+      "system": null,
+      "version_id": null
+    },
+    "python": {
+      "cache_tag": null,
+      "full_version": null,
+      "implementation": null,
+      "version": null
+    },
+    "recording_status": "not_recorded_for_original_measurement",
+    "schema": "runtime-environment-1",
+    "scope": "retained bounded offset-repair reproduction completed before environment capture was added",
+    "timing_clocks": {
+      "driver_elapsed": "time.monotonic",
+      "kernel_elapsed": null,
+      "process_cpu": "time.process_time; resource.getrusage(RUSAGE_SELF) for peak RSS"
+    },
+    "traceability_note": "The retained evidence does not contain the original CPU model/architecture, OS/kernel, or Python implementation and full version. These fields are not recoverable and the current or any later machine is deliberately not substituted. The timing APIs are recoverable from the retained source, but absolute timing traceability remains limited; deterministic outputs and counters remain auditable."
+  },
+  "feasible_cases": 125577,
+  "graph_profile_feasible": 4651,
+  "graph_profile_pairs": 12288,
+  "graphs": 4096,
+  "infeasible_cases": 206199,
+  "interval_profiles": 3,
+  "optimizer_mismatches": 0,
+  "optimum_histogram": {
+    "0": 18877,
+    "1": 53490,
+    "2": 40386,
+    "3": 12824
+  },
+  "peak_rss_kib": 93108,
+  "profile_counts": {
+    "lower-skew": {
+      "cases": 110592,
+      "feasible_cases": 37071,
+      "infeasible_cases": 73521,
+      "optimum_histogram": {
+        "0": 3689,
+        "1": 13146,
+        "2": 14532,
+        "3": 5704
+      }
+    },
+    "symmetric": {
+      "cases": 110592,
+      "feasible_cases": 51435,
+      "infeasible_cases": 59157,
+      "optimum_histogram": {
+        "0": 11499,
+        "1": 27198,
+        "2": 11322,
+        "3": 1416
+      }
+    },
+    "upper-skew": {
+      "cases": 110592,
+      "feasible_cases": 37071,
+      "infeasible_cases": 73521,
+      "optimum_histogram": {
+        "0": 3689,
+        "1": 13146,
+        "2": 14532,
+        "3": 5704
+      }
+    }
+  },
+  "wall_seconds": 14.140100032000191
+}

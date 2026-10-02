@@ -1,0 +1,15 @@
+{
+  "program_start": 32,
+  "program_stop": 40,
+  "candidate_packets": 12096,
+  "accepted_packets": 1104,
+  "wrong_models_accepted": 0,
+  "old_new_pairs_with_certificate": 128,
+  "rollback_mismatches": 0,
+  "run": {
+    "wall_seconds": 0.14542495999967286,
+    "cpu_seconds": 0.14215034199999987,
+    "peak_rss_kib": 94256,
+    "workers": 1
+  }
+}

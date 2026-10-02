@@ -1,0 +1,64 @@
+{
+  "available_cpu_quota": 4,
+  "affinity_cpus": 5,
+  "memory_limit_bytes": 4294967296,
+  "memory_current_at_intake_bytes": 358907904,
+  "swap_total_kib": 0,
+  "writable_free_bytes_at_intake": 32029900800,
+  "workers": 1,
+  "campaign_cpu_budget_seconds": 28800,
+  "reserved_repair_cpu_seconds": 7200,
+  "per_chunk_wall_seconds": 40,
+  "individual_run_max_seconds": 2700,
+  "download_budget_bytes": 1073741824,
+  "expanded_input_budget_bytes": 2147483648,
+  "child_address_space_limit_bytes": 3758096384,
+  "measurement_environment": {
+    "schema": "runtime-environment-1",
+    "recording_status": "not_recorded_for_original_measurement",
+    "scope": "resource intake associated with the retained original main campaign",
+    "associated_measurements": [
+      "results/campaign/execution.json",
+      "results/campaign/timing-raw.csv",
+      "results/campaign/policy-raw.csv"
+    ],
+    "cpu": {
+      "model": null,
+      "logical_cpu_count": null,
+      "affinity_cpu_count": null
+    },
+    "architecture": {
+      "machine": null,
+      "pointer_bits": null
+    },
+    "operating_system": {
+      "system": null,
+      "kernel_release": null,
+      "kernel_version": null,
+      "pretty_name": null,
+      "id": null,
+      "version_id": null
+    },
+    "python": {
+      "implementation": null,
+      "version": null,
+      "full_version": null,
+      "cache_tag": null
+    },
+    "timing_clocks": {
+      "kernel_elapsed": "time.perf_counter_ns (recoverable from retained campaign source and job clock fields)",
+      "driver_elapsed": "time.monotonic (recoverable from retained reproduction driver)",
+      "process_cpu": "time.process_time per job; resource.getrusage(RUSAGE_CHILDREN) in the reproduction driver"
+    },
+    "traceability_note": "The retained evidence does not contain the original CPU model/architecture, OS/kernel, or Python implementation and full version. These fields are not recoverable and the current or any later machine is deliberately not substituted. The timing APIs are recoverable from the retained source, but absolute timing traceability remains limited; deterministic outputs and counters remain auditable.",
+    "known_resource_envelope": {
+      "available_cpu_quota": 4,
+      "affinity_cpus": 5,
+      "memory_limit_bytes": 4294967296,
+      "swap_total_kib": 0,
+      "workers": 1,
+      "per_chunk_wall_seconds": 40,
+      "child_address_space_limit_bytes": 3758096384
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "program_start": 0,
+  "program_stop": 64,
+  "transitions": 4096,
+  "oracle_mismatches": 0,
+  "rollback_mismatches": 0,
+  "deletions": 1216,
+  "insertions": 1216,
+  "mixed": 1152,
+  "no_base_change": 512,
+  "run": {
+    "wall_seconds": 0.09484349100011968,
+    "cpu_seconds": 0.09288196500000001,
+    "peak_rss_kib": 94252,
+    "workers": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "pattern_start": 0,
+  "pattern_stop": 16,
+  "cases": 2160,
+  "feasible": 958,
+  "internal_order": 890,
+  "positive_cycle": 312,
+  "checked_obstructions": 1202,
+  "oracle_mismatches": 0,
+  "run": {
+    "wall_seconds": 0.07429612699979771,
+    "cpu_seconds": 0.07410221200000011,
+    "peak_rss_kib": 94256,
+    "workers": 1
+  }
+}

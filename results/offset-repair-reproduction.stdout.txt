@@ -1,0 +1,19 @@
+{
+  "graphs": 4096,
+  "graph_target_pairs": 110592,
+  "feasible_graphs": 1905,
+  "feasible_pairs": 51435,
+  "infeasible_pairs": 59157,
+  "oracle_mismatches": 0,
+  "certificate_failures": 0,
+  "optimum_histogram": {
+    "0": 11499,
+    "1": 32310,
+    "2": 7626,
+    "3": 0
+  },
+  "workload_rows": 126,
+  "cpu_seconds": 5.272505468,
+  "peak_rss_kib": 94640,
+  "deterministic_comparison": "matched"
+}

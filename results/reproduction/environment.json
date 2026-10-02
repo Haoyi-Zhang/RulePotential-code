@@ -1,0 +1,42 @@
+{
+  "schema": "runtime-environment-1",
+  "recording_status": "not_recorded_for_original_measurement",
+  "scope": "retained clean reproduction completed before environment capture was added",
+  "associated_measurements": [
+    "execution.json",
+    "timing-raw.csv",
+    "timing-summary.csv",
+    "policy-raw.csv",
+    "policy-summary.csv",
+    "summary.json"
+  ],
+  "cpu": {
+    "model": null,
+    "logical_cpu_count": null,
+    "affinity_cpu_count": null
+  },
+  "architecture": {
+    "machine": null,
+    "pointer_bits": null
+  },
+  "operating_system": {
+    "system": null,
+    "kernel_release": null,
+    "kernel_version": null,
+    "pretty_name": null,
+    "id": null,
+    "version_id": null
+  },
+  "python": {
+    "implementation": null,
+    "version": null,
+    "full_version": null,
+    "cache_tag": null
+  },
+  "timing_clocks": {
+    "kernel_elapsed": "time.perf_counter_ns (recoverable from retained campaign source and job clock fields)",
+    "driver_elapsed": "time.monotonic (recoverable from retained reproduction driver)",
+    "process_cpu": "time.process_time per job; resource.getrusage(RUSAGE_CHILDREN) in the reproduction driver"
+  },
+  "traceability_note": "The retained evidence does not contain the original CPU model/architecture, OS/kernel, or Python implementation and full version. These fields are not recoverable and the current or any later machine is deliberately not substituted. The timing APIs are recoverable from the retained source, but absolute timing traceability remains limited; deterministic outputs and counters remain auditable."
+}

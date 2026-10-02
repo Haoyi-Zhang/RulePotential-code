@@ -1,0 +1,23 @@
+{
+  "bibliography_entries": 63,
+  "calibration_group_counts": {
+    "adjacent_venue": 5,
+    "influential": 5,
+    "same_venue": 12
+  },
+  "calibration_slots": 22,
+  "calibration_unique_papers": 21,
+  "distinct_cited_entries": 63,
+  "doi_entries": 61,
+  "errors": [],
+  "nocite_commands": 0,
+  "non_doi_entries": [
+    "atserias2010",
+    "mcsherry2013"
+  ],
+  "scope": "Deterministic consistency audit plus frozen primary-record cross-check ledger; not independent peer review and not a live publisher-registry query.",
+  "source_ledger_rows": 63,
+  "status": "PASS",
+  "verification_ledger_rows": 63,
+  "warnings": []
+}

@@ -1,0 +1,28 @@
+{
+  "negative_control": "rank inequality violated",
+  "accepted": true,
+  "packet": {
+    "delete": [
+      0
+    ],
+    "insert": [],
+    "witness": {
+      "1": 8
+    },
+    "offset": {
+      "0": 4
+    }
+  },
+  "counters": {
+    "truth_fields": 1,
+    "witness_heads": 1,
+    "witness_literals": 1,
+    "closure_rules": 0,
+    "closure_literals": 0,
+    "offset_fields": 1,
+    "pair_checks": 1,
+    "segment_updates": 1,
+    "segment_steps": 1
+  },
+  "remaining_atoms": 9
+}

@@ -1,0 +1,18 @@
+{
+  "body_end_page": 30,
+  "encrypted": false,
+  "fonts_all_embedded": true,
+  "observed_clipping_or_overlap": 0,
+  "observed_missing_glyph_or_broken_figure": 0,
+  "openable_by_pymupdf": true,
+  "overfull_boxes": 0,
+  "page_size": "612 x 792 pts (letter)",
+  "pdf": "paper/main.pdf",
+  "reference_pages": 7,
+  "reference_start_page": 31,
+  "rendered_pages_visually_inspected": 37,
+  "scope": "PDF preflight and page-by-page rendered visual inspection; not scientific peer review",
+  "total_pages": 37,
+  "undefined_references_or_citations": 0,
+  "underfull_boxes": 1
+}

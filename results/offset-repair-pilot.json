@@ -1,0 +1,9 @@
+{
+  "sample_graphs": 64,
+  "old_graph_pairs": 1728,
+  "feasible_pairs": 1404,
+  "oracle_mismatches": 0,
+  "certificate_failures": 0,
+  "cpu_seconds": 0.08764704599999995,
+  "peak_rss_kib": 92420
+}

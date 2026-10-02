@@ -1,0 +1,23 @@
+{
+  "scope": "Smoke execution under Python -O after replacing optimization-removable scientific assertions with explicit checks; not a full optimized-mode campaign.",
+  "checks": [
+    {
+      "command": "python -O campaign.py units --out /tmp/pcg-optimized-units.json",
+      "returncode": 0,
+      "stdout_tail": "{\"mode\": \"units\", \"status\": \"passed\", \"wall_seconds\": 0.5635437870000715, \"cpu_seconds\": 0.559764023, \"peak_rss_kib\": 98220, \"workers\": 1}\n",
+      "stderr_tail": "dependent_substitution_budget (test_policy.PolicyTests.test_independent_substitution_budget) ... ok\ntest_forward_signs_and_self_variables (test_selection.SelectionTests.test_forward_signs_and_self_variables) ... ok\ntest_reverse_auxiliary_encoding (test_selection.SelectionTests.test_reverse_auxiliary_encoding) ... ok\ntest_zero_weight_block_cycle_is_allowed (test_selection.SelectionTests.test_zero_weight_block_cycle_is_allowed) ... ok\ntest_guard_and_shift_boundaries (test_temporal.TemporalTests.test_guard_and_shift_boundaries) ... ok\ntest_independent_grounders_and_direct_semantics (test_temporal.TemporalTests.test_independent_grounders_and_direct_semantics) ... ok\ntest_overlap_empty_intervals_and_coalescing (test_temporal.TemporalTests.test_overlap_empty_intervals_and_coalescing) ... ok\ntest_type_and_interval_rejections (test_temporal.TemporalTests.test_type_and_interval_rejections) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 0.560s\n\nOK\n"
+    },
+    {
+      "command": "python -O summarize.py results/campaign",
+      "returncode": 0,
+      "stdout_tail": "ions\": 9728,\n    \"mixed\": 9216,\n    \"no_base_change\": 4096\n  },\n  \"candidate\": {\n    \"candidate_packets\": 112896,\n    \"accepted_packets\": 8448,\n    \"wrong_models_accepted\": 0,\n    \"old_new_pairs_with_certificate\": 1024,\n    \"rollback_mismatches\": 0\n  },\n  \"representation\": {\n    \"cases\": 8640,\n    \"feasible\": 1779,\n    \"internal_order\": 4629,\n    \"positive_cycle\": 2232,\n    \"checked_obstructions\": 6861,\n    \"oracle_mismatches\": 0\n  },\n  \"selection\": {\n    \"maxatom_systems\": 600,\n    \"assignments\": 15000,\n    \"satisfying_assignments\": 7768,\n    \"forward_mismatches\": 0,\n    \"reverse_mismatches\": 0,\n    \"scope\": \"finite assignment equivalence checks, not an unbounded decision procedure\"\n  },\n  \"timing_rows\": 168,\n  \"policy_updates\": 216,\n  \"policy_status_counts\": {\n    \"accepted\": 216\n  },\n  \"max_atoms\": 32770,\n  \"max_rules\": 32770,\n  \"peak_rss_kib\": 246944,\n  \"kernel_cpu_seconds\": 33.652826331,\n  \"child_cpu_seconds_including_startup\": 61.591954,\n  \"timeouts\": 0,\n  \"failed_commands\": 0\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "python -O pilot.py",
+      "returncode": 0,
+      "stdout_tail": "pper_bound\": 24579\n      }\n    },\n    {\n      \"family\": \"exchange\",\n      \"length\": 4096,\n      \"partition\": \"scalar\",\n      \"atoms\": 8194,\n      \"rules\": 8194,\n      \"initialization_cpu_seconds\": 0.12222923899999993,\n      \"dred_cpu_seconds\": 0.01916610899999993,\n      \"certificate_cpu_seconds\": 0.07365112600000012,\n      \"checker_cpu_seconds\": 0.005902200999999607,\n      \"full_check_cpu_seconds\": 0.014321829000000008,\n      \"certificate_bytes\": 48103,\n      \"checker_counters\": {\n        \"truth_fields\": 1,\n        \"witness_heads\": 1,\n        \"witness_literals\": 1,\n        \"closure_rules\": 0,\n        \"closure_literals\": 0,\n        \"offset_fields\": 4096,\n        \"pair_checks\": 4096,\n        \"segment_updates\": 2,\n        \"segment_steps\": 2\n      },\n      \"dred_counters\": {\n        \"overdeleted\": 8193,\n        \"rule_checks\": 24579,\n        \"body_tests_upper_bound\": 24579\n      }\n    }\n  ],\n  \"peak_rss_kib\": 122200,\n  \"process_cpu_seconds\": 2.097331275,\n  \"status\": \"all_checks_accepted\"\n}\n",
+      "stderr_tail": ""
+    }
+  ]
+}

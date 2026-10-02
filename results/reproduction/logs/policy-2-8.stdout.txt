@@ -1,0 +1,1 @@
+{"mode": "policy", "status": "passed", "wall_seconds": 0.9162010140003076, "cpu_seconds": 0.914370605, "peak_rss_kib": 101040, "workers": 1}

@@ -1,0 +1,25 @@
+Name                              Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------------------------
+audit_tests.py                      187      0     48      1    99%   290->exit
+repair_tests.py                     111      0     16      0   100%
+src/bounded_offset_repair.py        141      6     94      7    94%   121->117, 140, 160, 192, 196, 198, 200
+src/bounded_optimality_check.py      76     16     60     14    78%   14, 26, 29, 40, 42, 46, 48, 54, 61, 64, 66, 73, 77, 87, 93-94
+src/cases.py                         35      6     10      0    82%   21-22, 39-40, 45-46
+src/checker.py                      285     23    180     23    90%   26, 35, 39, 53, 60, 105, 111, 115, 122, 124, 128, 131, 137, 142, 146, 150, 153, 209, 219, 229, 242, 249, 255
+src/obstruction_check.py             34      5     26      8    78%   8->exit, 11, 14, 17, 22->exit, 24->exit, 27->exit, 28->exit, 38-39
+src/offset_repair.py                110      3     78      4    96%   88->84, 104, 119, 135
+src/optimality_check.py              46      8     36      6    83%   11, 18, 27, 31, 34, 41, 53-54
+src/oracle.py                        28      9     20      1    62%   12, 30-37
+src/policy_cases.py                  69      1     20      2    97%   15->exit, 38
+src/producer.py                     136      1     64      1    99%   168
+src/reference_check.py               23      0     26      7    86%   8->exit, 13->exit, 14->exit, 17->exit, 21->exit, 22->exit, 28->exit
+src/selection.py                     69      4     42      6    91%   13, 18, 20, 39->37, 46, 86->85
+src/semantic_check.py               111      4    122     32    85%   13, 17->exit, 19->exit, 22->exit, 26->exit, 29->exit, 32->exit, 33->exit, 35->exit, 38->exit, 39->exit, 40->exit, 43->exit, 51->exit, 53->exit, 54->exit, 56->exit, 57->exit, 60, 61->exit, 63->exit, 64->exit, 66->exit, 67->exit, 69->exit, 72->exit, 75->exit, 79->exit, 100->exit, 102, 123->exit, 128
+src/temporal.py                     126     14    124     31    82%   14, 20, 23, 25, 26->exit, 29, 30->exit, 32->exit, 33->exit, 36, 38, 39->exit, 42->exit, 48, 53, 56, 58, 59->exit, 62, 63->exit, 65->exit, 68, 69->exit, 71->exit, 74->exit, 78->exit, 79->exit, 81->exit, 83->exit, 94->exit, 136
+tests/test_boundaries.py             39      0      4      0   100%
+tests/test_core.py                  116      1     14      1    98%   138
+tests/test_policy.py                 37      0      8      0   100%
+tests/test_selection.py              30      0      6      0   100%
+tests/test_temporal.py               58      0      6      0   100%
+-----------------------------------------------------------------------------
+TOTAL                              1867    101   1004    144    91%

@@ -1,0 +1,1 @@
+{"status":"rejected before measurement completion","case":"initial wide-conjunction test generator","blocks":32,"body_width":31,"checker_limit":16,"exception":"ValueError: body width exceeds 16","repair":"replace wide-conjunction control with a binary-tree control; original checker bound unchanged","included_in_reported_timing_rows":false}

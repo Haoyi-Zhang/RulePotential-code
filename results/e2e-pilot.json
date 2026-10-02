@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "family": "exchange",
+      "length": 4096,
+      "partition": "block",
+      "atoms": 8194,
+      "rules": 8194,
+      "initialization_cpu_seconds": 0.0752353910000001,
+      "dred_cpu_seconds": 0.019454395999999985,
+      "certificate_cpu_seconds": 0.003326579999999968,
+      "checker_cpu_seconds": 9.231200000003881e-05,
+      "full_check_cpu_seconds": 0.010150321999999878,
+      "certificate_bytes": 67,
+      "checker_counters": {
+        "truth_fields": 1,
+        "witness_heads": 1,
+        "witness_literals": 1,
+        "closure_rules": 0,
+        "closure_literals": 0,
+        "offset_fields": 1,
+        "pair_checks": 1,
+        "segment_updates": 1,
+        "segment_steps": 1
+      },
+      "dred_counters": {
+        "overdeleted": 8193,
+        "rule_checks": 24579,
+        "body_tests_upper_bound": 24579
+      }
+    },
+    {
+      "family": "exchange",
+      "length": 4096,
+      "partition": "scalar",
+      "atoms": 8194,
+      "rules": 8194,
+      "initialization_cpu_seconds": 0.12222923899999993,
+      "dred_cpu_seconds": 0.01916610899999993,
+      "certificate_cpu_seconds": 0.07365112600000012,
+      "checker_cpu_seconds": 0.005902200999999607,
+      "full_check_cpu_seconds": 0.014321829000000008,
+      "certificate_bytes": 48103,
+      "checker_counters": {
+        "truth_fields": 1,
+        "witness_heads": 1,
+        "witness_literals": 1,
+        "closure_rules": 0,
+        "closure_literals": 0,
+        "offset_fields": 4096,
+        "pair_checks": 4096,
+        "segment_updates": 2,
+        "segment_steps": 2
+      },
+      "dred_counters": {
+        "overdeleted": 8193,
+        "rule_checks": 24579,
+        "body_tests_upper_bound": 24579
+      }
+    }
+  ],
+  "peak_rss_kib": 122200,
+  "process_cpu_seconds": 2.097331275,
+  "status": "all_checks_accepted"
+}

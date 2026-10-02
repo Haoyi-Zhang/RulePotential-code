@@ -1,0 +1,55 @@
+{
+  "cases": 331776,
+  "certificate_failures": 0,
+  "cpu_seconds": 6.768564177,
+  "feasible_cases": 125577,
+  "graph_profile_feasible": 4651,
+  "graph_profile_pairs": 12288,
+  "graphs": 4096,
+  "infeasible_cases": 206199,
+  "interval_profiles": 3,
+  "optimizer_mismatches": 0,
+  "optimum_histogram": {
+    "0": 18877,
+    "1": 53490,
+    "2": 40386,
+    "3": 12824
+  },
+  "peak_rss_kib": 93096,
+  "profile_counts": {
+    "lower-skew": {
+      "cases": 110592,
+      "feasible_cases": 37071,
+      "infeasible_cases": 73521,
+      "optimum_histogram": {
+        "0": 3689,
+        "1": 13146,
+        "2": 14532,
+        "3": 5704
+      }
+    },
+    "symmetric": {
+      "cases": 110592,
+      "feasible_cases": 51435,
+      "infeasible_cases": 59157,
+      "optimum_histogram": {
+        "0": 11499,
+        "1": 27198,
+        "2": 11322,
+        "3": 1416
+      }
+    },
+    "upper-skew": {
+      "cases": 110592,
+      "feasible_cases": 37071,
+      "infeasible_cases": 73521,
+      "optimum_histogram": {
+        "0": 3689,
+        "1": 13146,
+        "2": 14532,
+        "3": 5704
+      }
+    }
+  },
+  "wall_seconds": 6.768845069000008
+}

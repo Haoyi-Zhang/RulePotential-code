@@ -1,0 +1,14 @@
+{
+  "maxatom_systems": 600,
+  "assignments": 15000,
+  "satisfying_assignments": 7768,
+  "forward_mismatches": 0,
+  "reverse_mismatches": 0,
+  "scope": "finite assignment equivalence checks, not an unbounded decision procedure",
+  "run": {
+    "wall_seconds": 0.11099839000007705,
+    "cpu_seconds": 0.10972903599999995,
+    "peak_rss_kib": 94256,
+    "workers": 1
+  }
+}
