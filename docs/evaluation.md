@@ -83,8 +83,7 @@ comparison, realistic workload-derived block selection, selection-aware producer
 and unbounded temporal semantics are outside the evidence.
 
 The general arguments are in model-and-proofs.md. The checker, full scanner,
-oracles, and reductions are independently implemented in the software sense,
-not independently authored or externally reviewed. All finite tests supplement,
+oracles, and reductions are separately implemented. All finite tests supplement,
 rather than mechanically certify, those arguments.
 
 ## Clean standalone reproduction

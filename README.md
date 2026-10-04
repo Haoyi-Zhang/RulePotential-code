@@ -133,11 +133,7 @@ transaction, or full probabilistic provenance. Ordinary packet rejection is
 rolled back in memory; process failure or memory exhaustion during commit is
 outside that claim. A full singleton reinitialization is a global fallback.
 
-Original artifact files use the MIT license. Casbin records retain Apache-2.0.
-This research artifact was developed with substantive generative-AI assistance
-in reasoning, implementation, evaluation, and writing. Named-person endorsement
-or external publication approval is not asserted. Do not treat an internal
-mathematical prototype as a verified operational decision service.
+Original artifact files use the MIT license. Casbin records retain Apache-2.0. Do not treat the mathematical prototype as a verified operational decision service.
 
 ## Manuscript data exports
 
