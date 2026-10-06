@@ -1,0 +1,11 @@
+test_bounded_optimizer_against_box_enumeration (__main__.IndependentAuditTests.test_bounded_optimizer_against_box_enumeration) ... ok
+test_malformed_optimizer_inputs_raise_value_error (__main__.IndependentAuditTests.test_malformed_optimizer_inputs_raise_value_error) ... ok
+test_random_maxatom_forward_and_reverse_equivalence (__main__.IndependentAuditTests.test_random_maxatom_forward_and_reverse_equivalence) ... ok
+test_random_multibody_updates_and_transactional_rejection (__main__.IndependentAuditTests.test_random_multibody_updates_and_transactional_rejection) ... ok
+test_strict_input_contracts (__main__.IndependentAuditTests.test_strict_input_contracts) ... ok
+test_unbounded_optimizer_against_subset_oracle (__main__.IndependentAuditTests.test_unbounded_optimizer_against_subset_oracle) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.284s
+
+OK

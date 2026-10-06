@@ -1,0 +1,86 @@
+{
+  "completed_jobs": 49,
+  "units": {
+    "tests": 23,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "timing_environment": {
+    "file": "environment.json",
+    "architecture": {
+      "machine": "x86_64",
+      "pointer_bits": 64
+    },
+    "cpu": {
+      "affinity_cpu_count": 1,
+      "logical_cpu_count": 2,
+      "model": "AMD EPYC 7763 64-Core Processor"
+    },
+    "operating_system": {
+      "id": "ubuntu",
+      "kernel_release": "6.17.0-1022-azure",
+      "kernel_version": "#22-Ubuntu SMP Mon Jul 27 17:24:03 UTC 2026",
+      "pretty_name": "Ubuntu 24.04.5 LTS",
+      "system": "Linux",
+      "version_id": "24.04"
+    },
+    "python": {
+      "cache_tag": "cpython-312",
+      "full_version": "3.12.14 (main, Aug 13 2026, 02:47:42) [GCC 13.3.0]",
+      "implementation": "CPython",
+      "version": "3.12.14"
+    },
+    "recording_status": "captured_before_run",
+    "schema": "runtime-environment-1",
+    "timing_clocks": {
+      "driver_elapsed": "time.monotonic",
+      "kernel_elapsed": "time.perf_counter_ns",
+      "process_cpu": "time.process_time/resource.getrusage as documented by each runner"
+    }
+  },
+  "correct": {
+    "transitions": 32768,
+    "oracle_mismatches": 0,
+    "rollback_mismatches": 0,
+    "deletions": 9728,
+    "insertions": 9728,
+    "mixed": 9216,
+    "no_base_change": 4096
+  },
+  "candidate": {
+    "candidate_packets": 112896,
+    "accepted_packets": 8448,
+    "wrong_models_accepted": 0,
+    "old_new_pairs_with_certificate": 1024,
+    "rollback_mismatches": 0
+  },
+  "representation": {
+    "cases": 8640,
+    "feasible": 1779,
+    "internal_order": 4629,
+    "positive_cycle": 2232,
+    "checked_obstructions": 6861,
+    "oracle_mismatches": 0
+  },
+  "selection": {
+    "maxatom_systems": 600,
+    "assignments": 15000,
+    "satisfying_assignments": 7768,
+    "forward_mismatches": 0,
+    "reverse_mismatches": 0,
+    "scope": "finite assignment equivalence checks, not an unbounded decision procedure"
+  },
+  "timing_rows": 168,
+  "policy_updates": 216,
+  "policy_status_counts": {
+    "accepted": 216
+  },
+  "max_atoms": 32770,
+  "max_rules": 32770,
+  "peak_rss_kib": 170720,
+  "kernel_cpu_seconds": 46.326693364,
+  "child_cpu_seconds_including_startup": 51.972242,
+  "timeouts": 0,
+  "failed_commands": 0
+}

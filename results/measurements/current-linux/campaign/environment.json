@@ -1,0 +1,32 @@
+{
+  "architecture": {
+    "machine": "x86_64",
+    "pointer_bits": 64
+  },
+  "cpu": {
+    "affinity_cpu_count": 1,
+    "logical_cpu_count": 2,
+    "model": "AMD EPYC 7763 64-Core Processor"
+  },
+  "operating_system": {
+    "id": "ubuntu",
+    "kernel_release": "6.17.0-1022-azure",
+    "kernel_version": "#22-Ubuntu SMP Mon Jul 27 17:24:03 UTC 2026",
+    "pretty_name": "Ubuntu 24.04.5 LTS",
+    "system": "Linux",
+    "version_id": "24.04"
+  },
+  "python": {
+    "cache_tag": "cpython-312",
+    "full_version": "3.12.14 (main, Aug 13 2026, 02:47:42) [GCC 13.3.0]",
+    "implementation": "CPython",
+    "version": "3.12.14"
+  },
+  "recording_status": "captured_before_run",
+  "schema": "runtime-environment-1",
+  "timing_clocks": {
+    "driver_elapsed": "time.monotonic",
+    "kernel_elapsed": "time.perf_counter_ns",
+    "process_cpu": "time.process_time/resource.getrusage as documented by each runner"
+  }
+}

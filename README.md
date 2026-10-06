@@ -255,4 +255,15 @@ per-child limits. Every scientific failure remains a failed step, and an
 `always()` upload retains raw attempts. The existing material-integrity workflow
 still checks only supplied-file and syntax integrity. Neither workflow builds the
 paper, verifies external source claims, or establishes the general theorems. A
-prepared workflow is not evidence that it has been run or passed on GitHub.
+configured workflow does not by itself establish a successful run.
+
+The current Ubuntu 24.04.5 / CPython 3.12.14 execution passed all 44 tests,
+all 49 campaign jobs, and both complete repair oracles. Every deterministic
+job payload and both oracle outputs matched the retained results, excluding
+recorded timing, resource, and environment fields. The campaign measured
+51.972242 child CPU seconds including startup, 46.326693364 kernel CPU seconds,
+and 170,720 KiB peak child RSS. The unbounded oracle covered 110,592 pairs;
+the bounded oracle covered 331,776 cases, with no disagreement or certificate
+failure. Current summaries, environment, command accounting, and test logs are
+in `results/measurements/current-linux/`; the historical timing tables above
+remain historical measurements rather than being silently relabeled.
