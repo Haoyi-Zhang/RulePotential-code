@@ -1,0 +1,58 @@
+name: Scientific finite checks
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  finite-checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      README_ENTRY: 'README.md'
+      MIN_EXPECTED_PYTHON_SOURCES: '33'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Run offline finite checks from the flat artifact repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          export P069_OUTPUT="$RUNNER_TEMP/p069-scientific"
+          mkdir -p "$P069_OUTPUT"
+          ulimit -v 3670016
+          ulimit -t 600
+          cpu=$(python -B -c 'import os; print(min(os.sched_getaffinity(0)))')
+          timeout --signal=TERM --kill-after=10s 12m taskset -c "$cpu" bash -euo pipefail <<'CHECKS' >"$P069_OUTPUT/whole-run.stdout.txt" 2>"$P069_OUTPUT/whole-run.stderr.txt"
+          python -B .github/scripts/check_repository.py >"$P069_OUTPUT/materials.stdout.txt" 2>"$P069_OUTPUT/materials.stderr.txt"
+          python -B example.py >"$P069_OUTPUT/example.stdout.txt" 2>"$P069_OUTPUT/example.stderr.txt"
+          python -B -m unittest discover -s tests -v >"$P069_OUTPUT/units.stdout.txt" 2>"$P069_OUTPUT/units.stderr.txt"
+          python -B repair_tests.py -v >"$P069_OUTPUT/repair-tests.stdout.txt" 2>"$P069_OUTPUT/repair-tests.stderr.txt"
+          python -B audit_tests.py -v >"$P069_OUTPUT/audit-tests.stdout.txt" 2>"$P069_OUTPUT/audit-tests.stderr.txt"
+          python -B reproduce.py --out "$P069_OUTPUT/campaign" >"$P069_OUTPUT/campaign.stdout.txt" 2>"$P069_OUTPUT/campaign.stderr.txt"
+          python -B summarize.py "$P069_OUTPUT/campaign" --compare results/campaign >"$P069_OUTPUT/comparison.stdout.txt" 2>"$P069_OUTPUT/comparison.stderr.txt"
+          python -B repair_experiments.py --out "$P069_OUTPUT/unbounded.json" --compare results/offset-repair.json >"$P069_OUTPUT/unbounded.stdout.txt" 2>"$P069_OUTPUT/unbounded.stderr.txt"
+          python -B bounded_repair_experiments.py --out "$P069_OUTPUT/bounded.json" --compare results/bounded-offset-repair.json >"$P069_OUTPUT/bounded.stdout.txt" 2>"$P069_OUTPUT/bounded.stderr.txt"
+          CHECKS
+      - name: Upload raw attempts and finite outputs, including failures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: p069-scientific-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/p069-scientific/
+          if-no-files-found: warn
+          retention-days: 14

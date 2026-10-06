@@ -1,0 +1,52 @@
+{
+  "scope": "Owned offline finite checks of reviewed functions; not a mechanized proof, POSIX CLI reproduction, remote CI run, or new original-host benchmark",
+  "date": "2026-10-06",
+  "environment": {
+    "operating_system": "Windows-11-10.0.28000-SP0",
+    "architecture": "AMD64, 64-bit",
+    "python": "CPython 3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "execution": {
+    "isolated_jobs": 53,
+    "failed_jobs": 0,
+    "timeouts": 0,
+    "whole_run_wall_seconds": 42.719,
+    "summed_child_helper_cpu_seconds": 35.4375,
+    "peak_child_working_set_kib": 170392,
+    "limits": "Windows Job Object: one process, 35 user-CPU seconds, 3500000000 bytes committed memory; parent wall watchdog 45 seconds per job and 900 seconds whole run",
+    "driver_scope": "POSIX-only resource imports omitted during AST loading; reviewed helper bodies and semantic fail gates unchanged; CLI main functions not called. The bounded helper resource observation used real Windows peak working set, not Linux ru_maxrss."
+  },
+  "tests": {
+    "original_methods": 23,
+    "repair_methods": 15,
+    "audit_methods": 6,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "finite_comparisons": {
+    "correct_transitions": 32768,
+    "candidate_packets": 112896,
+    "candidate_acceptances": 8448,
+    "wrong_models_accepted": 0,
+    "covered_candidate_base_pairs": 1024,
+    "representation_cases": 8640,
+    "representation_feasible": 1779,
+    "checked_obstructions": 6861,
+    "maxatom_systems": 600,
+    "maxatom_assignments": 15000,
+    "temporal_policy_updates": 216,
+    "original_structured_rows": 168,
+    "unbounded_graph_target_pairs": 110592,
+    "unbounded_feasible": 51435,
+    "unbounded_infeasible": 59157,
+    "unbounded_structured_rows": 126,
+    "bounded_graph_target_box_cases": 331776,
+    "bounded_feasible": 125577,
+    "bounded_infeasible": 206199,
+    "deterministic_mismatches": 0,
+    "valid_optimality_certificates_rejected": 0
+  },
+  "comparison_rule": "All returned deterministic fields matched retained campaign and repair outputs. Time, resource observations, and environment records were excluded from equality; Windows timings do not replace manuscript historical timings.",
+  "raw_attempts": "Kept outside the deliverable in the authorized review workspace. Standard Linux reproduction commands independently regenerate the same finite cases; the Windows review harness is not the artifact CLI."
+}

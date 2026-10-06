@@ -7,7 +7,10 @@ depth.  `bibliography_verification.csv` separately records title, authors, year,
 venue, volume/issue/pages or article number, DOI or stable primary record, and the
 record used for the final metadata cross-check.
 
-Run the deterministic consistency audit from this repository root:
+Run the deterministic consistency audit from `artifact/` in the complete
+delivered project. It requires the sibling `../paper/` manuscript; the flat
+code-only repository alone cannot perform this optional manuscript audit.
+Alternatively, pass `--root /path/to/project` with both directories:
 
 ```sh
 python verify_bibliography.py --minimum 55 \

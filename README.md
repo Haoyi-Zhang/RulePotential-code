@@ -53,6 +53,15 @@ byte-identity, checksum, or software-environment attestation.
 
 ## Timing-environment provenance
 
+`results/finite-checks.json` records an additional offline finite rerun on Windows
+11 with CPython 3.12.14. It repeats all stated enumerations, both repair oracles,
+216 policy updates, 168 original structured rows, 126 repair rows, and all 44 test
+methods. All deterministic fields match the retained results. The reviewed driver
+functions were invoked under native Windows process/memory/wall limits, not their
+POSIX command-line resource controls. This local check is not a remote CI run,
+mechanized proof, or replacement for the original timing observations; raw review
+attempts are kept outside the deliverable.
+
 The retained original campaign, unbounded repair, bounded repair, and earlier clean
 reproduction outputs did not record CPU model/architecture, OS/kernel, or Python
 implementation and full version. Those fields are not recoverable from the
@@ -196,6 +205,13 @@ calibration contract. See `docs/bibliography-verification.md`.
 python verify_bibliography.py --minimum 55 --out results/bibliography-verification.json
 ```
 
+This bibliography command is a **complete-project** check: it also reads the
+sibling `../paper/` manuscript and bibliography. Run it from `artifact/` in the
+delivered project, or give `--root /path/to/project` containing both `paper/` and
+`artifact/`. A flat code-only repository does not contain the manuscript; its
+computational reproduction is standalone, but this optional manuscript audit is
+not. The frozen source and metadata ledgers do not supply source-paper full texts.
+
 The completed planning
 calibration contains 12 full AIJ slots, 5 influential/foundational slots, and 5
 adjacent-venue slots (21 unique papers because one foundation overlaps), with an
@@ -227,3 +243,16 @@ deterministic equality rule. The retained final logs show 23 original tests, 15
 repair tests, and 6 independent property/input-contract audit tests: all 44 test
 methods passed. These executions are reproducibility checks, not mechanized proofs
 or independent peer review.
+
+## Scientific workflow
+
+The prepared `.github/workflows/scientific-checks.yml` runs the offline example,
+all three test suites, the 49-job campaign with deterministic comparison, and both
+complete repair oracles on Ubuntu 24.04 from a flat artifact-repository root. Its
+whole scientific step has a 12-minute wall watchdog, one-core affinity, a 3.5 GiB
+address-space limit, and inherited CPU limits; the drivers retain their tighter
+per-child limits. Every scientific failure remains a failed step, and an
+`always()` upload retains raw attempts. The existing material-integrity workflow
+still checks only supplied-file and syntax integrity. Neither workflow builds the
+paper, verifies external source claims, or establishes the general theorems. A
+prepared workflow is not evidence that it has been run or passed on GitHub.
