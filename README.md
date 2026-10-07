@@ -89,6 +89,16 @@ reference, fixed-proof offset synthesis, and packet construction. It is not an
 optimized external engine and is not a complete search over all compatible
 proof choices.
 
+Fixed-proof synthesis sorts its immutable block-edge sequence once per call and
+reuses that order on every relaxation pass. A transport-bound rebase builds its
+own sequence. This preserves the chosen proof, deterministic obstruction edges,
+pass/relaxation counters, and packet format; no elapsed-time improvement is claimed.
+Run `python -B potential_regression.py -v` for six untimed regressions using
+test-local simple-path, finite offset-box, and interpretation references. The
+scientific workflow invokes this command explicitly. These six methods are
+separate from the retained 23/15/6 suites and their 44-method historical receipts;
+the current source inventory contains 50 methods, not a new full-campaign result.
+
 `src/reference_check.py` is a separate full-certificate scan. `src/oracle.py`
 enumerates closed interpretations on tiny ground inputs. `src/temporal.py` and
 `semantic_check.elaborate` are two separately implemented temporal expanders.
@@ -183,7 +193,7 @@ independent optimality checking. The bounded oracle crosses the same graphs and
 old vectors with three interval profiles: 331,776 cases, 125,577 feasible and
 206,199 infeasible, again with zero optimizer or certificate disagreement. Fifteen
 repair tests preserve the original 23-test/49-job contract. Six separately written
-property and input-contract audits bring the delivered total to 44 test methods;
+property and input-contract audits bring the retained three-suite total to 44 methods;
 all three test commands are required for that total. Oracle and proof boundaries are in
 `docs/offset-repair.md`.
 

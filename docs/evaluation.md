@@ -116,8 +116,14 @@ It contains 125,577 feasible and 206,199 infeasible cases, with zero feasibility
 minimum-count, or certificate disagreement. Full enumeration bounds, hypotheses,
 controls, measured costs, and limits are in `docs/offset-repair.md`. The original
 49-job results are unchanged and are not relabelled as outcomes of either optimizer.
-The complete executable test count is 23 original, 15 repair, and 6 independent
+The retained campaign test count is 23 original, 15 repair, and 6 independent
 property/input-contract audit tests: 44 methods in total.
+
+Six additional untimed methods in `potential_regression.py` use test-local
+simple-path, finite offset-box, and interpretation references. Scientific CI
+invokes them explicitly; the current source inventory has 50 methods. They do
+not regenerate the retained campaign, establish a general proof, or measure
+a synthesis speedup.
 
 The new samples use tentative checks on one unchanged verified session per
 setting, not reallocation of persistent state at every repetition. They cannot

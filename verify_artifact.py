@@ -21,6 +21,7 @@ from typing import Any
 CUTOFF = date(2026, 9, 16)
 EXPECTED_PROJECT_ENTRIES = {"README.md", "artifact", "paper"}
 EXPECTED_TEST_METHODS = {"tests": 23, "repair_tests.py": 15, "audit_tests.py": 6}
+EXPECTED_TEST_METHODS["potential_regression.py"] = 6
 
 
 def _json(path: Path) -> dict[str, Any]:
@@ -106,7 +107,7 @@ def audit(artifact: Path) -> dict[str, Any]:
         "README.md", "LICENSE", "run_environment.py", "src/checker.py", "src/producer.py",
         "src/offset_repair.py", "src/optimality_check.py",
         "src/bounded_offset_repair.py", "src/bounded_optimality_check.py",
-        "tests/test_core.py", "repair_tests.py", "audit_tests.py",
+        "tests/test_core.py", "repair_tests.py", "audit_tests.py", "potential_regression.py",
         "claim_evidence_ledger.csv", "external_resources.csv",
         "literature_sources.csv", "literature_calibration.csv",
         "bibliography_verification.csv", "verify_bibliography.py",

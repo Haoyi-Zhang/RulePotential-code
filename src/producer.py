@@ -128,9 +128,11 @@ not representable with this fixed partition. It does not mean non-entailment.
     parent = {}
     last = None
     relaxations = 0
+    # This invocation's selected constraints do not change between passes.
+    ordered_edges = tuple(sorted(weights.items()))
     for iteration in range(program.k):
         last = None
-        for (u, v), w in sorted(weights.items()):
+        for (u, v), w in ordered_edges:
             if offsets[v] < offsets[u] + w:
                 offsets[v] = offsets[u] + w
                 parent[v] = u

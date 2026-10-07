@@ -20,7 +20,7 @@ jobs:
       OPENBLAS_NUM_THREADS: '1'
       MKL_NUM_THREADS: '1'
       README_ENTRY: 'README.md'
-      MIN_EXPECTED_PYTHON_SOURCES: '33'
+      MIN_EXPECTED_PYTHON_SOURCES: '34'
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
@@ -43,6 +43,7 @@ jobs:
           python -B -m unittest discover -s tests -v >"$P069_OUTPUT/units.stdout.txt" 2>"$P069_OUTPUT/units.stderr.txt"
           python -B repair_tests.py -v >"$P069_OUTPUT/repair-tests.stdout.txt" 2>"$P069_OUTPUT/repair-tests.stderr.txt"
           python -B audit_tests.py -v >"$P069_OUTPUT/audit-tests.stdout.txt" 2>"$P069_OUTPUT/audit-tests.stderr.txt"
+          python -B potential_regression.py -v >"$P069_OUTPUT/potential-regression.stdout.txt" 2>"$P069_OUTPUT/potential-regression.stderr.txt"
           python -B reproduce.py --out "$P069_OUTPUT/campaign" >"$P069_OUTPUT/campaign.stdout.txt" 2>"$P069_OUTPUT/campaign.stderr.txt"
           python -B summarize.py "$P069_OUTPUT/campaign" --compare results/campaign >"$P069_OUTPUT/comparison.stdout.txt" 2>"$P069_OUTPUT/comparison.stderr.txt"
           python -B repair_experiments.py --out "$P069_OUTPUT/unbounded.json" --compare results/offset-repair.json >"$P069_OUTPUT/unbounded.stdout.txt" 2>"$P069_OUTPUT/unbounded.stderr.txt"
