@@ -1,345 +1,127 @@
-# Proof-carrying knowledge graph
+# Block-Potential Certificates
 
-A standalone, offline research artifact for **Block-Potential Certificates for
-Incremental Temporal Rule Reasoning**. It checks exact finite positive Horn
-materialisations after mixed base updates. It does not implement a clinical
-system or deploy an access-control service.
+An offline artifact for *Block-Potential Certificates for Incremental Temporal Rule Reasoning*. It checks exact finite positive Horn materialisations after mixed base updates. It does not deploy an access-control service or clinical system.
 
-## Run from a clean extraction
+## Requirements and quick checks
 
-Use Python 3.10 or newer on a POSIX/Linux host with the standard `resource`
-module. No package installation, network, GPU, model API, external solver, or
-other project directory is required. Scientific consistency checks use explicit
-failures and remain active under `python -O`; normal non-optimized execution is
-still the documented route. A bounded optimized-mode smoke record is retained in
-`results/optimized-mode-smoke.json`.
+Run from this directory with Python 3.10+ and the standard library. Original campaign/repair runners require POSIX/Linux's `resource` module. The complete-cost tools and PDF-tool regressions also run on Windows. No package installation, network, GPU, model API, external solver, or other project is needed for computational reproduction. Normal execution is documented; scientific consistency checks use explicit failures and remain active under `python -O`.
+
+The test suites are separate commands:
 
 ```sh
-python example.py
-python -m unittest discover -s tests -v
-python reproduce.py --out reproduced-results
-python summarize.py reproduced-results --compare results/campaign
-python verify_artifact.py --out results/artifact-structure-check.json
+python -B example.py
+python -B -m unittest discover -s tests -v
+python -B repair_tests.py -v
+python -B audit_tests.py -v
+python -B potential_regression.py -v
+python -B complete_cost_regression.py -v
+python -B pdf_tools_regression.py -v
 ```
 
-The first command demonstrates rejection with unchanged state followed by a
-valid update. The full campaign contains 49 serial jobs. Each child has an
-independent 40-second parent watchdog, a 38/39-second soft/hard CPU limit, and a
-3.5 GiB address-space limit. A child failure stops the campaign and retains its
-stdout, stderr, and accounting. On a slower host a timeout is a reported failure,
-not a missing case to exclude. There is no promise of equal timings on another
-machine. Do not run several campaign drivers concurrently.
+Their method counts are 23, 15, 6, 6, 8, and 2: 60 in the current inventory. Discovery under `tests/` alone runs 23, not 60. Historical 44-test receipts cover only the first three suites. The six potential regressions and eight complete-cost regressions are untimed; the latter include 20,736 two-atom candidate packets checked against a test-local interpretation oracle. PDF-tool tests mock Poppler output and need no Poppler installation.
 
-For a bounded interactive invocation, process a few jobs at a time:
+## Original campaign
+
+Choose a fresh output directory, never the retained `results/campaign/`:
 
 ```sh
-python reproduce.py --out reproduced-results --max-jobs 4
-python reproduce.py --out reproduced-results --resume --max-jobs 4
+python -B reproduce.py --out reproduced-results
+python -B summarize.py reproduced-results --compare results/campaign
 ```
 
-Repeat the second command until all 49 jobs are present, then run the summary
-comparison. `--resume` skips only a result having a successful recorded exit;
-final summarization validates all expected files and outcomes. To obtain a
-small smoke check instead, use `python reproduce.py --quick --out quick-results`.
-The quick route is **not** the full campaign and cannot be summarized as one.
-Never point a new campaign at the retained measured directory. No output is
-silently overwritten without explicit resumption.
+The full run has 49 serial jobs. Each child has a 40-second watchdog, 38/39-second soft/hard CPU limits, and a 3.5 GiB address-space limit. Failures/timeouts stop the campaign and retain stdout, stderr, and accounting. Do not run multiple campaign drivers concurrently. No cross-host timing equality is promised.
 
-`summary.json` describes the validated full campaign. Comparison requires all
-deterministic results, dimensions, counters, accepted/rejected statuses, and
-selection outcomes to match. Kernel times and per-job resource observations
-are excluded from equality but retained as new measurements. It is not a
-byte-identity, checksum, or software-environment attestation.
+For bounded interactive execution:
 
-## Timing-environment provenance
+```sh
+python -B reproduce.py --out reproduced-results --max-jobs 4
+python -B reproduce.py --out reproduced-results --resume --max-jobs 4
+```
 
-`results/finite-checks.json` records an additional offline finite rerun on Windows
-11 with CPython 3.12.14. It repeats all stated enumerations, both repair oracles,
-216 policy updates, 168 original structured rows, 126 repair rows, and all 44 test
-methods. All deterministic fields match the retained results. The reviewed driver
-functions were invoked under native Windows process/memory/wall limits, not their
-POSIX command-line resource controls. This local check is not a remote CI run,
-mechanized proof, or replacement for the original timing observations; raw review
-attempts are kept outside the deliverable.
+Repeat the second command until all 49 jobs exist, then summarize/compare. A bounded driver exit alone does not establish a complete campaign. Resume skips only outputs with successful recorded exits and rejects a changed recorded environment. `--quick` instead runs the unit suite and one small timing sample; it cannot be summarized as the full campaign. Existing nonempty output requires explicit resumption.
 
-The retained original campaign, unbounded repair, bounded repair, and earlier clean
-reproduction outputs did not record CPU model/architecture, OS/kernel, or Python
-implementation and full version. Those fields are not recoverable from the
-retained evidence, and this artifact does not substitute the current machine or a
-later rerun. `results/resource-intake.json` preserves the recorded quota and
-resource envelope; the companion environment records explicitly mark the missing
-fields. Consequently, the old absolute times are traceable to their raw samples
-but not to a fully identified original execution environment.
+Comparison checks deterministic dimensions, counters, outcomes, and selection results, excluding kernel times, resources, and environment metadata. New runs write `environment.json` before their first job and link accounting rows to it.
 
-New `reproduce.py` outputs write `environment.json` before the first job and link
-every `execution.json` row to it. Resuming under a different recorded environment
-is rejected. The unbounded and bounded repair runners embed the same environment
-record in their output JSON. Deterministic comparisons continue to compare models,
-counters, statuses, and byte counts while excluding time, resource, and environment
-metadata.
+## Fixed-proof minimum-field repair
 
-## Files and trust boundaries
+The unbounded and interval-bounded optimizers retain as many old offsets as possible for a fixed selected proof. They do not choose a partition or proof, minimize packet bytes, or introduce a new generic isotonic algorithm. Both use exact integers and are capped at 256 blocks. The bounded variant trusts the supplied per-coordinate integer intervals.
 
-`src/checker.py` owns the complete rule indexes, selected witnesses, selected
-consumer lists, block maxima, and active boundary lists. It imports none of the
-producer or oracle implementations. Initialization checks a full certificate;
-updates trust only that verified preceding state and the immutable input.
-`src/producer.py` implements fresh semi-naive evaluation, a ground DRed
-reference, fixed-proof offset synthesis, and packet construction. It is not an
-optimized external engine and is not a complete search over all compatible
-proof choices.
+```sh
+python -B repair_experiments.py --out offset-reproduced.json --compare results/offset-repair.json
+python -B bounded_repair_experiments.py --out bounded-reproduced.json --compare results/bounded-offset-repair.json
+```
 
-Fixed-proof synthesis sorts its immutable block-edge sequence once per call and
-reuses that order on every relaxation pass. A transport-bound rebase builds its
-own sequence. This preserves the chosen proof, deterministic obstruction edges,
-pass/relaxation counters, and packet format; no elapsed-time improvement is claimed.
-Run `python -B potential_regression.py -v` for six untimed regressions using
-test-local simple-path, finite offset-box, and interpretation references. The
-scientific workflow invokes this command explicitly. These six methods are
-separate from the retained 23/15/6 suites and their 44-method historical receipts;
-the current source inventory contains 60 methods, including two PDF-tool
-decoding regressions and the eight separate
-complete-cost regressions below, not a new full-campaign result.
+The unbounded oracle covers 110,592 graph-target pairs (51,435 feasible, 59,157 infeasible); the bounded oracle covers 331,776 cases (125,577 feasible, 206,199 infeasible). Retained optimizer/certificate disagreement counts are zero. These are finite checks, not mechanized general proofs. `docs/offset-repair.md` gives assumptions, certificates, and oracle bounds.
 
-`src/reference_check.py` is a separate full-certificate scan. `src/oracle.py`
-enumerates closed interpretations on tiny ground inputs. `src/temporal.py` and
-`semantic_check.elaborate` are two separately implemented temporal expanders.
-`semantic_check.direct_model` intentionally reuses the latter's clauses and base
-and supplies only a fixed-point algorithm independent of producer counter/DRed;
-it is not a third front end and shares that expander's guard, shift, and interval
-failure boundary. `src/obstruction_check.py` checks explicit internal-edge or positive-cycle
-obstructions. `src/selection.py` implements the two Max-Atom reduction directions
-used by the finite assignment tests. `src/offset_repair.py` and
-`src/bounded_offset_repair.py` synthesize exact minimum-field repairs for fixed
-selected proofs, while `src/optimality_check.py` and
-`src/bounded_optimality_check.py` independently validate path/chain lower-bound
-certificates without importing optimizer, closure, or matching code. These
-independently written components are not independent human reviews or mechanized
-proofs.
-
-`docs/model-and-proofs.md` contains the mathematical specification and core proofs.
-`docs/offset-repair.md` contains the unbounded and interval-bounded repair proofs,
-certificate arguments, and exact-oracle boundaries. `docs/interface.md` specifies
-the executable interface, including unsupported operations. `docs/evaluation.md`
-explains counts, timing, and negative results. `claim_evidence_ledger.csv` connects
-retained claims to proofs and exact results; `external_resources.csv` records lawful
-inputs and source attribution. `literature_calibration.csv` and
-`docs/literature-calibration.md` record the completed 12+5+5 paper-planning matrix.
-Public policy fixtures are retained under `inputs/casbin/`; their temporal schedules
-and Horn adaptation are generated here, not observed production events.
+Three structured families retain 126 timing rows: one verified session and warm-up per setting, then seven tentative checks rolled back to that state, not fresh initialization. At 127 blocks, fan-out needs one optimal field instead of 126, but 3,439 bytes of optimality evidence exceed its 61-byte update packet. The tree gives no field improvement; ordered-chain exact repair changes the same 126 fields and has more packet bytes.
 
 ## Same-information complete costs
 
-`complete_cost.py` adds a serial source-to-output cost study on the current
-prototype, rather than rerunning or identifying the historical timing hosts.
-The unchanged block checker, an ordinary local checker with active individual
-boundary incidences, and a complete ranked-model scan consume identical
-compressed packets and verified predecessors. The ordinary local control also
-skips unchanged internal edges; pure exchange therefore gives constant rank
-work in both local implementations. A new dense-boundary control isolates the
-benefit of aggregating many active edges into a pair maximum.
+The block checker, an ordinary local checker with active individual boundary incidences, and a full ranked-model scan consume identical compressed packets and verified predecessors. Both local checkers skip unchanged internal edges; a dense-boundary control isolates pair-maximum aggregation rather than making the local baseline scan an entire translated block.
 
 ```sh
-python -B complete_cost_regression.py -v
-python -B pdf_tools_regression.py -v
 python -B complete_cost.py --check
+python -B verify_complete_cost.py results/complete-cost --check-exports results/complete-cost-validation
+```
+
+The first command runs an untimed smoke trace without writing results; the second checks retained samples, measured source identities, and exports without new measurements. To make a separately authorized new measurement, choose absent output directories and use the coordinated host's measurement runner when available:
+
+```sh
 python -B complete_cost.py --out fresh-complete-cost --repetitions 5
 python -B verify_complete_cost.py fresh-complete-cost --out fresh-validation
 ```
 
-These new commands use the standard library and run on Windows or POSIX. On a
-coordinated host, put the measurement command through its shared resource runner;
-`--check` and the regressions do not read clocks or write results. Do not point a
-new run at an existing output directory. The eight new methods include 20,736
-two-atom candidate-packet comparisons against a closed-superset oracle; they are
-separate from the retained 44-method receipts and six potential regressions.
+`results/complete-cost/` retains environment, source identities, warm-ups, and every sample; `results/complete-cost-validation/` retains validation, all-setting medians, and the native LaTeX table. There are 27 settings and 135 measured twelve-update traces: 1,365 genuine base changes and 255 no-ops per checker, 4,860 accepted commits, 405 rejection/rollback checks, 405 source-to-output rebuilds, and 15 singleton fallback initializations. All committed states/complete outputs agree. This run identifies CPython 3.12.14 on Windows 11/AMD64; the reported processor descriptor/kernel are retained in its environment record.
 
-Current measurements are in `results/complete-cost/`, with environment,
-source identities, warm-ups and every per-operation sample. The validation and
-all-setting median CSV and native LaTeX table are in `results/complete-cost-validation/`.
-There are 27 settings and 135 measured twelve-update traces: 1,365 genuine base
-changes and 255 separately identified no-ops per checker, 4,860 accepted commits,
-405 ordinary rejection/rollback tests, 405 source-to-output rebuilds, and 15
-checked singleton fallback initializations. All committed states and complete
-outputs agree. Current measurements use CPython 3.12.14 on Windows 11 / AMD64;
-the exact reported processor descriptor and kernel are in the environment record.
+At size 4,096 the first dense-boundary shift checks two pair inequalities versus 4,097 direct edges, with median check/commit times of 36.5 microseconds and 2.8732 milliseconds. Pure exchange checks one edge in both local controls and takes 29.0 versus 24.2 microseconds. The star's twelve-update check totals are 108.686/48.069/36.008 milliseconds for block/local/full. Policy schedules have no offset changes and repeated grounding dominates their cost. These conditional kernel savings are not a general lifecycle advantage.
 
-At size 4,096, the first dense-boundary shift checks two pair inequalities versus
-4,097 direct rank edges: median check-and-commit times are 36.5 microseconds and
-2.8732 milliseconds. Pure exchange checks one edge in both local controls and
-takes 29.0 versus 24.2 microseconds. For the star, the twelve-update check totals
-are 108.686 milliseconds (block), 48.069 (ordinary local), and 36.008 (full).
-Policy schedules still have no offset changes, and their actual repeated
-grounding dominates the update account. These are conditional mechanism
-observations, not a general end-to-end advantage over ordinary local checking.
+Initialization, structural partition construction, production/maintenance, UTF-8 packet handling, check/commit, complete JSON answers, rejection, and authoritative-base rebuilding are charged. Lifecycle sums one initialization, twelve updates, one rejection, and one rebuild; that event mix is not an estimated production failure frequency. No durable crash transaction, persistence, automatic partition discovery, or external service is included. Definitions and all losses remain in `docs/complete-cost.md`.
 
-Initialization, structural partition construction, production, producer state
-maintenance, UTF-8 packet handling, check/commit, complete JSON answer generation,
-ordinary rejection, and authoritative-base rebuilding are all charged. The
-reported lifecycle sums one initialization, twelve updates, one rejection and
-one rebuild; this is a stated event mix, not a production failure-frequency
-estimate. The partition is supplied by a structural/temporal rule, not discovered
-automatically. No disk/network persistence, durable crash transaction or external
-decision service is added. Full definitions, all losses, the boundary construction,
-and the provenance/cost boundary are in `docs/complete-cost.md`.
+## Data exports
 
-`python -B verify_complete_cost.py results/complete-cost --check-exports results/complete-cost-validation`
-checks the retained raw samples, measured source identities and both numerical
-exports without writing. The tool's `--out` also generates
-`complete-cost-table.tex`; the manuscript imports that native table. In a full
-project, add `--paper ../paper/sections/evaluation.tex` to verify the actual input.
-Scientific CI runs the eight new regressions, the optimized untimed smoke trace
-and this retained-result/export check; it does not use CI runtimes as new timing
-samples. Local CI configuration changes are not a claim of a remote run.
-
-## Retained observations
-
-The measured campaign reports 23 passing unit tests, 32,768 exact update
-transitions, 112,896 candidate packets with no wrong model accepted, 8,640
-representation cases, 15,000 reduction assignments, and 216 accepted temporal
-policy updates. These finite checks do not replace the general proofs. Peak
-observed child RSS is 246,944 KiB; final measured campaign child CPU time including
-startup is 61.6 seconds. An earlier clock-resolution problem is preserved in
-`results/clock-resolution-observation.json`; the measured campaign uses elapsed
-rather than short-operation CPU timings.
-
-At family size 16,384, exchange uses a 69-byte block packet versus a 218,329-byte
-explicit scalar packet. However, the reference DRed producer is slower than
-fresh materialisation there. The star requires 16,384 witness replacements, and
-the fan-in exposes 16,384 closure rules. Local verification loses to full scans
-on those controls. No general end-to-end speedup is claimed.
-
-## Limits and license
-
-Fixed finite domains, positive rules, a fixed integer horizon, fixed rule set,
-partition, and local labels are required. There is no negation, invented object,
-program edit, horizon extension, concurrent update protocol, durable crash
-transaction, or full probabilistic provenance. Ordinary packet rejection is
-rolled back in memory; process failure or memory exhaustion during commit is
-outside that claim. A full singleton reinitialization is a global fallback.
-
-Original artifact files use the MIT license. Casbin records retain Apache-2.0. Do not treat the mathematical prototype as a verified operational decision service.
-
-## Manuscript data exports
-
-`python export_paper_data.py --out exported-data` regenerates the two numerical
-LaTeX tables, four PGFPlots input files, and the underlying timing summary CSV.
-Use `--check` to compare an existing export byte for byte without changing it.
-This operation needs no manuscript, network, optional library, or hidden cache.
-The final clean-extraction reproduction results are retained in
-`results/reproduction/`, separately from the original reported measurements.
-All 49 deterministic job outputs matched `results/campaign/`; no command failed or
-timed out. After the explicit-check hardening, the fresh run used 118.734062 child
-CPU seconds including startup, 51.154015374 kernel CPU seconds, and 248,144 KiB
-peak child RSS. Runtime and resource fluctuations are retained but are not
-semantic failures.
-
-## Exact minimum-field offset repair
-
-For a fixed feasible selected-proof graph, `src/offset_repair.py` specializes
-classical L0 violator-order/maximum-antichain methods to retain as many old block
-offsets as possible. It is **not** a new generic isotonic algorithm, a partition
-selector, or a joint witness optimizer. `src/optimality_check.py` independently
-checks a chain partition with actual weighted paths and a feasible vector meeting
-the certified lower bound. It imports no synthesis or matching code.
+Export retained observations without rerunning measurements, using separate output directories:
 
 ```sh
-python repair_tests.py -v
-python audit_tests.py -v
-python repair_experiments.py --out offset-reproduced.json --compare results/offset-repair.json
-python bounded_repair_experiments.py --out bounded-reproduced.json --compare results/bounded-offset-repair.json
-python export_repair_data.py --out repair-exports
-python export_repair_data.py --out repair-exports --check
+python -B export_paper_data.py --out exported-data
+python -B export_paper_data.py --out exported-data --check
+python -B export_repair_data.py --out repair-exports
+python -B export_repair_data.py --out repair-exports --check
 ```
 
-The unbounded oracle covers 4,096 directed weighted graphs and 27 old vectors each:
-110,592 graph-target pairs, with 51,435 feasible and 59,157 infeasible outcomes.
-It agrees on every optimum and feasibility decision, and all feasible outputs pass
-independent optimality checking. The bounded oracle crosses the same graphs and
-old vectors with three interval profiles: 331,776 cases, 125,577 feasible and
-206,199 infeasible, again with zero optimizer or certificate disagreement. Fifteen
-repair tests preserve the original 23-test/49-job contract. Six separately written
-property and input-contract audits bring the retained three-suite total to 44 methods;
-all three test commands are required for that total. Oracle and proof boundaries are in
-`docs/offset-repair.md`.
+The first exporter produces two numerical LaTeX tables, four PGFPlots inputs, and a timing-summary CSV. The second produces the repair table and all-setting CSV. Both need no manuscript/cache/network; `--check` compares existing export bytes without rewriting them. The complete-cost verifier's `--out` additionally generates `complete-cost-table.tex`; `--paper ../paper/sections/evaluation.tex` can check its manuscript consumer in a full project.
 
-Three new Horn families at 3–127 blocks retain 126 timing rows. Each setting uses
-one verified session, one warm-up and seven tentative checks rolled back to that
-same state. Fan-out needs one optimal field instead of 126 at 127 blocks, but the
-3,439-byte optimality evidence exceeds the 61-byte update packet. The binary-tree
-control gives no field improvement. On the ordered chain, both algorithms change
-126 fields, and the exact minimum-field result has *more* packet bytes. The optimizers are global, use exact integers, and are capped at 256 blocks. The
-bounded variant treats per-coordinate integer intervals as trusted constraints;
-neither optimizer minimizes packet bytes, proof choice, or partitions.
+## Implementation and contract
 
-`literature_sources.csv` maps all 63 manuscript references to primary source
-locations, exact supported roles, and honest reading depth. `bibliography_verification.csv` records the
-primary-record metadata cross-check, and `verify_bibliography.py` enforces the
-55-reference minimum, citation/ledger equality, DOI uniqueness, and the 12+5+5
-calibration contract. See `docs/bibliography-verification.md`. 
+`src/checker.py` owns rule indexes, witnesses, selected consumers, block maxima, and boundary lists without importing producer/oracle/full-scan implementations. Initialization checks a full certificate; updates trust that verified predecessor and immutable input. `src/producer.py` supplies fresh semi-naive evaluation, a ground DRed reference, fixed-proof offset synthesis, and packets, not an optimized external engine or complete proof-choice search. Fixed-proof synthesis reuses one sorted immutable edge sequence per call; transport rebase builds its own. Proof choices, obstruction edges, counters, and formats remain deterministic; no measured speedup is attributed to that bookkeeping.
+
+`src/reference_check.py` is a full scan; `src/oracle.py` enumerates tiny closed interpretations. `src/temporal.py` and `semantic_check.elaborate` separately expand temporal input. `semantic_check.direct_model` reuses the latter's clauses/base and checks fixed-point evaluation, not a third independent front end. Obstruction, selection-reduction, and independent repair-optimality checkers remain under `src/`.
+
+The contract requires finite domains, positive fixed rules, a fixed integer horizon, partition, and local labels. It excludes negation, invented objects, rule edits, horizon extension, concurrent updates, durable crash transactions, and full probabilistic provenance. Ordinary rejection rolls back in memory; process failure/memory exhaustion during commit is outside that guarantee. Singleton reinitialization is a global fallback. Specification/proofs, interface, and evaluation details are in `docs/model-and-proofs.md`, `docs/interface.md`, and `docs/evaluation.md`.
+
+## Retained evidence and provenance
+
+The original campaign records 32,768 update transitions, 112,896 candidate packets with no wrong model accepted, 8,640 representation cases, 15,000 reduction assignments, and 216 temporal policy updates. At size 16,384 exchange uses a 69-byte block packet versus 218,329 explicit scalar bytes, but the DRed producer is slower than fresh materialisation. Star/fan-in local checks lose to full scans on their controls. The clock-resolution observation and all negative results remain in `results/`.
+
+`results/reproduction/` retains a complete 49-job comparison; `results/offset-repair-reproduction.json` and `results/bounded-offset-repair-reproduction.json` retain the repair reruns and separate comparisons. `results/finite-checks.json` records a Windows finite rerun. `results/measurements/current-linux/` records Ubuntu 24.04.5/CPython 3.12.14 execution of the historical 44-test suite, 49 jobs, and both repair oracles. None is relabelled as a new 60-test/native measurement.
+
+The original campaign, repairs, and earlier clean reproduction did not record CPU model/architecture, OS/kernel, or full Python identity. Those fields remain explicitly unrecorded; later environments do not reconstruct them. `results/resource-intake.json` retains the quota/envelope. Absolute historical times remain raw observations with that host-identity limit.
+
+The scientific workflow runs all six current test commands, untimed optimized smoke, retained complete-cost/export checking, the 49-job comparison, and both repair oracles on Ubuntu 24.04. It retains failures and raw outputs with a 12-minute scientific-step watchdog, one-core affinity, and 3.5 GiB limit. Material-integrity CI checks syntax/files only; neither workflow proves theorems or checks live external sources.
+
+## Optional project audits and licenses
+
+`verify_artifact.py` checks frozen evidence, inventory, and import boundaries without rerunning experiments. It also checks the PDF via Poppler (`pdfinfo`, `pdftotext`) when run in a complete project with a sibling `paper/`; a flat artifact checkout skips that project-only section. Its default output is stdout:
+
 ```sh
-python verify_bibliography.py --minimum 55 --out results/bibliography-verification.json
+python -B verify_artifact.py
 ```
 
-This bibliography command is a **complete-project** check: it also reads the
-sibling `../paper/` manuscript and bibliography. Run it from `artifact/` in the
-delivered project, or give `--root /path/to/project` containing both `paper/` and
-`artifact/`. A flat code-only repository does not contain the manuscript; its
-computational reproduction is standalone, but this optional manuscript audit is
-not. The frozen source and metadata ledgers do not supply source-paper full texts.
+`verify_bibliography.py` is a complete-project check requiring both `artifact/` and `paper/`, not a flat-checkout dependency. It checks local citation/ledger consistency and the retained calibration contract, not publisher truth or unread source bodies:
 
-The completed planning
-calibration contains 12 full AIJ slots, 5 influential/foundational slots, and 5
-adjacent-venue slots (21 unique papers because one foundation overlaps), with an
-AIJ bibliography-count median of 48.5. No upstream paper PDFs or implementations
-are redistributed, and this planning calibration is not independent peer review.
+```sh
+python -B verify_bibliography.py --minimum 55 --out bibliography-check.json
+```
 
+Use `--root /path/to/project` for an explicit full-project root. The source/metadata ledgers retain 63 references and precise reading scopes; `docs/bibliography-verification.md` and `docs/literature-calibration.md` explain them. The 12+5+5 planning slots contain 21 unique papers because of one overlap, not independent peer review. `results/bibliography-verification-final.json` is a consumed frozen validator input and is retained unchanged.
 
-## Current clean reproduction
-
-`results/reproduction/` is the final clean-extraction recheck of all 49 original
-jobs. Every deterministic dimension, counter, accepted/rejected result, and finite
-selection outcome matched `results/campaign/`; timing and resource observations
-were retained as new measurements and excluded from equality. The run completed
-with zero timeouts and zero failed commands. See `results/reproduction/summary.json`
-and `results/reproduction/comparison.json`.
-
-`results/offset-repair-reproduction.json` repeats the complete unbounded oracle and
-structured families: 110,592 graph–target pairs, 51,435 feasible outcomes, 59,157
-infeasible outcomes, 126 workload rows, zero optimizer disagreement, and zero
-certificate failure. It used 5.272505468 process CPU seconds and 94,640 KiB peak
-RSS. `results/offset-repair-reproduction-comparison.json` records deterministic
-identity after excluding runtime/resource fields.
-
-`results/bounded-offset-repair-reproduction.json` repeats all 331,776 bounded cases:
-125,577 feasible and 206,199 infeasible, with zero optimizer disagreement and zero
-certificate failure. It used 14.112702954 process CPU seconds and 93,108 KiB peak
-RSS. `results/bounded-offset-repair-reproduction-comparison.json` records the same
-deterministic equality rule. The retained final logs show 23 original tests, 15
-repair tests, and 6 independent property/input-contract audit tests: all 44 test
-methods passed. These executions are reproducibility checks, not mechanized proofs
-or independent peer review.
-
-## Scientific workflow
-
-The prepared `.github/workflows/scientific-checks.yml` runs the offline example,
-all three test suites, the 49-job campaign with deterministic comparison, and both
-complete repair oracles on Ubuntu 24.04 from a flat artifact-repository root. Its
-whole scientific step has a 12-minute wall watchdog, one-core affinity, a 3.5 GiB
-address-space limit, and inherited CPU limits; the drivers retain their tighter
-per-child limits. Every scientific failure remains a failed step, and an
-`always()` upload retains raw attempts. The existing material-integrity workflow
-still checks only supplied-file and syntax integrity. Neither workflow builds the
-paper, verifies external source claims, or establishes the general theorems. A
-configured workflow does not by itself establish a successful run.
-
-The current Ubuntu 24.04.5 / CPython 3.12.14 execution passed all 44 tests,
-all 49 campaign jobs, and both complete repair oracles. Every deterministic
-job payload and both oracle outputs matched the retained results, excluding
-recorded timing, resource, and environment fields. The campaign measured
-51.972242 child CPU seconds including startup, 46.326693364 kernel CPU seconds,
-and 170,720 KiB peak child RSS. The unbounded oracle covered 110,592 pairs;
-the bounded oracle covered 331,776 cases, with no disagreement or certificate
-failure. Current summaries, environment, command accounting, and test logs are
-in `results/measurements/current-linux/`; the historical timing tables above
-remain historical measurements rather than being silently relabeled.
+`claim_evidence_ledger.csv` maps claims to evidence; `external_resources.csv`, `literature_sources.csv`, and `bibliography_verification.csv` retain lawful source identities. Casbin fixtures and attribution remain in `inputs/casbin/`, with original Apache-2.0 terms under `licenses/`; their temporal schedules/Horn adaptation are generated examples, not production observations or Casbin conformance. Original files use MIT (`LICENSE`). No upstream paper PDFs or implementations are redistributed.
