@@ -1,0 +1,53 @@
+{
+  "consumers": {
+    "block": {
+      "init_ns": 18500,
+      "output_bytes": 9,
+      "output_ns": 4500
+    },
+    "full": {
+      "init_ns": 13600,
+      "output_bytes": 9,
+      "output_ns": 3600
+    },
+    "ordinary-local": {
+      "init_ns": 14400,
+      "output_bytes": 9,
+      "output_ns": 3100
+    }
+  },
+  "failed_produce_ns": 6400,
+  "failed_synthesis_ns": 5900,
+  "materialize_ns": 2400,
+  "obstruction": {
+    "cycle": [
+      {
+        "edge": [
+          0,
+          3,
+          0
+        ],
+        "left": 1,
+        "right": 0,
+        "weight": 2
+      },
+      {
+        "edge": [
+          1,
+          1,
+          2
+        ],
+        "left": 0,
+        "right": 1,
+        "weight": 2
+      }
+    ],
+    "kind": "positive_cycle",
+    "weight_sum": 4
+  },
+  "partition_ns": 1200,
+  "potential_ns": 2800,
+  "producer_index_ns": 2200,
+  "repetition": 3,
+  "warmup": false
+}

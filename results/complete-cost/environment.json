@@ -1,0 +1,59 @@
+{
+  "accounting": "sum of disjoint stages, including delta sorting, producer offset copying and UTF-8 wire conversion; diagnostics excluded",
+  "clock": "perf_counter_ns",
+  "consumer_order": "cyclic counterbalanced",
+  "environment": {
+    "architecture": {
+      "machine": "AMD64",
+      "pointer_bits": 64
+    },
+    "cpu": {
+      "affinity_cpu_count": null,
+      "logical_cpu_count": 20,
+      "model": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel"
+    },
+    "operating_system": {
+      "id": null,
+      "kernel_release": "11",
+      "kernel_version": "10.0.28000",
+      "pretty_name": null,
+      "system": "Windows",
+      "version_id": null
+    },
+    "python": {
+      "cache_tag": "cpython-312",
+      "full_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "implementation": "CPython",
+      "version": "3.12.14"
+    },
+    "recorded_utc": "2026-10-15T04:21:19.139340+00:00",
+    "recording_status": "captured_before_run",
+    "schema": "runtime-environment-1",
+    "timing_clocks": {
+      "driver_elapsed": "time.monotonic",
+      "kernel_elapsed": "time.perf_counter_ns",
+      "process_cpu": "time.process_time/resource.getrusage as documented by each runner"
+    }
+  },
+  "memory": "identity-deduplicated reachable sys.getsizeof bytes; not peak RSS",
+  "output": "complete point-model JSON; temporal models coalesced to intervals",
+  "repetitions": 5,
+  "same_information": "identical compressed packet, fixed program/partition/proof and verified predecessor",
+  "schema": "p069-complete-cost-2",
+  "scope": "serial in-memory offline prototype; no disk/network persistence or crash transaction",
+  "sources_sha256": {
+    "complete_cost.py": "6722d9a6b8e1d7b762f8dead8d77f67b7dccdf2e649e268ea4b863eca2b75921",
+    "inputs/casbin/rbac_policy.csv": "1c9269ac13b459e35c669c98bf971ef5f140406d05adfd99e341567de5b54cc1",
+    "inputs/casbin/rbac_with_domains_policy.csv": "42b33853bec91cf70a5bed8597d38f44cc0244c30cfa0f8708fb992ac4812bdd",
+    "inputs/casbin/rbac_with_resource_roles_policy.csv": "4e68fad96a5e091e2320bc489f601c9001d5b1c4e0672214410469e3cf3a3067",
+    "run_environment.py": "f622204d8ab67aaa737a996996bb948dd5d59b967126d045df79e4e0f27a00f0",
+    "src/cases.py": "59984083fe30b0decf3dd33a3d227e5399833f6f9b995e0f05e483c772008bf1",
+    "src/checker.py": "c76040340b41d39634d1b12d5518a1f5fe96a1c4b0fb95b1711fb83df59d1809",
+    "src/ordinary_check.py": "4006445d9036323d96f68b6cf19e2d374ddd7f420b9ae3561a96ca7a359aee9e",
+    "src/policy_cases.py": "cd7fcf9480c09120a1af96e08c01df95ea3a2e0f9040d0db9e41270eb5c0d90d",
+    "src/producer.py": "63604a72359bff376220c369ba39eb6ea5fa0783e3ce813c4a9bee354c28244d",
+    "src/reference_check.py": "5c4162a6fe5add3a884021200db3011b3dcad7fae8c7328a205f878790dd8226",
+    "src/temporal.py": "554a1766d387e3b5de01a624179a1c56c01eafbf088902fb3d70de2e7b86579b"
+  },
+  "warmups_per_setting": 1
+}

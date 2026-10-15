@@ -1,0 +1,1146 @@
+{
+  "atoms": 4098,
+  "case": {
+    "family": "star",
+    "partition": "native",
+    "size": 4096
+  },
+  "initial": {
+    "consumer_init_ns": {
+      "block": 22130600,
+      "full": 11116800,
+      "ordinary-local": 14670500
+    },
+    "input_build_ns": 1069800,
+    "materialize_ns": 1364000,
+    "output_bytes": 19381,
+    "output_ns": 178400,
+    "partition_ns": 5300,
+    "potential_ns": 584900,
+    "producer_index_ns": 2985700,
+    "schedule_ns": 7200,
+    "state_bytes": {
+      "block": 5259211,
+      "full": 3763331,
+      "ordinary-local": 6281891
+    }
+  },
+  "recovery": {
+    "consumers": {
+      "block": {
+        "init_ns": 28484900,
+        "output_ns": 176100
+      },
+      "full": {
+        "init_ns": 10715100,
+        "output_ns": 165700
+      },
+      "ordinary-local": {
+        "init_ns": 24469700,
+        "output_ns": 169800
+      }
+    },
+    "input_reload_ns": 1246600,
+    "materialize_ns": 1289400,
+    "partition_ns": 9200,
+    "potential_ns": 578800,
+    "producer_index_ns": 2910900
+  },
+  "repetition": 2,
+  "rules": 8192,
+  "updates": [
+    {
+      "base_added": 0,
+      "base_removed": 1,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 23642400,
+          "counters": {
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "offset_fields": 0,
+            "pair_checks": 1,
+            "segment_steps": 114688,
+            "segment_updates": 8192,
+            "truth_fields": 1,
+            "witness_heads": 4096,
+            "witness_literals": 4096
+          },
+          "output_bytes": 19379,
+          "output_ns": 166500,
+          "parse_ns": 733200
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 4076100,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4097
+          },
+          "output_bytes": 19379,
+          "output_ns": 194700,
+          "parse_ns": 698100
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 8817300,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 4096,
+            "offset_fields": 0,
+            "rank_heads": 4096,
+            "rank_literals": 4096,
+            "truth_fields": 1,
+            "witness_heads": 4096,
+            "witness_literals": 4096
+          },
+          "output_bytes": 19379,
+          "output_ns": 171700,
+          "parse_ns": 712000
+        }
+      },
+      "label": "step-01",
+      "offset_fields": 0,
+      "packet_bytes": 47543,
+      "producer_counters": {
+        "body_tests_upper_bound": 12288,
+        "overdeleted": 4097,
+        "rule_checks": 12288
+      },
+      "rejection": {
+        "checks": {
+          "block": {
+            "check_rollback_ns": 38807000,
+            "counters": {
+              "closure_literals": 0,
+              "closure_rules": 0,
+              "offset_fields": 1,
+              "pair_checks": 1,
+              "segment_steps": 114688,
+              "segment_updates": 8192,
+              "truth_fields": 1,
+              "witness_heads": 4096,
+              "witness_literals": 4096
+            },
+            "parse_ns": 718600,
+            "reason": "rank inequality violated"
+          },
+          "full": {
+            "check_rollback_ns": 2078700,
+            "counters": {
+              "boundary_incidence_visits": 0,
+              "closure_literals": 0,
+              "closure_rules": 0,
+              "consumer_visits": 0,
+              "offset_fields": 1,
+              "proof_literals": 1,
+              "rank_heads": 0,
+              "rank_literals": 0,
+              "rule_literals": 0,
+              "rules": 0,
+              "truth_fields": 1,
+              "witness_heads": 0,
+              "witness_literals": 0,
+              "witnesses": 2
+            },
+            "parse_ns": 765200,
+            "reason": "full ranked-model check failed"
+          },
+          "ordinary-local": {
+            "check_rollback_ns": 6278900,
+            "counters": {
+              "boundary_incidence_visits": 4096,
+              "closure_literals": 0,
+              "closure_rules": 0,
+              "consumer_visits": 4096,
+              "offset_fields": 1,
+              "rank_heads": 4096,
+              "rank_literals": 1,
+              "truth_fields": 1,
+              "witness_heads": 4096,
+              "witness_literals": 4096
+            },
+            "parse_ns": 708800,
+            "reason": "rank inequality violated"
+          }
+        },
+        "kind": "rank-after-provisional-changes",
+        "serialize_ns": 916300
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 1500,
+        "front_end_ns": 800,
+        "produce_ns": 4486300,
+        "producer_state_ns": 1300,
+        "serialize_ns": 2362900,
+        "synthesize_ns": 1142800
+      },
+      "step": 0,
+      "truth_fields": 1,
+      "witness_fields": 4096
+    },
+    {
+      "base_added": 1,
+      "base_removed": 0,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 1045800,
+          "counters": {
+            "closure_literals": 4096,
+            "closure_rules": 4096,
+            "offset_fields": 0,
+            "pair_checks": 0,
+            "segment_steps": 0,
+            "segment_updates": 0,
+            "truth_fields": 1,
+            "witness_heads": 1,
+            "witness_literals": 0
+          },
+          "output_bytes": 19381,
+          "output_ns": 157400,
+          "parse_ns": 12200
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 2547300,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4098
+          },
+          "output_bytes": 19381,
+          "output_ns": 158000,
+          "parse_ns": 6700
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 982500,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 4096,
+            "closure_rules": 4096,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "truth_fields": 1,
+            "witness_heads": 1,
+            "witness_literals": 0
+          },
+          "output_bytes": 19381,
+          "output_ns": 156000,
+          "parse_ns": 8700
+        }
+      },
+      "label": "step-02",
+      "offset_fields": 0,
+      "packet_bytes": 57,
+      "producer_counters": {
+        "body_tests_upper_bound": 4096,
+        "overdeleted": 0,
+        "rule_checks": 4096
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 1500,
+        "front_end_ns": 900,
+        "produce_ns": 434600,
+        "producer_state_ns": 800,
+        "serialize_ns": 10000,
+        "synthesize_ns": 813800
+      },
+      "step": 1,
+      "truth_fields": 1,
+      "witness_fields": 1
+    },
+    {
+      "base_added": 0,
+      "base_removed": 1,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 33314400,
+          "counters": {
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "offset_fields": 0,
+            "pair_checks": 1,
+            "segment_steps": 114688,
+            "segment_updates": 8192,
+            "truth_fields": 1,
+            "witness_heads": 4096,
+            "witness_literals": 4096
+          },
+          "output_bytes": 19379,
+          "output_ns": 182800,
+          "parse_ns": 748900
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 4262600,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4097
+          },
+          "output_bytes": 19379,
+          "output_ns": 173700,
+          "parse_ns": 834400
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 9409600,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 4096,
+            "offset_fields": 0,
+            "rank_heads": 4096,
+            "rank_literals": 4096,
+            "truth_fields": 1,
+            "witness_heads": 4096,
+            "witness_literals": 4096
+          },
+          "output_bytes": 19379,
+          "output_ns": 193000,
+          "parse_ns": 716900
+        }
+      },
+      "label": "step-03",
+      "offset_fields": 0,
+      "packet_bytes": 47543,
+      "producer_counters": {
+        "body_tests_upper_bound": 12288,
+        "overdeleted": 4097,
+        "rule_checks": 12288
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 900,
+        "front_end_ns": 600,
+        "produce_ns": 3089700,
+        "producer_state_ns": 1300,
+        "serialize_ns": 718100,
+        "synthesize_ns": 1094000
+      },
+      "step": 2,
+      "truth_fields": 1,
+      "witness_fields": 4096
+    },
+    {
+      "base_added": 1,
+      "base_removed": 0,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 986800,
+          "counters": {
+            "closure_literals": 4096,
+            "closure_rules": 4096,
+            "offset_fields": 0,
+            "pair_checks": 0,
+            "segment_steps": 0,
+            "segment_updates": 0,
+            "truth_fields": 1,
+            "witness_heads": 1,
+            "witness_literals": 0
+          },
+          "output_bytes": 19381,
+          "output_ns": 156800,
+          "parse_ns": 14800
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 2585600,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4098
+          },
+          "output_bytes": 19381,
+          "output_ns": 223500,
+          "parse_ns": 16200
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 1083000,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 4096,
+            "closure_rules": 4096,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "truth_fields": 1,
+            "witness_heads": 1,
+            "witness_literals": 0
+          },
+          "output_bytes": 19381,
+          "output_ns": 151300,
+          "parse_ns": 8800
+        }
+      },
+      "label": "step-04",
+      "offset_fields": 0,
+      "packet_bytes": 57,
+      "producer_counters": {
+        "body_tests_upper_bound": 4096,
+        "overdeleted": 0,
+        "rule_checks": 4096
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 1700,
+        "front_end_ns": 1000,
+        "produce_ns": 412000,
+        "producer_state_ns": 800,
+        "serialize_ns": 13200,
+        "synthesize_ns": 763900
+      },
+      "step": 3,
+      "truth_fields": 1,
+      "witness_fields": 1
+    },
+    {
+      "base_added": 0,
+      "base_removed": 1,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 14200,
+          "counters": {
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "offset_fields": 0,
+            "pair_checks": 0,
+            "segment_steps": 0,
+            "segment_updates": 0,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0
+          },
+          "output_bytes": 19379,
+          "output_ns": 148900,
+          "parse_ns": 8000
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 2650700,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4097
+          },
+          "output_bytes": 19379,
+          "output_ns": 181800,
+          "parse_ns": 5300
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 11700,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0
+          },
+          "output_bytes": 19379,
+          "output_ns": 163100,
+          "parse_ns": 6000
+        }
+      },
+      "label": "step-05",
+      "offset_fields": 0,
+      "packet_bytes": 51,
+      "producer_counters": {
+        "body_tests_upper_bound": 12288,
+        "overdeleted": 4097,
+        "rule_checks": 12288
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 1500,
+        "front_end_ns": 600,
+        "produce_ns": 2804800,
+        "producer_state_ns": 700,
+        "serialize_ns": 8200,
+        "synthesize_ns": 761000
+      },
+      "step": 4,
+      "truth_fields": 1,
+      "witness_fields": 0
+    },
+    {
+      "base_added": 1,
+      "base_removed": 1,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 25545100,
+          "counters": {
+            "closure_literals": 4096,
+            "closure_rules": 4096,
+            "offset_fields": 0,
+            "pair_checks": 1,
+            "segment_steps": 114688,
+            "segment_updates": 8192,
+            "truth_fields": 2,
+            "witness_heads": 4097,
+            "witness_literals": 4096
+          },
+          "output_bytes": 19379,
+          "output_ns": 188600,
+          "parse_ns": 707300
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 4076400,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 2,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4097
+          },
+          "output_bytes": 19379,
+          "output_ns": 161600,
+          "parse_ns": 800200
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 10172600,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 4096,
+            "closure_rules": 4096,
+            "consumer_visits": 4096,
+            "offset_fields": 0,
+            "rank_heads": 4096,
+            "rank_literals": 4096,
+            "truth_fields": 2,
+            "witness_heads": 4097,
+            "witness_literals": 4096
+          },
+          "output_bytes": 19379,
+          "output_ns": 169400,
+          "parse_ns": 763400
+        }
+      },
+      "label": "step-06",
+      "offset_fields": 0,
+      "packet_bytes": 47551,
+      "producer_counters": {
+        "body_tests_upper_bound": 16384,
+        "overdeleted": 4097,
+        "rule_checks": 16384
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 1900,
+        "front_end_ns": 1000,
+        "produce_ns": 4747100,
+        "producer_state_ns": 1100,
+        "serialize_ns": 596100,
+        "synthesize_ns": 1111000
+      },
+      "step": 5,
+      "truth_fields": 2,
+      "witness_fields": 4097
+    },
+    {
+      "base_added": 1,
+      "base_removed": 0,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 1065200,
+          "counters": {
+            "closure_literals": 4096,
+            "closure_rules": 4096,
+            "offset_fields": 0,
+            "pair_checks": 0,
+            "segment_steps": 0,
+            "segment_updates": 0,
+            "truth_fields": 1,
+            "witness_heads": 1,
+            "witness_literals": 0
+          },
+          "output_bytes": 19381,
+          "output_ns": 164700,
+          "parse_ns": 12000
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 2840300,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4098
+          },
+          "output_bytes": 19381,
+          "output_ns": 164500,
+          "parse_ns": 14900
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 1064200,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 4096,
+            "closure_rules": 4096,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "truth_fields": 1,
+            "witness_heads": 1,
+            "witness_literals": 0
+          },
+          "output_bytes": 19381,
+          "output_ns": 158500,
+          "parse_ns": 7500
+        }
+      },
+      "label": "step-07",
+      "offset_fields": 0,
+      "packet_bytes": 57,
+      "producer_counters": {
+        "body_tests_upper_bound": 4096,
+        "overdeleted": 0,
+        "rule_checks": 4096
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 1700,
+        "front_end_ns": 900,
+        "produce_ns": 434500,
+        "producer_state_ns": 1000,
+        "serialize_ns": 10700,
+        "synthesize_ns": 771800
+      },
+      "step": 6,
+      "truth_fields": 1,
+      "witness_fields": 1
+    },
+    {
+      "base_added": 0,
+      "base_removed": 2,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 15541200,
+          "counters": {
+            "closure_literals": 8192,
+            "closure_rules": 8192,
+            "offset_fields": 0,
+            "pair_checks": 0,
+            "segment_steps": 57344,
+            "segment_updates": 4096,
+            "truth_fields": 4098,
+            "witness_heads": 0,
+            "witness_literals": 0
+          },
+          "output_bytes": 2,
+          "output_ns": 14800,
+          "parse_ns": 188200
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 1862700,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 0,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 4098,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 0
+          },
+          "output_bytes": 2,
+          "output_ns": 7400,
+          "parse_ns": 171200
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 5789300,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 8192,
+            "closure_rules": 8192,
+            "consumer_visits": 4096,
+            "offset_fields": 0,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "truth_fields": 4098,
+            "witness_heads": 0,
+            "witness_literals": 0
+          },
+          "output_bytes": 2,
+          "output_ns": 12000,
+          "parse_ns": 175300
+        }
+      },
+      "label": "step-08",
+      "offset_fields": 0,
+      "packet_bytes": 19429,
+      "producer_counters": {
+        "body_tests_upper_bound": 16384,
+        "overdeleted": 4098,
+        "rule_checks": 16384
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 1200,
+        "front_end_ns": 500,
+        "produce_ns": 5034900,
+        "producer_state_ns": 900,
+        "serialize_ns": 154300,
+        "synthesize_ns": 52000
+      },
+      "step": 7,
+      "truth_fields": 4098,
+      "witness_fields": 0
+    },
+    {
+      "base_added": 2,
+      "base_removed": 0,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 17201600,
+          "counters": {
+            "closure_literals": 8192,
+            "closure_rules": 8192,
+            "offset_fields": 0,
+            "pair_checks": 1,
+            "segment_steps": 57344,
+            "segment_updates": 4096,
+            "truth_fields": 4098,
+            "witness_heads": 4098,
+            "witness_literals": 4096
+          },
+          "output_bytes": 19381,
+          "output_ns": 181600,
+          "parse_ns": 917500
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 4361800,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 4098,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4098
+          },
+          "output_bytes": 19381,
+          "output_ns": 171100,
+          "parse_ns": 964100
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 10552800,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 8192,
+            "closure_rules": 8192,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "rank_heads": 4096,
+            "rank_literals": 4096,
+            "truth_fields": 4098,
+            "witness_heads": 4098,
+            "witness_literals": 4096
+          },
+          "output_bytes": 19381,
+          "output_ns": 173000,
+          "parse_ns": 924700
+        }
+      },
+      "label": "step-09",
+      "offset_fields": 0,
+      "packet_bytes": 66935,
+      "producer_counters": {
+        "body_tests_upper_bound": 8192,
+        "overdeleted": 0,
+        "rule_checks": 8192
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 1200,
+        "front_end_ns": 900,
+        "produce_ns": 1568900,
+        "producer_state_ns": 900,
+        "serialize_ns": 755700,
+        "synthesize_ns": 1021600
+      },
+      "step": 8,
+      "truth_fields": 4098,
+      "witness_fields": 4098
+    },
+    {
+      "base_added": 0,
+      "base_removed": 1,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 17500,
+          "counters": {
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "offset_fields": 0,
+            "pair_checks": 0,
+            "segment_steps": 0,
+            "segment_updates": 0,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0
+          },
+          "output_bytes": 19379,
+          "output_ns": 174600,
+          "parse_ns": 12100
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 2642700,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4097
+          },
+          "output_bytes": 19379,
+          "output_ns": 169300,
+          "parse_ns": 17000
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 13600,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0
+          },
+          "output_bytes": 19379,
+          "output_ns": 181000,
+          "parse_ns": 7700
+        }
+      },
+      "label": "step-10",
+      "offset_fields": 0,
+      "packet_bytes": 51,
+      "producer_counters": {
+        "body_tests_upper_bound": 12288,
+        "overdeleted": 4097,
+        "rule_checks": 12288
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 2100,
+        "front_end_ns": 1000,
+        "produce_ns": 3124200,
+        "producer_state_ns": 1100,
+        "serialize_ns": 18000,
+        "synthesize_ns": 788800
+      },
+      "step": 9,
+      "truth_fields": 1,
+      "witness_fields": 0
+    },
+    {
+      "base_added": 1,
+      "base_removed": 0,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 1083200,
+          "counters": {
+            "closure_literals": 4096,
+            "closure_rules": 4096,
+            "offset_fields": 0,
+            "pair_checks": 0,
+            "segment_steps": 0,
+            "segment_updates": 0,
+            "truth_fields": 1,
+            "witness_heads": 1,
+            "witness_literals": 0
+          },
+          "output_bytes": 19381,
+          "output_ns": 165200,
+          "parse_ns": 9900
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 2560800,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 1,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4098
+          },
+          "output_bytes": 19381,
+          "output_ns": 157400,
+          "parse_ns": 6600
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 1056900,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 4096,
+            "closure_rules": 4096,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "truth_fields": 1,
+            "witness_heads": 1,
+            "witness_literals": 0
+          },
+          "output_bytes": 19381,
+          "output_ns": 167900,
+          "parse_ns": 7900
+        }
+      },
+      "label": "step-11",
+      "offset_fields": 0,
+      "packet_bytes": 57,
+      "producer_counters": {
+        "body_tests_upper_bound": 4096,
+        "overdeleted": 0,
+        "rule_checks": 4096
+      },
+      "semantic_noop": false,
+      "shared": {
+        "delta_ns": 1100,
+        "front_end_ns": 800,
+        "produce_ns": 401700,
+        "producer_state_ns": 800,
+        "serialize_ns": 9400,
+        "synthesize_ns": 771300
+      },
+      "step": 10,
+      "truth_fields": 1,
+      "witness_fields": 1
+    },
+    {
+      "base_added": 0,
+      "base_removed": 0,
+      "checks": {
+        "block": {
+          "accepted": true,
+          "check_commit_ns": 16100,
+          "counters": {
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "offset_fields": 0,
+            "pair_checks": 0,
+            "segment_steps": 0,
+            "segment_updates": 0,
+            "truth_fields": 0,
+            "witness_heads": 0,
+            "witness_literals": 0
+          },
+          "output_bytes": 19381,
+          "output_ns": 177300,
+          "parse_ns": 15300
+        },
+        "full": {
+          "accepted": true,
+          "check_commit_ns": 2861300,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "proof_literals": 4096,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "rule_literals": 8192,
+            "rules": 8192,
+            "truth_fields": 0,
+            "witness_heads": 0,
+            "witness_literals": 0,
+            "witnesses": 4098
+          },
+          "output_bytes": 19381,
+          "output_ns": 175500,
+          "parse_ns": 9600
+        },
+        "ordinary-local": {
+          "accepted": true,
+          "check_commit_ns": 18900,
+          "counters": {
+            "boundary_incidence_visits": 0,
+            "closure_literals": 0,
+            "closure_rules": 0,
+            "consumer_visits": 0,
+            "offset_fields": 0,
+            "rank_heads": 0,
+            "rank_literals": 0,
+            "truth_fields": 0,
+            "witness_heads": 0,
+            "witness_literals": 0
+          },
+          "output_bytes": 19381,
+          "output_ns": 183300,
+          "parse_ns": 14900
+        }
+      },
+      "label": "step-12",
+      "offset_fields": 0,
+      "packet_bytes": 50,
+      "producer_counters": {
+        "body_tests_upper_bound": 0,
+        "overdeleted": 0,
+        "rule_checks": 0
+      },
+      "semantic_noop": true,
+      "shared": {
+        "delta_ns": 1000,
+        "front_end_ns": 600,
+        "produce_ns": 153900,
+        "producer_state_ns": 600,
+        "serialize_ns": 17500,
+        "synthesize_ns": 763000
+      },
+      "step": 11,
+      "truth_fields": 0,
+      "witness_fields": 0
+    }
+  ],
+  "warmup": false
+}

@@ -1,0 +1,4056 @@
+{
+  "fallback_trials": 5,
+  "groups": {
+    "boundary/4096/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 76417900,
+            "median": 53425300,
+            "min": 49702800
+          },
+          "initialize_ns": {
+            "max": 61994500,
+            "median": 51530100,
+            "min": 47411200
+          },
+          "lifecycle_ns": {
+            "max": 351094500,
+            "median": 292120900,
+            "min": 284279300
+          },
+          "output_trace_ns": {
+            "max": 5946100,
+            "median": 5695600,
+            "min": 5439000
+          },
+          "real_update_trace_ns": {
+            "max": 185751300,
+            "median": 161740900,
+            "min": 153923300
+          },
+          "rebuild_ns": {
+            "max": 99843900,
+            "median": 79113900,
+            "min": 64294300
+          },
+          "rejection_ns": {
+            "max": 78900,
+            "median": 75300,
+            "min": 70500
+          },
+          "state_bytes": {
+            "max": 11163223,
+            "median": 11163223,
+            "min": 11163223
+          },
+          "steady_trace_ns": {
+            "max": 189177200,
+            "median": 165123200,
+            "min": 157220200
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 81089000,
+            "median": 80017200,
+            "min": 77363100
+          },
+          "initialize_ns": {
+            "max": 56491900,
+            "median": 54231200,
+            "min": 40650100
+          },
+          "lifecycle_ns": {
+            "max": 303160100,
+            "median": 287796200,
+            "min": 277332300
+          },
+          "output_trace_ns": {
+            "max": 5792600,
+            "median": 5605200,
+            "min": 5566500
+          },
+          "real_update_trace_ns": {
+            "max": 184368900,
+            "median": 179622300,
+            "min": 174465500
+          },
+          "rebuild_ns": {
+            "max": 53935900,
+            "median": 51468100,
+            "min": 36013500
+          },
+          "rejection_ns": {
+            "max": 2835600,
+            "median": 1512000,
+            "min": 1321800
+          },
+          "state_bytes": {
+            "max": 7427111,
+            "median": 7427111,
+            "min": 7427111
+          },
+          "steady_trace_ns": {
+            "max": 193911200,
+            "median": 189158700,
+            "min": 183823300
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 66439500,
+            "median": 47888600,
+            "min": 45278400
+          },
+          "initialize_ns": {
+            "max": 59201800,
+            "median": 56895900,
+            "min": 48864000
+          },
+          "lifecycle_ns": {
+            "max": 318095800,
+            "median": 301019100,
+            "min": 267447600
+          },
+          "output_trace_ns": {
+            "max": 5904900,
+            "median": 5737500,
+            "min": 5390400
+          },
+          "real_update_trace_ns": {
+            "max": 176801200,
+            "median": 155093800,
+            "min": 148362100
+          },
+          "rebuild_ns": {
+            "max": 106735300,
+            "median": 78552200,
+            "min": 56458100
+          },
+          "rejection_ns": {
+            "max": 2267100,
+            "median": 2062000,
+            "min": 1928700
+          },
+          "state_bytes": {
+            "max": 13463479,
+            "median": 13463479,
+            "min": 13463479
+          },
+          "steady_trace_ns": {
+            "max": 180270000,
+            "median": 158435800,
+            "min": 151645500
+          }
+        }
+      },
+      "offset_fields_per_trace": 4,
+      "packet_bytes_per_trace": 275851,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "boundary/512/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 6582100,
+            "median": 5846300,
+            "min": 5746000
+          },
+          "initialize_ns": {
+            "max": 7411500,
+            "median": 5333500,
+            "min": 5163600
+          },
+          "lifecycle_ns": {
+            "max": 33369500,
+            "median": 29288700,
+            "min": 28979800
+          },
+          "output_trace_ns": {
+            "max": 1022200,
+            "median": 845000,
+            "min": 797600
+          },
+          "real_update_trace_ns": {
+            "max": 19982100,
+            "median": 18456400,
+            "min": 18173800
+          },
+          "rebuild_ns": {
+            "max": 5478300,
+            "median": 5116600,
+            "min": 4883700
+          },
+          "rejection_ns": {
+            "max": 80800,
+            "median": 40100,
+            "min": 36400
+          },
+          "state_bytes": {
+            "max": 1432431,
+            "median": 1432431,
+            "min": 1432431
+          },
+          "steady_trace_ns": {
+            "max": 20420100,
+            "median": 18918100,
+            "min": 18665300
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 9722700,
+            "median": 9238000,
+            "min": 9095000
+          },
+          "initialize_ns": {
+            "max": 7456500,
+            "median": 4950700,
+            "min": 4628400
+          },
+          "lifecycle_ns": {
+            "max": 35905700,
+            "median": 31635700,
+            "min": 31325900
+          },
+          "output_trace_ns": {
+            "max": 725000,
+            "median": 694700,
+            "min": 685900
+          },
+          "real_update_trace_ns": {
+            "max": 22646600,
+            "median": 21062800,
+            "min": 20769500
+          },
+          "rebuild_ns": {
+            "max": 4961100,
+            "median": 4496500,
+            "min": 4358700
+          },
+          "rejection_ns": {
+            "max": 231100,
+            "median": 210300,
+            "min": 164000
+          },
+          "state_bytes": {
+            "max": 961823,
+            "median": 961823,
+            "min": 961823
+          },
+          "steady_trace_ns": {
+            "max": 23742400,
+            "median": 22195700,
+            "min": 21926700
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 5810600,
+            "median": 5529500,
+            "min": 5422100
+          },
+          "initialize_ns": {
+            "max": 7883700,
+            "median": 5423700,
+            "min": 5034900
+          },
+          "lifecycle_ns": {
+            "max": 32095600,
+            "median": 30931600,
+            "min": 28820300
+          },
+          "output_trace_ns": {
+            "max": 898900,
+            "median": 822700,
+            "min": 802000
+          },
+          "real_update_trace_ns": {
+            "max": 19800300,
+            "median": 17975600,
+            "min": 17851900
+          },
+          "rebuild_ns": {
+            "max": 5346400,
+            "median": 5020200,
+            "min": 4860700
+          },
+          "rejection_ns": {
+            "max": 286700,
+            "median": 279000,
+            "min": 235800
+          },
+          "state_bytes": {
+            "max": 1758415,
+            "median": 1758415,
+            "min": 1758415
+          },
+          "steady_trace_ns": {
+            "max": 20218300,
+            "median": 18401100,
+            "min": 18373100
+          }
+        }
+      },
+      "offset_fields_per_trace": 4,
+      "packet_bytes_per_trace": 30131,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "boundary/64/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 771900,
+            "median": 738600,
+            "min": 734000
+          },
+          "initialize_ns": {
+            "max": 692700,
+            "median": 637400,
+            "min": 615000
+          },
+          "lifecycle_ns": {
+            "max": 4135800,
+            "median": 3857300,
+            "min": 3824200
+          },
+          "output_trace_ns": {
+            "max": 150300,
+            "median": 120900,
+            "min": 116400
+          },
+          "real_update_trace_ns": {
+            "max": 2506300,
+            "median": 2483900,
+            "min": 2477600
+          },
+          "rebuild_ns": {
+            "max": 835800,
+            "median": 622800,
+            "min": 616900
+          },
+          "rejection_ns": {
+            "max": 41000,
+            "median": 34600,
+            "min": 27800
+          },
+          "state_bytes": {
+            "max": 154699,
+            "median": 154699,
+            "min": 154699
+          },
+          "steady_trace_ns": {
+            "max": 2579500,
+            "median": 2560800,
+            "min": 2552800
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 1150600,
+            "median": 1092900,
+            "min": 1092400
+          },
+          "initialize_ns": {
+            "max": 636600,
+            "median": 565000,
+            "min": 493000
+          },
+          "lifecycle_ns": {
+            "max": 4105200,
+            "median": 4049400,
+            "min": 3955800
+          },
+          "output_trace_ns": {
+            "max": 123500,
+            "median": 119400,
+            "min": 117500
+          },
+          "real_update_trace_ns": {
+            "max": 2804500,
+            "median": 2760900,
+            "min": 2751300
+          },
+          "rebuild_ns": {
+            "max": 546100,
+            "median": 516700,
+            "min": 489900
+          },
+          "rejection_ns": {
+            "max": 45200,
+            "median": 39600,
+            "min": 36700
+          },
+          "state_bytes": {
+            "max": 101103,
+            "median": 101103,
+            "min": 101103
+          },
+          "steady_trace_ns": {
+            "max": 2954900,
+            "median": 2915200,
+            "min": 2902100
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 764800,
+            "median": 732700,
+            "min": 727300
+          },
+          "initialize_ns": {
+            "max": 2052400,
+            "median": 620900,
+            "min": 607300
+          },
+          "lifecycle_ns": {
+            "max": 5231800,
+            "median": 3837400,
+            "min": 3829300
+          },
+          "output_trace_ns": {
+            "max": 127200,
+            "median": 122200,
+            "min": 118900
+          },
+          "real_update_trace_ns": {
+            "max": 2514600,
+            "median": 2480100,
+            "min": 2468500
+          },
+          "rebuild_ns": {
+            "max": 620800,
+            "median": 600800,
+            "min": 578100
+          },
+          "rejection_ns": {
+            "max": 60100,
+            "median": 49800,
+            "min": 47600
+          },
+          "state_bytes": {
+            "max": 191715,
+            "median": 191715,
+            "min": 191715
+          },
+          "steady_trace_ns": {
+            "max": 2591000,
+            "median": 2552400,
+            "min": 2541200
+          }
+        }
+      },
+      "offset_fields_per_trace": 4,
+      "packet_bytes_per_trace": 3768,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "exchange/4096/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 23003900,
+            "median": 22231100,
+            "min": 21334100
+          },
+          "initialize_ns": {
+            "max": 35995500,
+            "median": 32735500,
+            "min": 28090900
+          },
+          "lifecycle_ns": {
+            "max": 187138800,
+            "median": 178511700,
+            "min": 155111900
+          },
+          "output_trace_ns": {
+            "max": 4074400,
+            "median": 3915400,
+            "min": 3890800
+          },
+          "real_update_trace_ns": {
+            "max": 98709700,
+            "median": 95444500,
+            "min": 91460200
+          },
+          "rebuild_ns": {
+            "max": 56462800,
+            "median": 42379500,
+            "min": 26876600
+          },
+          "rejection_ns": {
+            "max": 66100,
+            "median": 65400,
+            "min": 54000
+          },
+          "state_bytes": {
+            "max": 7149443,
+            "median": 7149443,
+            "min": 7149443
+          },
+          "steady_trace_ns": {
+            "max": 101262300,
+            "median": 97874900,
+            "min": 93859700
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 55751100,
+            "median": 55034200,
+            "min": 53745000
+          },
+          "initialize_ns": {
+            "max": 42080400,
+            "median": 28836500,
+            "min": 26933600
+          },
+          "lifecycle_ns": {
+            "max": 226671000,
+            "median": 198424000,
+            "min": 178697800
+          },
+          "output_trace_ns": {
+            "max": 4109700,
+            "median": 4009800,
+            "min": 3993500
+          },
+          "real_update_trace_ns": {
+            "max": 127206600,
+            "median": 123573000,
+            "min": 120190000
+          },
+          "rebuild_ns": {
+            "max": 49824000,
+            "median": 37416800,
+            "min": 24122800
+          },
+          "rejection_ns": {
+            "max": 1174900,
+            "median": 1150700,
+            "min": 933500
+          },
+          "state_bytes": {
+            "max": 5150851,
+            "median": 5150851,
+            "min": 5150851
+          },
+          "steady_trace_ns": {
+            "max": 133833100,
+            "median": 130589300,
+            "min": 126466500
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 43256300,
+            "median": 25832900,
+            "min": 25183200
+          },
+          "initialize_ns": {
+            "max": 39296400,
+            "median": 34028400,
+            "min": 28712800
+          },
+          "lifecycle_ns": {
+            "max": 183843500,
+            "median": 177372600,
+            "min": 170997500
+          },
+          "output_trace_ns": {
+            "max": 4036000,
+            "median": 3962200,
+            "min": 3865700
+          },
+          "real_update_trace_ns": {
+            "max": 118836000,
+            "median": 99026300,
+            "min": 95467100
+          },
+          "rebuild_ns": {
+            "max": 42750900,
+            "median": 41369200,
+            "min": 28364000
+          },
+          "rejection_ns": {
+            "max": 78900,
+            "median": 64500,
+            "min": 52300
+          },
+          "state_bytes": {
+            "max": 8787419,
+            "median": 8787419,
+            "min": 8787419
+          },
+          "steady_trace_ns": {
+            "max": 121372200,
+            "median": 101437100,
+            "min": 97838900
+          }
+        }
+      },
+      "offset_fields_per_trace": 4,
+      "packet_bytes_per_trace": 176579,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "exchange/4096/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 55794800,
+            "median": 54696300,
+            "min": 53109000
+          },
+          "initialize_ns": {
+            "max": 56902200,
+            "median": 51829700,
+            "min": 48105000
+          },
+          "lifecycle_ns": {
+            "max": 354802900,
+            "median": 343715900,
+            "min": 329439400
+          },
+          "output_trace_ns": {
+            "max": 4174900,
+            "median": 3995900,
+            "min": 3920500
+          },
+          "real_update_trace_ns": {
+            "max": 224645400,
+            "median": 209568500,
+            "min": 188018500
+          },
+          "rebuild_ns": {
+            "max": 87018600,
+            "median": 63370500,
+            "min": 55526500
+          },
+          "rejection_ns": {
+            "max": 4848600,
+            "median": 4428700,
+            "min": 4226100
+          },
+          "state_bytes": {
+            "max": 12519283,
+            "median": 12519283,
+            "min": 12519283
+          },
+          "steady_trace_ns": {
+            "max": 230950400,
+            "median": 215700200,
+            "min": 194956700
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 62744100,
+            "median": 59465200,
+            "min": 57754200
+          },
+          "initialize_ns": {
+            "max": 49094700,
+            "median": 33498700,
+            "min": 32357100
+          },
+          "lifecycle_ns": {
+            "max": 327563900,
+            "median": 301959000,
+            "min": 285704800
+          },
+          "output_trace_ns": {
+            "max": 4190600,
+            "median": 3818000,
+            "min": 3677100
+          },
+          "real_update_trace_ns": {
+            "max": 227439900,
+            "median": 210566000,
+            "min": 188727600
+          },
+          "rebuild_ns": {
+            "max": 52970400,
+            "median": 46483000,
+            "min": 28448400
+          },
+          "rejection_ns": {
+            "max": 3688300,
+            "median": 3661400,
+            "min": 3653800
+          },
+          "state_bytes": {
+            "max": 5440251,
+            "median": 5440251,
+            "min": 5440251
+          },
+          "steady_trace_ns": {
+            "max": 237998900,
+            "median": 221211000,
+            "min": 200663700
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 69335400,
+            "median": 51185100,
+            "min": 50538000
+          },
+          "initialize_ns": {
+            "max": 60373500,
+            "median": 49771100,
+            "min": 40762900
+          },
+          "lifecycle_ns": {
+            "max": 377531600,
+            "median": 330010000,
+            "min": 319159900
+          },
+          "output_trace_ns": {
+            "max": 3989000,
+            "median": 3902000,
+            "min": 3736800
+          },
+          "real_update_trace_ns": {
+            "max": 238722500,
+            "median": 205019300,
+            "min": 185379800
+          },
+          "rebuild_ns": {
+            "max": 85773500,
+            "median": 74284200,
+            "min": 51695300
+          },
+          "rejection_ns": {
+            "max": 5977200,
+            "median": 5913900,
+            "min": 5700400
+          },
+          "state_bytes": {
+            "max": 11437715,
+            "median": 11437715,
+            "min": 11437715
+          },
+          "steady_trace_ns": {
+            "max": 245018000,
+            "median": 211119500,
+            "min": 192049400
+          }
+        }
+      },
+      "offset_fields_per_trace": 16384,
+      "packet_bytes_per_trace": 381416,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "exchange/512/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 2865200,
+            "median": 2627100,
+            "min": 2567900
+          },
+          "initialize_ns": {
+            "max": 3434900,
+            "median": 3351000,
+            "min": 3136600
+          },
+          "lifecycle_ns": {
+            "max": 17996600,
+            "median": 17708400,
+            "min": 17418500
+          },
+          "output_trace_ns": {
+            "max": 515100,
+            "median": 483800,
+            "min": 474200
+          },
+          "real_update_trace_ns": {
+            "max": 11190600,
+            "median": 10862600,
+            "min": 10775800
+          },
+          "rebuild_ns": {
+            "max": 3395600,
+            "median": 3154300,
+            "min": 2925700
+          },
+          "rejection_ns": {
+            "max": 47700,
+            "median": 37600,
+            "min": 35500
+          },
+          "state_bytes": {
+            "max": 830347,
+            "median": 830347,
+            "min": 830347
+          },
+          "steady_trace_ns": {
+            "max": 11453700,
+            "median": 11129600,
+            "min": 11031500
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 6310500,
+            "median": 6082100,
+            "min": 5984400
+          },
+          "initialize_ns": {
+            "max": 3319600,
+            "median": 3140300,
+            "min": 2896800
+          },
+          "lifecycle_ns": {
+            "max": 21202200,
+            "median": 20786700,
+            "min": 20285000
+          },
+          "output_trace_ns": {
+            "max": 509500,
+            "median": 488800,
+            "min": 464400
+          },
+          "real_update_trace_ns": {
+            "max": 14240200,
+            "median": 13928800,
+            "min": 13659500
+          },
+          "rebuild_ns": {
+            "max": 2924300,
+            "median": 2789300,
+            "min": 2631600
+          },
+          "rejection_ns": {
+            "max": 196200,
+            "median": 142800,
+            "min": 130600
+          },
+          "state_bytes": {
+            "max": 583819,
+            "median": 583819,
+            "min": 583819
+          },
+          "steady_trace_ns": {
+            "max": 14959400,
+            "median": 14760900,
+            "min": 14389100
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 3221200,
+            "median": 3020500,
+            "min": 2973800
+          },
+          "initialize_ns": {
+            "max": 5520900,
+            "median": 3594400,
+            "min": 3005800
+          },
+          "lifecycle_ns": {
+            "max": 20378200,
+            "median": 18189700,
+            "min": 17957900
+          },
+          "output_trace_ns": {
+            "max": 507300,
+            "median": 484000,
+            "min": 466500
+          },
+          "real_update_trace_ns": {
+            "max": 11619600,
+            "median": 11360000,
+            "min": 11130900
+          },
+          "rebuild_ns": {
+            "max": 3237300,
+            "median": 3082700,
+            "min": 3043700
+          },
+          "rejection_ns": {
+            "max": 43700,
+            "median": 35200,
+            "min": 28700
+          },
+          "state_bytes": {
+            "max": 1034723,
+            "median": 1034723,
+            "min": 1034723
+          },
+          "steady_trace_ns": {
+            "max": 11877100,
+            "median": 11672500,
+            "min": 11386700
+          }
+        }
+      },
+      "offset_fields_per_trace": 4,
+      "packet_bytes_per_trace": 18867,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "exchange/512/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 6369400,
+            "median": 5832400,
+            "min": 5762000
+          },
+          "initialize_ns": {
+            "max": 5034900,
+            "median": 4892500,
+            "min": 4619500
+          },
+          "lifecycle_ns": {
+            "max": 34129800,
+            "median": 30634100,
+            "min": 29927300
+          },
+          "output_trace_ns": {
+            "max": 505700,
+            "median": 492200,
+            "min": 475300
+          },
+          "real_update_trace_ns": {
+            "max": 19918700,
+            "median": 19317400,
+            "min": 18942900
+          },
+          "rebuild_ns": {
+            "max": 8943500,
+            "median": 4829100,
+            "min": 4567000
+          },
+          "rejection_ns": {
+            "max": 559300,
+            "median": 536600,
+            "min": 530500
+          },
+          "state_bytes": {
+            "max": 1495939,
+            "median": 1495939,
+            "min": 1495939
+          },
+          "steady_trace_ns": {
+            "max": 20570200,
+            "median": 19974600,
+            "min": 19591300
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 7064600,
+            "median": 6796900,
+            "min": 6735700
+          },
+          "initialize_ns": {
+            "max": 3769100,
+            "median": 3543100,
+            "min": 3265800
+          },
+          "lifecycle_ns": {
+            "max": 28562800,
+            "median": 28277200,
+            "min": 28025000
+          },
+          "output_trace_ns": {
+            "max": 493300,
+            "median": 470500,
+            "min": 469000
+          },
+          "real_update_trace_ns": {
+            "max": 20322600,
+            "median": 19800800,
+            "min": 19442400
+          },
+          "rebuild_ns": {
+            "max": 3629500,
+            "median": 3325600,
+            "min": 3233200
+          },
+          "rejection_ns": {
+            "max": 486600,
+            "median": 439400,
+            "min": 414100
+          },
+          "state_bytes": {
+            "max": 614147,
+            "median": 614147,
+            "min": 614147
+          },
+          "steady_trace_ns": {
+            "max": 21518200,
+            "median": 20930900,
+            "min": 20634400
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 6087400,
+            "median": 5727800,
+            "min": 5699500
+          },
+          "initialize_ns": {
+            "max": 4316600,
+            "median": 3924700,
+            "min": 3766900
+          },
+          "lifecycle_ns": {
+            "max": 32736700,
+            "median": 31444100,
+            "min": 28386500
+          },
+          "output_trace_ns": {
+            "max": 512800,
+            "median": 480100,
+            "min": 473700
+          },
+          "real_update_trace_ns": {
+            "max": 19820700,
+            "median": 19245200,
+            "min": 18889300
+          },
+          "rebuild_ns": {
+            "max": 7864400,
+            "median": 6951600,
+            "min": 3838900
+          },
+          "rejection_ns": {
+            "max": 744600,
+            "median": 697900,
+            "min": 695100
+          },
+          "state_bytes": {
+            "max": 1360539,
+            "median": 1360539,
+            "min": 1360539
+          },
+          "steady_trace_ns": {
+            "max": 20546300,
+            "median": 19897700,
+            "min": 19535000
+          }
+        }
+      },
+      "offset_fields_per_trace": 2048,
+      "packet_bytes_per_trace": 40709,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "exchange/64/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 508800,
+            "median": 465500,
+            "min": 452900
+          },
+          "initialize_ns": {
+            "max": 466200,
+            "median": 450300,
+            "min": 437500
+          },
+          "lifecycle_ns": {
+            "max": 3334700,
+            "median": 2690900,
+            "min": 2631500
+          },
+          "output_trace_ns": {
+            "max": 96100,
+            "median": 94600,
+            "min": 93000
+          },
+          "real_update_trace_ns": {
+            "max": 2378300,
+            "median": 1755100,
+            "min": 1685300
+          },
+          "rebuild_ns": {
+            "max": 417600,
+            "median": 408300,
+            "min": 384000
+          },
+          "rejection_ns": {
+            "max": 42100,
+            "median": 33600,
+            "min": 27600
+          },
+          "state_bytes": {
+            "max": 100447,
+            "median": 100287,
+            "min": 100127
+          },
+          "steady_trace_ns": {
+            "max": 2437000,
+            "median": 1812100,
+            "min": 1739300
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 806500,
+            "median": 799600,
+            "min": 797800
+          },
+          "initialize_ns": {
+            "max": 400300,
+            "median": 352900,
+            "min": 347300
+          },
+          "lifecycle_ns": {
+            "max": 3481300,
+            "median": 2919000,
+            "min": 2828200
+          },
+          "output_trace_ns": {
+            "max": 94800,
+            "median": 92300,
+            "min": 91400
+          },
+          "real_update_trace_ns": {
+            "max": 2649900,
+            "median": 1991500,
+            "min": 1983800
+          },
+          "rebuild_ns": {
+            "max": 411600,
+            "median": 375800,
+            "min": 337000
+          },
+          "rejection_ns": {
+            "max": 42500,
+            "median": 35600,
+            "min": 34900
+          },
+          "state_bytes": {
+            "max": 70027,
+            "median": 69971,
+            "min": 69963
+          },
+          "steady_trace_ns": {
+            "max": 2760700,
+            "median": 2101000,
+            "min": 2096300
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 522100,
+            "median": 493400,
+            "min": 492200
+          },
+          "initialize_ns": {
+            "max": 448000,
+            "median": 429600,
+            "min": 411600
+          },
+          "lifecycle_ns": {
+            "max": 3306000,
+            "median": 2682500,
+            "min": 2668500
+          },
+          "output_trace_ns": {
+            "max": 95600,
+            "median": 93400,
+            "min": 92100
+          },
+          "real_update_trace_ns": {
+            "max": 2404500,
+            "median": 1766700,
+            "min": 1725400
+          },
+          "rebuild_ns": {
+            "max": 418200,
+            "median": 405100,
+            "min": 395700
+          },
+          "rejection_ns": {
+            "max": 37300,
+            "median": 28700,
+            "min": 25700
+          },
+          "state_bytes": {
+            "max": 125327,
+            "median": 125255,
+            "min": 125255
+          },
+          "steady_trace_ns": {
+            "max": 2460500,
+            "median": 1822200,
+            "min": 1783100
+          }
+        }
+      },
+      "offset_fields_per_trace": 4,
+      "packet_bytes_per_trace": 2616,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "exchange/64/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 896300,
+            "median": 857600,
+            "min": 842400
+          },
+          "initialize_ns": {
+            "max": 647400,
+            "median": 609300,
+            "min": 595700
+          },
+          "lifecycle_ns": {
+            "max": 4142400,
+            "median": 4079500,
+            "min": 4001800
+          },
+          "output_trace_ns": {
+            "max": 99000,
+            "median": 97300,
+            "min": 95100
+          },
+          "real_update_trace_ns": {
+            "max": 2703100,
+            "median": 2662000,
+            "min": 2617900
+          },
+          "rebuild_ns": {
+            "max": 607600,
+            "median": 586300,
+            "min": 570500
+          },
+          "rejection_ns": {
+            "max": 106100,
+            "median": 101800,
+            "min": 90700
+          },
+          "state_bytes": {
+            "max": 180519,
+            "median": 180519,
+            "min": 180519
+          },
+          "steady_trace_ns": {
+            "max": 2831300,
+            "median": 2760500,
+            "min": 2709000
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 892300,
+            "median": 879300,
+            "min": 860400
+          },
+          "initialize_ns": {
+            "max": 468400,
+            "median": 446700,
+            "min": 394000
+          },
+          "lifecycle_ns": {
+            "max": 3828300,
+            "median": 3704000,
+            "min": 3600200
+          },
+          "output_trace_ns": {
+            "max": 99700,
+            "median": 96200,
+            "min": 90100
+          },
+          "real_update_trace_ns": {
+            "max": 2673800,
+            "median": 2642900,
+            "min": 2562200
+          },
+          "rebuild_ns": {
+            "max": 438600,
+            "median": 415100,
+            "min": 396800
+          },
+          "rejection_ns": {
+            "max": 84700,
+            "median": 76600,
+            "min": 73700
+          },
+          "state_bytes": {
+            "max": 71115,
+            "median": 71115,
+            "min": 71115
+          },
+          "steady_trace_ns": {
+            "max": 2858300,
+            "median": 2794200,
+            "min": 2710900
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 856400,
+            "median": 842000,
+            "min": 814800
+          },
+          "initialize_ns": {
+            "max": 535900,
+            "median": 508600,
+            "min": 479800
+          },
+          "lifecycle_ns": {
+            "max": 4098200,
+            "median": 3846200,
+            "min": 3782500
+          },
+          "output_trace_ns": {
+            "max": 98900,
+            "median": 96300,
+            "min": 93800
+          },
+          "real_update_trace_ns": {
+            "max": 2678300,
+            "median": 2631400,
+            "min": 2579200
+          },
+          "rebuild_ns": {
+            "max": 640500,
+            "median": 494000,
+            "min": 487100
+          },
+          "rejection_ns": {
+            "max": 121500,
+            "median": 111700,
+            "min": 110000
+          },
+          "state_bytes": {
+            "max": 163399,
+            "median": 163399,
+            "min": 163399
+          },
+          "steady_trace_ns": {
+            "max": 2810600,
+            "median": 2725100,
+            "min": 2669900
+          }
+        }
+      },
+      "offset_fields_per_trace": 256,
+      "packet_bytes_per_trace": 4896,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "fanin/4096/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 3368200,
+            "median": 3332000,
+            "min": 3237900
+          },
+          "initialize_ns": {
+            "max": 19788800,
+            "median": 17531200,
+            "min": 12907200
+          },
+          "lifecycle_ns": {
+            "max": 56568400,
+            "median": 52406600,
+            "min": 46369000
+          },
+          "output_trace_ns": {
+            "max": 55500,
+            "median": 42600,
+            "min": 32400
+          },
+          "real_update_trace_ns": {
+            "max": 13248100,
+            "median": 13138300,
+            "min": 12642300
+          },
+          "rebuild_ns": {
+            "max": 28317600,
+            "median": 22298400,
+            "min": 13499100
+          },
+          "rejection_ns": {
+            "max": 42500,
+            "median": 36000,
+            "min": 20800
+          },
+          "state_bytes": {
+            "max": 5299311,
+            "median": 5299311,
+            "min": 5299311
+          },
+          "steady_trace_ns": {
+            "max": 13608300,
+            "median": 13414100,
+            "min": 12914300
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 5986100,
+            "median": 5637700,
+            "min": 5378500
+          },
+          "initialize_ns": {
+            "max": 8720900,
+            "median": 8288800,
+            "min": 7423800
+          },
+          "lifecycle_ns": {
+            "max": 52616900,
+            "median": 39971300,
+            "min": 30927100
+          },
+          "output_trace_ns": {
+            "max": 58400,
+            "median": 51900,
+            "min": 40600
+          },
+          "real_update_trace_ns": {
+            "max": 15078900,
+            "median": 14835400,
+            "min": 14359400
+          },
+          "rebuild_ns": {
+            "max": 28325700,
+            "median": 15887600,
+            "min": 7530200
+          },
+          "rejection_ns": {
+            "max": 29000,
+            "median": 22900,
+            "min": 16600
+          },
+          "state_bytes": {
+            "max": 1863911,
+            "median": 1863911,
+            "min": 1863911
+          },
+          "steady_trace_ns": {
+            "max": 15883500,
+            "median": 15778300,
+            "min": 15066300
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 3521900,
+            "median": 3374300,
+            "min": 3293700
+          },
+          "initialize_ns": {
+            "max": 15905100,
+            "median": 10601500,
+            "min": 8769500
+          },
+          "lifecycle_ns": {
+            "max": 50613200,
+            "median": 39385900,
+            "min": 30193800
+          },
+          "output_trace_ns": {
+            "max": 46900,
+            "median": 42700,
+            "min": 37100
+          },
+          "real_update_trace_ns": {
+            "max": 13220000,
+            "median": 13086900,
+            "min": 12885300
+          },
+          "rebuild_ns": {
+            "max": 28290000,
+            "median": 10249700,
+            "min": 8185800
+          },
+          "rejection_ns": {
+            "max": 42500,
+            "median": 39000,
+            "min": 24000
+          },
+          "state_bytes": {
+            "max": 4496583,
+            "median": 4496583,
+            "min": 4496583
+          },
+          "steady_trace_ns": {
+            "max": 13593700,
+            "median": 13366300,
+            "min": 13192100
+          }
+        }
+      },
+      "offset_fields_per_trace": 1,
+      "packet_bytes_per_trace": 720,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "fanin/512/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 648200,
+            "median": 561900,
+            "min": 516300
+          },
+          "initialize_ns": {
+            "max": 3907200,
+            "median": 1833000,
+            "min": 1474700
+          },
+          "lifecycle_ns": {
+            "max": 7665600,
+            "median": 5598600,
+            "min": 5094800
+          },
+          "output_trace_ns": {
+            "max": 38000,
+            "median": 33300,
+            "min": 29400
+          },
+          "real_update_trace_ns": {
+            "max": 2034700,
+            "median": 1925400,
+            "min": 1849900
+          },
+          "rebuild_ns": {
+            "max": 1764600,
+            "median": 1637700,
+            "min": 1574000
+          },
+          "rejection_ns": {
+            "max": 25200,
+            "median": 19500,
+            "min": 13800
+          },
+          "state_bytes": {
+            "max": 652839,
+            "median": 652839,
+            "min": 652839
+          },
+          "steady_trace_ns": {
+            "max": 2089600,
+            "median": 1980800,
+            "min": 1904000
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 914400,
+            "median": 746300,
+            "min": 733600
+          },
+          "initialize_ns": {
+            "max": 1077700,
+            "median": 1023400,
+            "min": 880500
+          },
+          "lifecycle_ns": {
+            "max": 4384800,
+            "median": 4033900,
+            "min": 4028100
+          },
+          "output_trace_ns": {
+            "max": 46500,
+            "median": 29800,
+            "min": 27900
+          },
+          "real_update_trace_ns": {
+            "max": 2295300,
+            "median": 2080700,
+            "min": 2021200
+          },
+          "rebuild_ns": {
+            "max": 937300,
+            "median": 845100,
+            "min": 816500
+          },
+          "rejection_ns": {
+            "max": 24100,
+            "median": 16300,
+            "min": 11200
+          },
+          "state_bytes": {
+            "max": 228807,
+            "median": 228807,
+            "min": 228807
+          },
+          "steady_trace_ns": {
+            "max": 2406400,
+            "median": 2184600,
+            "min": 2124200
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 569900,
+            "median": 555900,
+            "min": 535200
+          },
+          "initialize_ns": {
+            "max": 1490100,
+            "median": 1026400,
+            "min": 977500
+          },
+          "lifecycle_ns": {
+            "max": 4512000,
+            "median": 4070300,
+            "min": 3904200
+          },
+          "output_trace_ns": {
+            "max": 33600,
+            "median": 31000,
+            "min": 28700
+          },
+          "real_update_trace_ns": {
+            "max": 1973200,
+            "median": 1920400,
+            "min": 1897000
+          },
+          "rebuild_ns": {
+            "max": 1034200,
+            "median": 975500,
+            "min": 951000
+          },
+          "rejection_ns": {
+            "max": 26300,
+            "median": 17300,
+            "min": 15300
+          },
+          "state_bytes": {
+            "max": 552583,
+            "median": 552583,
+            "min": 552583
+          },
+          "steady_trace_ns": {
+            "max": 2029700,
+            "median": 1973600,
+            "min": 1949400
+          }
+        }
+      },
+      "offset_fields_per_trace": 1,
+      "packet_bytes_per_trace": 704,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "fanin/64/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 196100,
+            "median": 183000,
+            "min": 175300
+          },
+          "initialize_ns": {
+            "max": 245100,
+            "median": 226500,
+            "min": 200300
+          },
+          "lifecycle_ns": {
+            "max": 1077900,
+            "median": 1029700,
+            "min": 965500
+          },
+          "output_trace_ns": {
+            "max": 33000,
+            "median": 27800,
+            "min": 26500
+          },
+          "real_update_trace_ns": {
+            "max": 609400,
+            "median": 530900,
+            "min": 515700
+          },
+          "rebuild_ns": {
+            "max": 231900,
+            "median": 216400,
+            "min": 183900
+          },
+          "rejection_ns": {
+            "max": 19900,
+            "median": 15600,
+            "min": 11100
+          },
+          "state_bytes": {
+            "max": 82867,
+            "median": 82867,
+            "min": 82867
+          },
+          "steady_trace_ns": {
+            "max": 633300,
+            "median": 556600,
+            "min": 541500
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 182300,
+            "median": 178100,
+            "min": 171900
+          },
+          "initialize_ns": {
+            "max": 167100,
+            "median": 122400,
+            "min": 116100
+          },
+          "lifecycle_ns": {
+            "max": 885600,
+            "median": 823300,
+            "min": 776100
+          },
+          "output_trace_ns": {
+            "max": 30100,
+            "median": 27200,
+            "min": 25000
+          },
+          "real_update_trace_ns": {
+            "max": 563700,
+            "median": 521300,
+            "min": 505700
+          },
+          "rebuild_ns": {
+            "max": 116900,
+            "median": 110900,
+            "min": 109100
+          },
+          "rejection_ns": {
+            "max": 18500,
+            "median": 11800,
+            "min": 9800
+          },
+          "state_bytes": {
+            "max": 29807,
+            "median": 29807,
+            "min": 29807
+          },
+          "steady_trace_ns": {
+            "max": 594800,
+            "median": 553600,
+            "min": 536300
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 177600,
+            "median": 177000,
+            "min": 168700
+          },
+          "initialize_ns": {
+            "max": 138400,
+            "median": 135500,
+            "min": 133400
+          },
+          "lifecycle_ns": {
+            "max": 977100,
+            "median": 848200,
+            "min": 818000
+          },
+          "output_trace_ns": {
+            "max": 29200,
+            "median": 27900,
+            "min": 27100
+          },
+          "real_update_trace_ns": {
+            "max": 563000,
+            "median": 528500,
+            "min": 507700
+          },
+          "rebuild_ns": {
+            "max": 261400,
+            "median": 147000,
+            "min": 123600
+          },
+          "rejection_ns": {
+            "max": 19000,
+            "median": 12400,
+            "min": 11800
+          },
+          "state_bytes": {
+            "max": 70539,
+            "median": 70539,
+            "min": 70539
+          },
+          "steady_trace_ns": {
+            "max": 587600,
+            "median": 553300,
+            "min": 532200
+          }
+        }
+      },
+      "offset_fields_per_trace": 1,
+      "packet_bytes_per_trace": 688,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_policy.csv/32/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 3481100,
+            "median": 3374300,
+            "min": 3197100
+          },
+          "initialize_ns": {
+            "max": 30132800,
+            "median": 23975700,
+            "min": 23712800
+          },
+          "lifecycle_ns": {
+            "max": 191071800,
+            "median": 185707300,
+            "min": 182346500
+          },
+          "output_trace_ns": {
+            "max": 1313700,
+            "median": 1309200,
+            "min": 1260300
+          },
+          "real_update_trace_ns": {
+            "max": 107832400,
+            "median": 103397600,
+            "min": 101425000
+          },
+          "rebuild_ns": {
+            "max": 29925900,
+            "median": 29148000,
+            "min": 20550300
+          },
+          "rejection_ns": {
+            "max": 68200,
+            "median": 61200,
+            "min": 56000
+          },
+          "state_bytes": {
+            "max": 2422363,
+            "median": 2422363,
+            "min": 2422363
+          },
+          "steady_trace_ns": {
+            "max": 137285700,
+            "median": 136094900,
+            "min": 130966000
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 9391300,
+            "median": 9151100,
+            "min": 8624800
+          },
+          "initialize_ns": {
+            "max": 26607600,
+            "median": 20871500,
+            "min": 19634000
+          },
+          "lifecycle_ns": {
+            "max": 187183300,
+            "median": 179043100,
+            "min": 172703700
+          },
+          "output_trace_ns": {
+            "max": 1331100,
+            "median": 1306200,
+            "min": 1254100
+          },
+          "real_update_trace_ns": {
+            "max": 111420400,
+            "median": 106884900,
+            "min": 105202900
+          },
+          "rebuild_ns": {
+            "max": 17189500,
+            "median": 16817500,
+            "min": 16577900
+          },
+          "rejection_ns": {
+            "max": 105200,
+            "median": 94000,
+            "min": 88000
+          },
+          "state_bytes": {
+            "max": 1638019,
+            "median": 1638019,
+            "min": 1638019
+          },
+          "steady_trace_ns": {
+            "max": 143298200,
+            "median": 141941300,
+            "min": 136345300
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 2465300,
+            "median": 2422000,
+            "min": 2244600
+          },
+          "initialize_ns": {
+            "max": 26206500,
+            "median": 21778300,
+            "min": 20024000
+          },
+          "lifecycle_ns": {
+            "max": 184250900,
+            "median": 174777500,
+            "min": 173966200
+          },
+          "output_trace_ns": {
+            "max": 1303500,
+            "median": 1290800,
+            "min": 1215100
+          },
+          "real_update_trace_ns": {
+            "max": 106894000,
+            "median": 102497800,
+            "min": 100421000
+          },
+          "rebuild_ns": {
+            "max": 26106100,
+            "median": 17807200,
+            "min": 17539100
+          },
+          "rejection_ns": {
+            "max": 124400,
+            "median": 101000,
+            "min": 84600
+          },
+          "state_bytes": {
+            "max": 2636803,
+            "median": 2636803,
+            "min": 2636803
+          },
+          "steady_trace_ns": {
+            "max": 136265500,
+            "median": 135167800,
+            "min": 129946900
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 8644,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_policy.csv/32/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 3371400,
+            "median": 3231700,
+            "min": 3215000
+          },
+          "initialize_ns": {
+            "max": 33547900,
+            "median": 32038300,
+            "min": 28139100
+          },
+          "lifecycle_ns": {
+            "max": 221233300,
+            "median": 216981100,
+            "min": 207312900
+          },
+          "output_trace_ns": {
+            "max": 1331300,
+            "median": 1291300,
+            "min": 1255800
+          },
+          "real_update_trace_ns": {
+            "max": 123795600,
+            "median": 122113800,
+            "min": 101963900
+          },
+          "rebuild_ns": {
+            "max": 36879800,
+            "median": 36003100,
+            "min": 34922200
+          },
+          "rejection_ns": {
+            "max": 87100,
+            "median": 58900,
+            "min": 52500
+          },
+          "state_bytes": {
+            "max": 4534483,
+            "median": 4534483,
+            "min": 4534483
+          },
+          "steady_trace_ns": {
+            "max": 154109600,
+            "median": 150778300,
+            "min": 141190200
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 9323400,
+            "median": 9088600,
+            "min": 8978700
+          },
+          "initialize_ns": {
+            "max": 26496300,
+            "median": 21217300,
+            "min": 20150600
+          },
+          "lifecycle_ns": {
+            "max": 197976600,
+            "median": 194289200,
+            "min": 185596600
+          },
+          "output_trace_ns": {
+            "max": 1324900,
+            "median": 1317500,
+            "min": 1254100
+          },
+          "real_update_trace_ns": {
+            "max": 127339100,
+            "median": 125652000,
+            "min": 105746700
+          },
+          "rebuild_ns": {
+            "max": 17903200,
+            "median": 17466700,
+            "min": 16648600
+          },
+          "rejection_ns": {
+            "max": 129900,
+            "median": 94700,
+            "min": 90200
+          },
+          "state_bytes": {
+            "max": 1698435,
+            "median": 1698435,
+            "min": 1698435
+          },
+          "steady_trace_ns": {
+            "max": 159851500,
+            "median": 156573000,
+            "min": 147158000
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 2416100,
+            "median": 2381800,
+            "min": 2298200
+          },
+          "initialize_ns": {
+            "max": 25130400,
+            "median": 21547700,
+            "min": 21088400
+          },
+          "lifecycle_ns": {
+            "max": 194748700,
+            "median": 189807900,
+            "min": 180856500
+          },
+          "output_trace_ns": {
+            "max": 1264800,
+            "median": 1257300,
+            "min": 1234100
+          },
+          "real_update_trace_ns": {
+            "max": 122795400,
+            "median": 121195900,
+            "min": 100944900
+          },
+          "rebuild_ns": {
+            "max": 18472000,
+            "median": 18332000,
+            "min": 17953500
+          },
+          "rejection_ns": {
+            "max": 73200,
+            "median": 54200,
+            "min": 46900
+          },
+          "state_bytes": {
+            "max": 3021331,
+            "median": 3021331,
+            "min": 3021331
+          },
+          "steady_trace_ns": {
+            "max": 153109100,
+            "median": 149812900,
+            "min": 140159400
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 8644,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_policy.csv/8/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 1035700,
+            "median": 1018800,
+            "min": 985100
+          },
+          "initialize_ns": {
+            "max": 12922500,
+            "median": 9510200,
+            "min": 8683200
+          },
+          "lifecycle_ns": {
+            "max": 53694900,
+            "median": 50551900,
+            "min": 46898200
+          },
+          "output_trace_ns": {
+            "max": 625400,
+            "median": 590800,
+            "min": 557200
+          },
+          "real_update_trace_ns": {
+            "max": 29345000,
+            "median": 24319100,
+            "min": 23599400
+          },
+          "rebuild_ns": {
+            "max": 12181500,
+            "median": 5826100,
+            "min": 5497900
+          },
+          "rejection_ns": {
+            "max": 65900,
+            "median": 54200,
+            "min": 49300
+          },
+          "state_bytes": {
+            "max": 639867,
+            "median": 639867,
+            "min": 639867
+          },
+          "steady_trace_ns": {
+            "max": 36944200,
+            "median": 32008300,
+            "min": 31003900
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 2540900,
+            "median": 2350900,
+            "min": 2315000
+          },
+          "initialize_ns": {
+            "max": 9129200,
+            "median": 8355800,
+            "min": 7377300
+          },
+          "lifecycle_ns": {
+            "max": 53265000,
+            "median": 46558200,
+            "min": 44269800
+          },
+          "output_trace_ns": {
+            "max": 622700,
+            "median": 592800,
+            "min": 584700
+          },
+          "real_update_trace_ns": {
+            "max": 30127900,
+            "median": 25316900,
+            "min": 24369400
+          },
+          "rebuild_ns": {
+            "max": 10969800,
+            "median": 4512200,
+            "min": 4437800
+          },
+          "rejection_ns": {
+            "max": 62600,
+            "median": 51000,
+            "min": 44500
+          },
+          "state_bytes": {
+            "max": 404835,
+            "median": 404835,
+            "min": 404835
+          },
+          "steady_trace_ns": {
+            "max": 38259800,
+            "median": 33333600,
+            "min": 32352500
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 914600,
+            "median": 818700,
+            "min": 768200
+          },
+          "initialize_ns": {
+            "max": 8611800,
+            "median": 8371600,
+            "min": 7761000
+          },
+          "lifecycle_ns": {
+            "max": 51364600,
+            "median": 45311200,
+            "min": 43446600
+          },
+          "output_trace_ns": {
+            "max": 669500,
+            "median": 576700,
+            "min": 543000
+          },
+          "real_update_trace_ns": {
+            "max": 29099900,
+            "median": 24201100,
+            "min": 23370000
+          },
+          "rebuild_ns": {
+            "max": 11111600,
+            "median": 4919800,
+            "min": 4693500
+          },
+          "rejection_ns": {
+            "max": 68700,
+            "median": 62400,
+            "min": 48000
+          },
+          "state_bytes": {
+            "max": 658467,
+            "median": 658467,
+            "min": 658467
+          },
+          "steady_trace_ns": {
+            "max": 36686500,
+            "median": 31890400,
+            "min": 30767000
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 2301,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_policy.csv/8/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 1009900,
+            "median": 939100,
+            "min": 900300
+          },
+          "initialize_ns": {
+            "max": 12615000,
+            "median": 9703200,
+            "min": 9416100
+          },
+          "lifecycle_ns": {
+            "max": 53064700,
+            "median": 51842600,
+            "min": 47361900
+          },
+          "output_trace_ns": {
+            "max": 641500,
+            "median": 556000,
+            "min": 546600
+          },
+          "real_update_trace_ns": {
+            "max": 24809100,
+            "median": 24026200,
+            "min": 23817800
+          },
+          "rebuild_ns": {
+            "max": 11212300,
+            "median": 10678800,
+            "min": 6427500
+          },
+          "rejection_ns": {
+            "max": 73700,
+            "median": 47800,
+            "min": 46100
+          },
+          "state_bytes": {
+            "max": 1113715,
+            "median": 1113715,
+            "min": 1113715
+          },
+          "steady_trace_ns": {
+            "max": 32563700,
+            "median": 31515600,
+            "min": 31148400
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 2323300,
+            "median": 2250600,
+            "min": 2222100
+          },
+          "initialize_ns": {
+            "max": 10692500,
+            "median": 7996400,
+            "min": 7793800
+          },
+          "lifecycle_ns": {
+            "max": 47928500,
+            "median": 45592600,
+            "min": 44961100
+          },
+          "output_trace_ns": {
+            "max": 579200,
+            "median": 561600,
+            "min": 555000
+          },
+          "real_update_trace_ns": {
+            "max": 25661600,
+            "median": 24905200,
+            "min": 24712900
+          },
+          "rebuild_ns": {
+            "max": 4810500,
+            "median": 4511900,
+            "min": 4310300
+          },
+          "rejection_ns": {
+            "max": 53200,
+            "median": 49700,
+            "min": 47700
+          },
+          "state_bytes": {
+            "max": 414307,
+            "median": 414307,
+            "min": 414307
+          },
+          "steady_trace_ns": {
+            "max": 33925500,
+            "median": 32876000,
+            "min": 32548100
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 775500,
+            "median": 736000,
+            "min": 722300
+          },
+          "initialize_ns": {
+            "max": 10904100,
+            "median": 8361400,
+            "min": 7752300
+          },
+          "lifecycle_ns": {
+            "max": 46799300,
+            "median": 44159400,
+            "min": 43988100
+          },
+          "output_trace_ns": {
+            "max": 596900,
+            "median": 550200,
+            "min": 543700
+          },
+          "real_update_trace_ns": {
+            "max": 24608600,
+            "median": 23848600,
+            "min": 23636500
+          },
+          "rebuild_ns": {
+            "max": 4993400,
+            "median": 4619600,
+            "min": 4511500
+          },
+          "rejection_ns": {
+            "max": 53600,
+            "median": 43800,
+            "min": 36900
+          },
+          "state_bytes": {
+            "max": 739315,
+            "median": 739315,
+            "min": 739315
+          },
+          "steady_trace_ns": {
+            "max": 32341300,
+            "median": 31333500,
+            "min": 30963300
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 2301,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_with_domains_policy.csv/32/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 5308700,
+            "median": 4996200,
+            "min": 4857600
+          },
+          "initialize_ns": {
+            "max": 63660800,
+            "median": 57295400,
+            "min": 49012300
+          },
+          "lifecycle_ns": {
+            "max": 429951100,
+            "median": 412023700,
+            "min": 394329500
+          },
+          "output_trace_ns": {
+            "max": 1857100,
+            "median": 1741500,
+            "min": 1666900
+          },
+          "real_update_trace_ns": {
+            "max": 242859500,
+            "median": 217467900,
+            "min": 197633100
+          },
+          "rebuild_ns": {
+            "max": 70938900,
+            "median": 64934200,
+            "min": 41456700
+          },
+          "rejection_ns": {
+            "max": 96300,
+            "median": 92100,
+            "min": 71500
+          },
+          "state_bytes": {
+            "max": 4736243,
+            "median": 4736243,
+            "min": 4736243
+          },
+          "steady_trace_ns": {
+            "max": 321458400,
+            "median": 289164600,
+            "min": 265660200
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 18693900,
+            "median": 17556800,
+            "min": 16457900
+          },
+          "initialize_ns": {
+            "max": 44161800,
+            "median": 42828300,
+            "min": 40493100
+          },
+          "lifecycle_ns": {
+            "max": 430608000,
+            "median": 388631300,
+            "min": 363684800
+          },
+          "output_trace_ns": {
+            "max": 1895200,
+            "median": 1768600,
+            "min": 1695700
+          },
+          "real_update_trace_ns": {
+            "max": 251753500,
+            "median": 225412800,
+            "min": 205347400
+          },
+          "rebuild_ns": {
+            "max": 52648600,
+            "median": 46530700,
+            "min": 42904600
+          },
+          "rejection_ns": {
+            "max": 134800,
+            "median": 131400,
+            "min": 126800
+          },
+          "state_bytes": {
+            "max": 3212411,
+            "median": 3212411,
+            "min": 3212411
+          },
+          "steady_trace_ns": {
+            "max": 335002400,
+            "median": 301726900,
+            "min": 277314600
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 3674000,
+            "median": 3536100,
+            "min": 3404200
+          },
+          "initialize_ns": {
+            "max": 51278500,
+            "median": 45492600,
+            "min": 41111100
+          },
+          "lifecycle_ns": {
+            "max": 434256700,
+            "median": 379209900,
+            "min": 357938900
+          },
+          "output_trace_ns": {
+            "max": 1749700,
+            "median": 1692800,
+            "min": 1661300
+          },
+          "real_update_trace_ns": {
+            "max": 241260600,
+            "median": 216004700,
+            "min": 196227100
+          },
+          "rebuild_ns": {
+            "max": 63014400,
+            "median": 45997500,
+            "min": 33228700
+          },
+          "rejection_ns": {
+            "max": 143400,
+            "median": 114500,
+            "min": 96900
+          },
+          "state_bytes": {
+            "max": 5091803,
+            "median": 5091803,
+            "min": 5091803
+          },
+          "steady_trace_ns": {
+            "max": 319849300,
+            "median": 287622900,
+            "min": 264243500
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 12061,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_with_domains_policy.csv/32/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 5932700,
+            "median": 5040100,
+            "min": 4926400
+          },
+          "initialize_ns": {
+            "max": 78917100,
+            "median": 66576600,
+            "min": 65450300
+          },
+          "lifecycle_ns": {
+            "max": 513631700,
+            "median": 453613500,
+            "min": 429925700
+          },
+          "output_trace_ns": {
+            "max": 1900600,
+            "median": 1706100,
+            "min": 1647800
+          },
+          "real_update_trace_ns": {
+            "max": 281904000,
+            "median": 225917400,
+            "min": 210122200
+          },
+          "rebuild_ns": {
+            "max": 102441200,
+            "median": 84908900,
+            "min": 63744500
+          },
+          "rejection_ns": {
+            "max": 105100,
+            "median": 93000,
+            "min": 70200
+          },
+          "state_bytes": {
+            "max": 8931331,
+            "median": 8931331,
+            "min": 8931331
+          },
+          "steady_trace_ns": {
+            "max": 344508800,
+            "median": 300363400,
+            "min": 298409100
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 19080400,
+            "median": 16944600,
+            "min": 16544400
+          },
+          "initialize_ns": {
+            "max": 55014500,
+            "median": 44282800,
+            "min": 42518500
+          },
+          "lifecycle_ns": {
+            "max": 460490400,
+            "median": 422735200,
+            "min": 402550400
+          },
+          "output_trace_ns": {
+            "max": 2017100,
+            "median": 1755100,
+            "min": 1696200
+          },
+          "real_update_trace_ns": {
+            "max": 290421500,
+            "median": 233744900,
+            "min": 217795200
+          },
+          "rebuild_ns": {
+            "max": 70373000,
+            "median": 49497600,
+            "min": 48018600
+          },
+          "rejection_ns": {
+            "max": 155400,
+            "median": 147000,
+            "min": 136000
+          },
+          "state_bytes": {
+            "max": 3333851,
+            "median": 3333851,
+            "min": 3333851
+          },
+          "steady_trace_ns": {
+            "max": 357746600,
+            "median": 312149300,
+            "min": 310102000
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 4974100,
+            "median": 3569500,
+            "min": 3430300
+          },
+          "initialize_ns": {
+            "max": 62108800,
+            "median": 59362400,
+            "min": 43775400
+          },
+          "lifecycle_ns": {
+            "max": 465164600,
+            "median": 405693100,
+            "min": 391849000
+          },
+          "output_trace_ns": {
+            "max": 1828600,
+            "median": 1678200,
+            "min": 1638700
+          },
+          "real_update_trace_ns": {
+            "max": 280945300,
+            "median": 224177700,
+            "min": 208667600
+          },
+          "rebuild_ns": {
+            "max": 59445400,
+            "median": 51367100,
+            "min": 49620700
+          },
+          "rejection_ns": {
+            "max": 86600,
+            "median": 69400,
+            "min": 64900
+          },
+          "state_bytes": {
+            "max": 5880859,
+            "median": 5880859,
+            "min": 5880859
+          },
+          "steady_trace_ns": {
+            "max": 343528100,
+            "median": 298804700,
+            "min": 296640600
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 12061,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_with_domains_policy.csv/8/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 1556100,
+            "median": 1481500,
+            "min": 1338200
+          },
+          "initialize_ns": {
+            "max": 20049300,
+            "median": 16323200,
+            "min": 15800500
+          },
+          "lifecycle_ns": {
+            "max": 104021800,
+            "median": 99077500,
+            "min": 92053200
+          },
+          "output_trace_ns": {
+            "max": 807700,
+            "median": 796000,
+            "min": 742400
+          },
+          "real_update_trace_ns": {
+            "max": 56433600,
+            "median": 50700700,
+            "min": 48778600
+          },
+          "rebuild_ns": {
+            "max": 12084500,
+            "median": 11516000,
+            "min": 10980900
+          },
+          "rejection_ns": {
+            "max": 86900,
+            "median": 73800,
+            "min": 62400
+          },
+          "state_bytes": {
+            "max": 1259523,
+            "median": 1259523,
+            "min": 1259523
+          },
+          "steady_trace_ns": {
+            "max": 72254500,
+            "median": 71558100,
+            "min": 65195200
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 4534600,
+            "median": 4490900,
+            "min": 4042900
+          },
+          "initialize_ns": {
+            "max": 18323900,
+            "median": 14026900,
+            "min": 13927300
+          },
+          "lifecycle_ns": {
+            "max": 103038400,
+            "median": 97374200,
+            "min": 95423600
+          },
+          "output_trace_ns": {
+            "max": 870400,
+            "median": 823500,
+            "min": 754500
+          },
+          "real_update_trace_ns": {
+            "max": 58428900,
+            "median": 52516000,
+            "min": 50675800
+          },
+          "rebuild_ns": {
+            "max": 14475100,
+            "median": 9403200,
+            "min": 8803800
+          },
+          "rejection_ns": {
+            "max": 71300,
+            "median": 62800,
+            "min": 60900
+          },
+          "state_bytes": {
+            "max": 795531,
+            "median": 795531,
+            "min": 795531
+          },
+          "steady_trace_ns": {
+            "max": 75307800,
+            "median": 74480000,
+            "min": 67914400
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 1235400,
+            "median": 1158100,
+            "min": 1084100
+          },
+          "initialize_ns": {
+            "max": 19757200,
+            "median": 14610700,
+            "min": 13928500
+          },
+          "lifecycle_ns": {
+            "max": 101148900,
+            "median": 99744200,
+            "min": 88487600
+          },
+          "output_trace_ns": {
+            "max": 802000,
+            "median": 791600,
+            "min": 753500
+          },
+          "real_update_trace_ns": {
+            "max": 56095500,
+            "median": 50512900,
+            "min": 48443000
+          },
+          "rebuild_ns": {
+            "max": 17106300,
+            "median": 9420000,
+            "min": 9116200
+          },
+          "rejection_ns": {
+            "max": 74200,
+            "median": 63700,
+            "min": 54200
+          },
+          "state_bytes": {
+            "max": 1278699,
+            "median": 1278699,
+            "min": 1278699
+          },
+          "steady_trace_ns": {
+            "max": 71921000,
+            "median": 71209600,
+            "min": 65004700
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 3019,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_with_domains_policy.csv/8/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 1422400,
+            "median": 1385400,
+            "min": 1317300
+          },
+          "initialize_ns": {
+            "max": 21672100,
+            "median": 20948300,
+            "min": 17498600
+          },
+          "lifecycle_ns": {
+            "max": 109087100,
+            "median": 101800700,
+            "min": 98190900
+          },
+          "output_trace_ns": {
+            "max": 760300,
+            "median": 751200,
+            "min": 739400
+          },
+          "real_update_trace_ns": {
+            "max": 53653500,
+            "median": 52509600,
+            "min": 47169200
+          },
+          "rebuild_ns": {
+            "max": 19734600,
+            "median": 18623700,
+            "min": 12333200
+          },
+          "rejection_ns": {
+            "max": 83400,
+            "median": 69400,
+            "min": 58200
+          },
+          "state_bytes": {
+            "max": 2206355,
+            "median": 2206355,
+            "min": 2206355
+          },
+          "steady_trace_ns": {
+            "max": 68668600,
+            "median": 67669600,
+            "min": 61985200
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 4154400,
+            "median": 4067800,
+            "min": 3928200
+          },
+          "initialize_ns": {
+            "max": 18218500,
+            "median": 14049700,
+            "min": 13697500
+          },
+          "lifecycle_ns": {
+            "max": 97575700,
+            "median": 93839100,
+            "min": 87656200
+          },
+          "output_trace_ns": {
+            "max": 823600,
+            "median": 775400,
+            "min": 750600
+          },
+          "real_update_trace_ns": {
+            "max": 55477600,
+            "median": 54208900,
+            "min": 48806300
+          },
+          "rebuild_ns": {
+            "max": 9095000,
+            "median": 8832900,
+            "min": 8641700
+          },
+          "rejection_ns": {
+            "max": 66000,
+            "median": 60900,
+            "min": 58800
+          },
+          "state_bytes": {
+            "max": 820203,
+            "median": 820203,
+            "min": 820203
+          },
+          "steady_trace_ns": {
+            "max": 71433900,
+            "median": 70218300,
+            "min": 64741600
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 1134300,
+            "median": 1070400,
+            "min": 1042900
+          },
+          "initialize_ns": {
+            "max": 20373000,
+            "median": 17701700,
+            "min": 14024200
+          },
+          "lifecycle_ns": {
+            "max": 97724600,
+            "median": 95047900,
+            "min": 85118200
+          },
+          "output_trace_ns": {
+            "max": 753500,
+            "median": 744400,
+            "min": 735400
+          },
+          "real_update_trace_ns": {
+            "max": 53279700,
+            "median": 52336800,
+            "min": 46832400
+          },
+          "rebuild_ns": {
+            "max": 9374100,
+            "median": 9224000,
+            "min": 9000900
+          },
+          "rejection_ns": {
+            "max": 63500,
+            "median": 58600,
+            "min": 49800
+          },
+          "state_bytes": {
+            "max": 1451819,
+            "median": 1451819,
+            "min": 1451819
+          },
+          "steady_trace_ns": {
+            "max": 68293600,
+            "median": 67330000,
+            "min": 61661300
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 3019,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_with_resource_roles_policy.csv/32/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 4208700,
+            "median": 4039400,
+            "min": 3879600
+          },
+          "initialize_ns": {
+            "max": 43722800,
+            "median": 39260500,
+            "min": 35213900
+          },
+          "lifecycle_ns": {
+            "max": 315871200,
+            "median": 297892600,
+            "min": 290835700
+          },
+          "output_trace_ns": {
+            "max": 1717700,
+            "median": 1630700,
+            "min": 1582000
+          },
+          "real_update_trace_ns": {
+            "max": 172440200,
+            "median": 163895200,
+            "min": 156966100
+          },
+          "rebuild_ns": {
+            "max": 62056200,
+            "median": 43532700,
+            "min": 42324900
+          },
+          "rejection_ns": {
+            "max": 81400,
+            "median": 66700,
+            "min": 52300
+          },
+          "state_bytes": {
+            "max": 3594807,
+            "median": 3594807,
+            "min": 3594807
+          },
+          "steady_trace_ns": {
+            "max": 217589000,
+            "median": 214487800,
+            "min": 207724900
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 13886200,
+            "median": 13360300,
+            "min": 12858900
+          },
+          "initialize_ns": {
+            "max": 32321700,
+            "median": 29957000,
+            "min": 29507100
+          },
+          "lifecycle_ns": {
+            "max": 295612700,
+            "median": 280332600,
+            "min": 271245000
+          },
+          "output_trace_ns": {
+            "max": 1717400,
+            "median": 1681600,
+            "min": 1629500
+          },
+          "real_update_trace_ns": {
+            "max": 178418300,
+            "median": 169795300,
+            "min": 163465700
+          },
+          "rebuild_ns": {
+            "max": 39012500,
+            "median": 24911400,
+            "min": 24178100
+          },
+          "rejection_ns": {
+            "max": 124200,
+            "median": 119000,
+            "min": 115800
+          },
+          "state_bytes": {
+            "max": 2429863,
+            "median": 2429863,
+            "min": 2429863
+          },
+          "steady_trace_ns": {
+            "max": 226683400,
+            "median": 224154300,
+            "min": 216576600
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 3121400,
+            "median": 3004000,
+            "min": 2905900
+          },
+          "initialize_ns": {
+            "max": 44434300,
+            "median": 35210800,
+            "min": 30802600
+          },
+          "lifecycle_ns": {
+            "max": 298522700,
+            "median": 277261500,
+            "min": 263812400
+          },
+          "output_trace_ns": {
+            "max": 1718100,
+            "median": 1623800,
+            "min": 1596700
+          },
+          "real_update_trace_ns": {
+            "max": 171191700,
+            "median": 163022700,
+            "min": 156124400
+          },
+          "rebuild_ns": {
+            "max": 40703300,
+            "median": 25773600,
+            "min": 25286200
+          },
+          "rejection_ns": {
+            "max": 109100,
+            "median": 95400,
+            "min": 82200
+          },
+          "state_bytes": {
+            "max": 3860711,
+            "median": 3860711,
+            "min": 3860711
+          },
+          "steady_trace_ns": {
+            "max": 216714900,
+            "median": 213302900,
+            "min": 206581600
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 10035,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_with_resource_roles_policy.csv/32/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 4466000,
+            "median": 4342700,
+            "min": 4046900
+          },
+          "initialize_ns": {
+            "max": 57964500,
+            "median": 52038400,
+            "min": 46845500
+          },
+          "lifecycle_ns": {
+            "max": 366656500,
+            "median": 348266900,
+            "min": 336365100
+          },
+          "output_trace_ns": {
+            "max": 1685700,
+            "median": 1667100,
+            "min": 1620800
+          },
+          "real_update_trace_ns": {
+            "max": 183242200,
+            "median": 172770600,
+            "min": 166247900
+          },
+          "rebuild_ns": {
+            "max": 72369800,
+            "median": 67746900,
+            "min": 51505700
+          },
+          "rejection_ns": {
+            "max": 87300,
+            "median": 80700,
+            "min": 77100
+          },
+          "state_bytes": {
+            "max": 6704095,
+            "median": 6704095,
+            "min": 6704095
+          },
+          "steady_trace_ns": {
+            "max": 242950700,
+            "median": 232155700,
+            "min": 224351100
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 14299300,
+            "median": 13822700,
+            "min": 13103000
+          },
+          "initialize_ns": {
+            "max": 36452800,
+            "median": 34557800,
+            "min": 30728000
+          },
+          "lifecycle_ns": {
+            "max": 326903500,
+            "median": 314863800,
+            "min": 307554400
+          },
+          "output_trace_ns": {
+            "max": 1695300,
+            "median": 1667800,
+            "min": 1617100
+          },
+          "real_update_trace_ns": {
+            "max": 189305400,
+            "median": 179100000,
+            "min": 172070500
+          },
+          "rebuild_ns": {
+            "max": 41575000,
+            "median": 41045900,
+            "min": 38244400
+          },
+          "rejection_ns": {
+            "max": 153100,
+            "median": 143800,
+            "min": 119400
+          },
+          "state_bytes": {
+            "max": 2517607,
+            "median": 2517607,
+            "min": 2517607
+          },
+          "steady_trace_ns": {
+            "max": 252604900,
+            "median": 241831600,
+            "min": 233394000
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 3160900,
+            "median": 2996700,
+            "min": 2882000
+          },
+          "initialize_ns": {
+            "max": 43432800,
+            "median": 36037100,
+            "min": 35644500
+          },
+          "lifecycle_ns": {
+            "max": 328283400,
+            "median": 317369300,
+            "min": 301056100
+          },
+          "output_trace_ns": {
+            "max": 1707400,
+            "median": 1666000,
+            "min": 1575100
+          },
+          "real_update_trace_ns": {
+            "max": 182070100,
+            "median": 171593000,
+            "min": 165026300
+          },
+          "rebuild_ns": {
+            "max": 60773200,
+            "median": 42734200,
+            "min": 39767400
+          },
+          "rejection_ns": {
+            "max": 91600,
+            "median": 56400,
+            "min": 55600
+          },
+          "state_bytes": {
+            "max": 4448655,
+            "median": 4448655,
+            "min": 4448655
+          },
+          "steady_trace_ns": {
+            "max": 241728600,
+            "median": 230967400,
+            "min": 223127200
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 10035,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_with_resource_roles_policy.csv/8/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 1139800,
+            "median": 1103800,
+            "min": 1097500
+          },
+          "initialize_ns": {
+            "max": 16207100,
+            "median": 12490500,
+            "min": 12386600
+          },
+          "lifecycle_ns": {
+            "max": 76575900,
+            "median": 72477000,
+            "min": 71150500
+          },
+          "output_trace_ns": {
+            "max": 870300,
+            "median": 763600,
+            "min": 715300
+          },
+          "real_update_trace_ns": {
+            "max": 40479200,
+            "median": 39303400,
+            "min": 34675400
+          },
+          "rebuild_ns": {
+            "max": 14388300,
+            "median": 8344900,
+            "min": 8197200
+          },
+          "rejection_ns": {
+            "max": 63300,
+            "median": 50600,
+            "min": 44500
+          },
+          "state_bytes": {
+            "max": 956323,
+            "median": 956323,
+            "min": 956323
+          },
+          "steady_trace_ns": {
+            "max": 51704100,
+            "median": 51160100,
+            "min": 45917200
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 3327600,
+            "median": 3239800,
+            "min": 3159800
+          },
+          "initialize_ns": {
+            "max": 11928300,
+            "median": 11013300,
+            "min": 10762200
+          },
+          "lifecycle_ns": {
+            "max": 72345400,
+            "median": 70774500,
+            "min": 65809400
+          },
+          "output_trace_ns": {
+            "max": 749100,
+            "median": 731000,
+            "min": 724800
+          },
+          "real_update_trace_ns": {
+            "max": 41948800,
+            "median": 40618500,
+            "min": 35973800
+          },
+          "rebuild_ns": {
+            "max": 6796500,
+            "median": 6521700,
+            "min": 6457700
+          },
+          "rejection_ns": {
+            "max": 68600,
+            "median": 58700,
+            "min": 55200
+          },
+          "state_bytes": {
+            "max": 603059,
+            "median": 603059,
+            "min": 603059
+          },
+          "steady_trace_ns": {
+            "max": 53900700,
+            "median": 53181300,
+            "min": 48011100
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 1012400,
+            "median": 889000,
+            "min": 883400
+          },
+          "initialize_ns": {
+            "max": 12114000,
+            "median": 11317700,
+            "min": 11007900
+          },
+          "lifecycle_ns": {
+            "max": 70616100,
+            "median": 69219900,
+            "min": 63694100
+          },
+          "output_trace_ns": {
+            "max": 747000,
+            "median": 732000,
+            "min": 701400
+          },
+          "real_update_trace_ns": {
+            "max": 40257800,
+            "median": 39070300,
+            "min": 34455600
+          },
+          "rebuild_ns": {
+            "max": 6999800,
+            "median": 6949400,
+            "min": 6696500
+          },
+          "rejection_ns": {
+            "max": 73400,
+            "median": 50400,
+            "min": 45600
+          },
+          "state_bytes": {
+            "max": 965715,
+            "median": 965715,
+            "min": 965715
+          },
+          "steady_trace_ns": {
+            "max": 51474200,
+            "median": 50940100,
+            "min": 45616200
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 2599,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "policy/rbac_with_resource_roles_policy.csv/8/singleton": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 1338500,
+            "median": 1141900,
+            "min": 1101900
+          },
+          "initialize_ns": {
+            "max": 18735300,
+            "median": 13563000,
+            "min": 13465300
+          },
+          "lifecycle_ns": {
+            "max": 82308300,
+            "median": 76799700,
+            "min": 75334500
+          },
+          "output_trace_ns": {
+            "max": 792300,
+            "median": 710400,
+            "min": 706800
+          },
+          "real_update_trace_ns": {
+            "max": 45302000,
+            "median": 41568200,
+            "min": 35130100
+          },
+          "rebuild_ns": {
+            "max": 15300100,
+            "median": 9684000,
+            "min": 9298000
+          },
+          "rejection_ns": {
+            "max": 155100,
+            "median": 57600,
+            "min": 46700
+          },
+          "state_bytes": {
+            "max": 1649515,
+            "median": 1649515,
+            "min": 1649515
+          },
+          "steady_trace_ns": {
+            "max": 56658100,
+            "median": 53818400,
+            "min": 46477600
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 3659000,
+            "median": 3215400,
+            "min": 3174200
+          },
+          "initialize_ns": {
+            "max": 11838700,
+            "median": 11115600,
+            "min": 10483000
+          },
+          "lifecycle_ns": {
+            "max": 76780200,
+            "median": 73322800,
+            "min": 66099100
+          },
+          "output_trace_ns": {
+            "max": 800800,
+            "median": 719500,
+            "min": 718500
+          },
+          "real_update_trace_ns": {
+            "max": 46742500,
+            "median": 42883500,
+            "min": 36428500
+          },
+          "rebuild_ns": {
+            "max": 6770600,
+            "median": 6663600,
+            "min": 6503100
+          },
+          "rejection_ns": {
+            "max": 75000,
+            "median": 62200,
+            "min": 55800
+          },
+          "state_bytes": {
+            "max": 618675,
+            "median": 618675,
+            "min": 618675
+          },
+          "steady_trace_ns": {
+            "max": 58979900,
+            "median": 56088200,
+            "min": 48533700
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 981400,
+            "median": 917900,
+            "min": 882300
+          },
+          "initialize_ns": {
+            "max": 16159600,
+            "median": 11606900,
+            "min": 10962900
+          },
+          "lifecycle_ns": {
+            "max": 80872700,
+            "median": 71766300,
+            "min": 69437900
+          },
+          "output_trace_ns": {
+            "max": 750500,
+            "median": 711400,
+            "min": 700000
+          },
+          "real_update_trace_ns": {
+            "max": 44918000,
+            "median": 41322900,
+            "min": 34882500
+          },
+          "rebuild_ns": {
+            "max": 13599100,
+            "median": 7015900,
+            "min": 6937700
+          },
+          "rejection_ns": {
+            "max": 56400,
+            "median": 48700,
+            "min": 39100
+          },
+          "state_bytes": {
+            "max": 1091547,
+            "median": 1091547,
+            "min": 1091547
+          },
+          "steady_trace_ns": {
+            "max": 56254300,
+            "median": 53477800,
+            "min": 46221900
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 2599,
+      "real_updates_per_trace": 9,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "star/4096/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 119473500,
+            "median": 108685800,
+            "min": 107112100
+          },
+          "initialize_ns": {
+            "max": 32089900,
+            "median": 27515700,
+            "min": 23475400
+          },
+          "lifecycle_ns": {
+            "max": 270879400,
+            "median": 260459000,
+            "min": 250323100
+          },
+          "output_trace_ns": {
+            "max": 1902200,
+            "median": 1873600,
+            "min": 1823000
+          },
+          "real_update_trace_ns": {
+            "max": 164846700,
+            "median": 153225800,
+            "min": 151993600
+          },
+          "rebuild_ns": {
+            "max": 43292200,
+            "median": 33476700,
+            "min": 21283200
+          },
+          "rejection_ns": {
+            "max": 50771900,
+            "median": 40441900,
+            "min": 39505900
+          },
+          "state_bytes": {
+            "max": 5259211,
+            "median": 5259211,
+            "min": 5259211
+          },
+          "steady_trace_ns": {
+            "max": 165992000,
+            "median": 154364600,
+            "min": 153138800
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 37328300,
+            "median": 36007900,
+            "min": 35649500
+          },
+          "initialize_ns": {
+            "max": 29352700,
+            "median": 19580500,
+            "min": 17312100
+          },
+          "lifecycle_ns": {
+            "max": 143236300,
+            "median": 139217600,
+            "min": 122059000
+          },
+          "output_trace_ns": {
+            "max": 1938500,
+            "median": 1778300,
+            "min": 1770400
+          },
+          "real_update_trace_ns": {
+            "max": 88281700,
+            "median": 79088500,
+            "min": 77884000
+          },
+          "rebuild_ns": {
+            "max": 28938400,
+            "median": 27238700,
+            "min": 16915700
+          },
+          "rejection_ns": {
+            "max": 3760200,
+            "median": 3199400,
+            "min": 3056600
+          },
+          "state_bytes": {
+            "max": 3763331,
+            "median": 3763331,
+            "min": 3763331
+          },
+          "steady_trace_ns": {
+            "max": 91870200,
+            "median": 82794800,
+            "min": 81771500
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 48972400,
+            "median": 48069200,
+            "min": 47580400
+          },
+          "initialize_ns": {
+            "max": 28650000,
+            "median": 23089300,
+            "min": 20865800
+          },
+          "lifecycle_ns": {
+            "max": 166508500,
+            "median": 154910500,
+            "min": 145137400
+          },
+          "output_trace_ns": {
+            "max": 1880200,
+            "median": 1816500,
+            "min": 1800300
+          },
+          "real_update_trace_ns": {
+            "max": 94312600,
+            "median": 92722200,
+            "min": 91387400
+          },
+          "rebuild_ns": {
+            "max": 42226500,
+            "median": 30674400,
+            "min": 18510600
+          },
+          "rejection_ns": {
+            "max": 8288200,
+            "median": 7865000,
+            "min": 7466500
+          },
+          "state_bytes": {
+            "max": 6281891,
+            "median": 6281891,
+            "min": 6281891
+          },
+          "steady_trace_ns": {
+            "max": 95466300,
+            "median": 93850800,
+            "min": 92638100
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 229381,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "star/512/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 11276300,
+            "median": 11002100,
+            "min": 10982800
+          },
+          "initialize_ns": {
+            "max": 3512000,
+            "median": 2967600,
+            "min": 2695900
+          },
+          "lifecycle_ns": {
+            "max": 27153000,
+            "median": 26442500,
+            "min": 26270900
+          },
+          "output_trace_ns": {
+            "max": 353600,
+            "median": 275700,
+            "min": 261600
+          },
+          "real_update_trace_ns": {
+            "max": 16806700,
+            "median": 16452600,
+            "min": 16343500
+          },
+          "rebuild_ns": {
+            "max": 2990200,
+            "median": 2822700,
+            "min": 2755600
+          },
+          "rejection_ns": {
+            "max": 4142400,
+            "median": 3987400,
+            "min": 3844400
+          },
+          "state_bytes": {
+            "max": 672611,
+            "median": 672611,
+            "min": 672611
+          },
+          "steady_trace_ns": {
+            "max": 16965800,
+            "median": 16614600,
+            "min": 16508400
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 4493300,
+            "median": 4324500,
+            "min": 4264300
+          },
+          "initialize_ns": {
+            "max": 3186800,
+            "median": 2274600,
+            "min": 2001100
+          },
+          "lifecycle_ns": {
+            "max": 15699900,
+            "median": 14903600,
+            "min": 14511900
+          },
+          "output_trace_ns": {
+            "max": 280400,
+            "median": 265500,
+            "min": 260900
+          },
+          "real_update_trace_ns": {
+            "max": 9711400,
+            "median": 9496700,
+            "min": 9383000
+          },
+          "rebuild_ns": {
+            "max": 2180700,
+            "median": 2126700,
+            "min": 1997300
+          },
+          "rejection_ns": {
+            "max": 820700,
+            "median": 431400,
+            "min": 395000
+          },
+          "state_bytes": {
+            "max": 480059,
+            "median": 480059,
+            "min": 480059
+          },
+          "steady_trace_ns": {
+            "max": 10160700,
+            "median": 9941900,
+            "min": 9836200
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 5667400,
+            "median": 5619200,
+            "min": 5489800
+          },
+          "initialize_ns": {
+            "max": 3630800,
+            "median": 2561900,
+            "min": 2361100
+          },
+          "lifecycle_ns": {
+            "max": 20060800,
+            "median": 17436900,
+            "min": 16779400
+          },
+          "output_trace_ns": {
+            "max": 275700,
+            "median": 269700,
+            "min": 263400
+          },
+          "real_update_trace_ns": {
+            "max": 11303000,
+            "median": 11058600,
+            "min": 10950400
+          },
+          "rebuild_ns": {
+            "max": 5288800,
+            "median": 2399300,
+            "min": 2358000
+          },
+          "rejection_ns": {
+            "max": 987500,
+            "median": 904900,
+            "min": 876900
+          },
+          "state_bytes": {
+            "max": 839227,
+            "median": 839227,
+            "min": 839227
+          },
+          "steady_trace_ns": {
+            "max": 11460900,
+            "median": 11222600,
+            "min": 11113100
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 24425,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    },
+    "star/64/native": {
+      "modes": {
+        "block": {
+          "check_commit_trace_ns": {
+            "max": 1277100,
+            "median": 1234800,
+            "min": 1228500
+          },
+          "initialize_ns": {
+            "max": 380600,
+            "median": 335900,
+            "min": 328700
+          },
+          "lifecycle_ns": {
+            "max": 3297000,
+            "median": 3220900,
+            "min": 3202500
+          },
+          "output_trace_ns": {
+            "max": 65900,
+            "median": 64800,
+            "min": 63800
+          },
+          "real_update_trace_ns": {
+            "max": 2182500,
+            "median": 2114100,
+            "min": 2099700
+          },
+          "rebuild_ns": {
+            "max": 354400,
+            "median": 345200,
+            "min": 313700
+          },
+          "rejection_ns": {
+            "max": 409300,
+            "median": 391600,
+            "min": 386700
+          },
+          "state_bytes": {
+            "max": 77615,
+            "median": 77615,
+            "min": 77615
+          },
+          "steady_trace_ns": {
+            "max": 2226400,
+            "median": 2155900,
+            "min": 2142700
+          }
+        },
+        "full": {
+          "check_commit_trace_ns": {
+            "max": 600100,
+            "median": 593900,
+            "min": 586400
+          },
+          "initialize_ns": {
+            "max": 279800,
+            "median": 266700,
+            "min": 261200
+          },
+          "lifecycle_ns": {
+            "max": 2183700,
+            "median": 2146500,
+            "min": 2117000
+          },
+          "output_trace_ns": {
+            "max": 70300,
+            "median": 64500,
+            "min": 62500
+          },
+          "real_update_trace_ns": {
+            "max": 1478200,
+            "median": 1440800,
+            "min": 1423800
+          },
+          "rebuild_ns": {
+            "max": 305000,
+            "median": 281100,
+            "min": 278200
+          },
+          "rejection_ns": {
+            "max": 82000,
+            "median": 74400,
+            "min": 68800
+          },
+          "state_bytes": {
+            "max": 58251,
+            "median": 58251,
+            "min": 58251
+          },
+          "steady_trace_ns": {
+            "max": 1553400,
+            "median": 1514500,
+            "min": 1500400
+          }
+        },
+        "ordinary-local": {
+          "check_commit_trace_ns": {
+            "max": 794500,
+            "median": 781500,
+            "min": 778600
+          },
+          "initialize_ns": {
+            "max": 364700,
+            "median": 323100,
+            "min": 289500
+          },
+          "lifecycle_ns": {
+            "max": 2705500,
+            "median": 2472000,
+            "min": 2431500
+          },
+          "output_trace_ns": {
+            "max": 67100,
+            "median": 63700,
+            "min": 62700
+          },
+          "real_update_trace_ns": {
+            "max": 1705200,
+            "median": 1657500,
+            "min": 1655000
+          },
+          "rebuild_ns": {
+            "max": 493500,
+            "median": 310500,
+            "min": 271400
+          },
+          "rejection_ns": {
+            "max": 141700,
+            "median": 131500,
+            "min": 127800
+          },
+          "state_bytes": {
+            "max": 96747,
+            "median": 96747,
+            "min": 96747
+          },
+          "steady_trace_ns": {
+            "max": 1747200,
+            "median": 1700000,
+            "min": 1696000
+          }
+        }
+      },
+      "offset_fields_per_trace": 0,
+      "packet_bytes_per_trace": 3077,
+      "real_updates_per_trace": 11,
+      "repetitions": 5,
+      "updates_per_trace": 12
+    }
+  },
+  "measured_traces": 135
+}

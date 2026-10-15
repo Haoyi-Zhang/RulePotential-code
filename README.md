@@ -97,7 +97,9 @@ Run `python -B potential_regression.py -v` for six untimed regressions using
 test-local simple-path, finite offset-box, and interpretation references. The
 scientific workflow invokes this command explicitly. These six methods are
 separate from the retained 23/15/6 suites and their 44-method historical receipts;
-the current source inventory contains 50 methods, not a new full-campaign result.
+the current source inventory contains 60 methods, including two PDF-tool
+decoding regressions and the eight separate
+complete-cost regressions below, not a new full-campaign result.
 
 `src/reference_check.py` is a separate full-certificate scan. `src/oracle.py`
 enumerates closed interpretations on tiny ground inputs. `src/temporal.py` and
@@ -125,6 +127,70 @@ inputs and source attribution. `literature_calibration.csv` and
 `docs/literature-calibration.md` record the completed 12+5+5 paper-planning matrix.
 Public policy fixtures are retained under `inputs/casbin/`; their temporal schedules
 and Horn adaptation are generated here, not observed production events.
+
+## Same-information complete costs
+
+`complete_cost.py` adds a serial source-to-output cost study on the current
+prototype, rather than rerunning or identifying the historical timing hosts.
+The unchanged block checker, an ordinary local checker with active individual
+boundary incidences, and a complete ranked-model scan consume identical
+compressed packets and verified predecessors. The ordinary local control also
+skips unchanged internal edges; pure exchange therefore gives constant rank
+work in both local implementations. A new dense-boundary control isolates the
+benefit of aggregating many active edges into a pair maximum.
+
+```sh
+python -B complete_cost_regression.py -v
+python -B pdf_tools_regression.py -v
+python -B complete_cost.py --check
+python -B complete_cost.py --out fresh-complete-cost --repetitions 5
+python -B verify_complete_cost.py fresh-complete-cost --out fresh-validation
+```
+
+These new commands use the standard library and run on Windows or POSIX. On a
+coordinated host, put the measurement command through its shared resource runner;
+`--check` and the regressions do not read clocks or write results. Do not point a
+new run at an existing output directory. The eight new methods include 20,736
+two-atom candidate-packet comparisons against a closed-superset oracle; they are
+separate from the retained 44-method receipts and six potential regressions.
+
+Current measurements are in `results/complete-cost/`, with environment,
+source identities, warm-ups and every per-operation sample. The validation and
+all-setting median CSV and native LaTeX table are in `results/complete-cost-validation/`.
+There are 27 settings and 135 measured twelve-update traces: 1,365 genuine base
+changes and 255 separately identified no-ops per checker, 4,860 accepted commits,
+405 ordinary rejection/rollback tests, 405 source-to-output rebuilds, and 15
+checked singleton fallback initializations. All committed states and complete
+outputs agree. Current measurements use CPython 3.12.14 on Windows 11 / AMD64;
+the exact reported processor descriptor and kernel are in the environment record.
+
+At size 4,096, the first dense-boundary shift checks two pair inequalities versus
+4,097 direct rank edges: median check-and-commit times are 36.5 microseconds and
+2.8732 milliseconds. Pure exchange checks one edge in both local controls and
+takes 29.0 versus 24.2 microseconds. For the star, the twelve-update check totals
+are 108.686 milliseconds (block), 48.069 (ordinary local), and 36.008 (full).
+Policy schedules still have no offset changes, and their actual repeated
+grounding dominates the update account. These are conditional mechanism
+observations, not a general end-to-end advantage over ordinary local checking.
+
+Initialization, structural partition construction, production, producer state
+maintenance, UTF-8 packet handling, check/commit, complete JSON answer generation,
+ordinary rejection, and authoritative-base rebuilding are all charged. The
+reported lifecycle sums one initialization, twelve updates, one rejection and
+one rebuild; this is a stated event mix, not a production failure-frequency
+estimate. The partition is supplied by a structural/temporal rule, not discovered
+automatically. No disk/network persistence, durable crash transaction or external
+decision service is added. Full definitions, all losses, the boundary construction,
+and the provenance/cost boundary are in `docs/complete-cost.md`.
+
+`python -B verify_complete_cost.py results/complete-cost --check-exports results/complete-cost-validation`
+checks the retained raw samples, measured source identities and both numerical
+exports without writing. The tool's `--out` also generates
+`complete-cost-table.tex`; the manuscript imports that native table. In a full
+project, add `--paper ../paper/sections/evaluation.tex` to verify the actual input.
+Scientific CI runs the eight new regressions, the optimized untimed smoke trace
+and this retained-result/export check; it does not use CI runtimes as new timing
+samples. Local CI configuration changes are not a claim of a remote run.
 
 ## Retained observations
 

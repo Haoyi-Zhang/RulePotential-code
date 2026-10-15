@@ -1,0 +1,17 @@
+{
+  "authoritative_base_rebuilds_all_strategies": 405,
+  "committed_checks_all_strategies": 4860,
+  "committed_updates_per_strategy": 1620,
+  "deterministic_repetitions_match": true,
+  "measured_traces": 135,
+  "ordinary_rejections_all_strategies": 405,
+  "paper_table_matches": true,
+  "raw_summary_matches": true,
+  "real_updates_per_strategy": 1365,
+  "schema": "complete-cost-validation-1",
+  "semantic_noops_per_strategy": 255,
+  "settings": 27,
+  "singleton_fallbacks_all_strategies": 15,
+  "source_identity_matches": true,
+  "warmup_traces": 27
+}

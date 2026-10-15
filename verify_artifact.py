@@ -19,9 +19,11 @@ from pathlib import Path
 from typing import Any
 
 CUTOFF = date(2026, 9, 16)
-EXPECTED_PROJECT_ENTRIES = {"README.md", "artifact", "paper"}
+EXPECTED_PROJECT_ENTRIES = {"artifact", "paper"}
 EXPECTED_TEST_METHODS = {"tests": 23, "repair_tests.py": 15, "audit_tests.py": 6}
 EXPECTED_TEST_METHODS["potential_regression.py"] = 6
+EXPECTED_TEST_METHODS["complete_cost_regression.py"] = 8
+EXPECTED_TEST_METHODS["pdf_tools_regression.py"] = 2
 
 
 def _json(path: Path) -> dict[str, Any]:
@@ -81,9 +83,11 @@ def _function_calls(path: Path, function_name: str) -> set[str]:
 
 def _pdf_pages(path: Path) -> int:
     completed = subprocess.run(
-        ["pdfinfo", str(path)], check=True, text=True, capture_output=True
+        ["pdfinfo", "-enc", "UTF-8", str(path)], check=True, capture_output=True
     )
-    match = re.search(r"^Pages:\s+(\d+)\s*$", completed.stdout, re.MULTILINE)
+    # Only the ASCII page-count field is consumed. Some Windows pdfinfo builds
+    # emit metadata in the active console encoding even with -enc UTF-8.
+    match = re.search(rb"^Pages:\s+(\d+)\s*$", completed.stdout, re.MULTILINE)
     if not match:
         raise ValueError("pdfinfo did not report a page count")
     return int(match.group(1))
@@ -91,10 +95,10 @@ def _pdf_pages(path: Path) -> int:
 
 def _pdf_page_text(path: Path, page: int) -> str:
     completed = subprocess.run(
-        ["pdftotext", "-f", str(page), "-l", str(page), str(path), "-"],
-        check=True, text=True, capture_output=True,
+        ["pdftotext", "-enc", "UTF-8", "-f", str(page), "-l", str(page), str(path), "-"],
+        check=True, capture_output=True,
     )
-    return completed.stdout
+    return completed.stdout.decode("utf-8")
 
 
 def audit(artifact: Path) -> dict[str, Any]:
@@ -108,6 +112,11 @@ def audit(artifact: Path) -> dict[str, Any]:
         "src/offset_repair.py", "src/optimality_check.py",
         "src/bounded_offset_repair.py", "src/bounded_optimality_check.py",
         "tests/test_core.py", "repair_tests.py", "audit_tests.py", "potential_regression.py",
+        "complete_cost.py", "complete_cost_regression.py", "verify_complete_cost.py", "pdf_tools_regression.py",
+        "src/ordinary_check.py", "docs/complete-cost.md",
+        "results/complete-cost/environment.json", "results/complete-cost/summary.json",
+        "results/complete-cost-validation/validation.json", "results/complete-cost-validation/summary.csv",
+        "results/complete-cost-validation/complete-cost-table.tex",
         "claim_evidence_ledger.csv", "external_resources.csv",
         "literature_sources.csv", "literature_calibration.csv",
         "bibliography_verification.csv", "verify_bibliography.py",
@@ -340,15 +349,15 @@ def audit(artifact: Path) -> dict[str, Any]:
         else:
             pages = _pdf_pages(pdf)
             project_checks["pdf_pages"] = pages
-            if pages != 37:
-                errors.append(f"paper/main.pdf has {pages} pages; expected 37")
-            page_30 = _pdf_page_text(pdf, 30)
-            page_31 = _pdf_page_text(pdf, 31)
-            reference_start = 31 if re.search(r"(?m)^References\s*$", page_31) else None
-            project_checks["body_end_page"] = 30 if reference_start == 31 else None
+            if pages != 40:
+                errors.append(f"paper/main.pdf has {pages} pages; expected 40")
+            page_33 = _pdf_page_text(pdf, 33)
+            page_34 = _pdf_page_text(pdf, 34)
+            reference_start = 34 if re.search(r"(?m)^References\s*$", page_34) else None
+            project_checks["body_end_page"] = 33 if reference_start == 34 else None
             project_checks["reference_start_page"] = reference_start
-            if reference_start != 31 or re.search(r"(?m)^References\s*$", page_30):
-                errors.append("paper body/reference boundary is not pages 30/31")
+            if reference_start != 34 or re.search(r"(?m)^References\s*$", page_33):
+                errors.append("paper body/reference boundary is not pages 33/34")
 
     transients = sorted(
         str(path.relative_to(artifact))

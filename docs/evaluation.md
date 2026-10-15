@@ -121,7 +121,9 @@ property/input-contract audit tests: 44 methods in total.
 
 Six additional untimed methods in `potential_regression.py` use test-local
 simple-path, finite offset-box, and interpretation references. Scientific CI
-invokes them explicitly; the current source inventory has 50 methods. They do
+invokes them explicitly; eight complete-cost methods bring the current source
+inventory to 58 methods. Two PDF-tool decoding regressions bring the current
+inventory to 60 methods. They do
 not regenerate the retained campaign, establish a general proof, or measure
 a synthesis speedup.
 
@@ -131,3 +133,28 @@ be interpreted as fresh-initialization timings. New source data are exported by
 `export_repair_data.py`; all-setting medians/minima/maxima and deterministic sizes
 are available in its CSV export. The rejected wide-conjunction pilot is retained
 as an input-boundary observation, not a successful timing sample.
+
+## Same-information sequential costs
+
+`docs/complete-cost.md` specifies the new 27-setting source-to-output study and
+the ordinary local/full controls, which receive the exact same compressed
+packet and predecessor as the unchanged block checker. The new local baseline
+uses active individual boundary incidences and also cancels unchanged internal
+edges. Maximum aggregation is therefore separated from the simple benefit of
+not scanning a whole translated block.
+
+The current samples retain 135 measured traces and 27 warm-up traces. Each checker
+commits 1,620 updates, of which 1,365 are genuine base changes and 255 semantic
+no-ops. Initial construction, real commits and index maintenance, full answer
+generation, 405 ordinary rejection/rollback checks, 405 source-to-output rebuilds
+and 15 singleton fallback initializations are covered. Source identities,
+deterministic repetitions and all summary calculations pass
+`verify_complete_cost.py`. The eight new untimed regression methods include
+20,736 candidate-packet comparisons against a direct finite interpretation
+oracle, and do not alter any historical campaign receipt.
+
+The new study is an offline cost account for the existing serial mathematical
+prototype. The three policy fixtures retain their generated schedules and lack
+offset changes; no production workload, automatic partition discovery, external
+engine, durable persistence or crash consistency is inferred. Original measured
+files, historical host-identity gaps and previous negative results remain intact.
